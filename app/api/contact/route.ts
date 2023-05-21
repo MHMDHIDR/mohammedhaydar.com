@@ -17,8 +17,7 @@ export async function POST(request: Request) {
     if (accepted.length > 0) {
       return NextResponse.json(
         {
-          message:
-            'Thank you for contacting us, we will reply to you as soon as possible',
+          message: 'Thank you for contacting me, I will reply to you as soon as possible',
           mailSent: 1
         },
         { status: 200 }

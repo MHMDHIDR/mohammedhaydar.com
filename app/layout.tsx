@@ -3,6 +3,7 @@ import 'normalize.css'
 import 'nprogress/nprogress.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
+import 'react-toastify/dist/ReactToastify.css'
 import './globals.scss'
 
 const RadioCanada = Radio_Canada({
