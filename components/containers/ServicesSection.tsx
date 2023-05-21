@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { childrenAnimation } from '@/lib/motion'
 import { Service } from '@/components/elements'
 import { servicesProps } from '@/types'
 import { getServices } from '@/sanity/sanity-utils'
 
 const ServicesSection = () => {
-  const { data } = useQuery<servicesProps[]>('services', getServices)
+  const { data } = useQuery<servicesProps[]>(['services'], getServices)
 
   if (!data) return null
 

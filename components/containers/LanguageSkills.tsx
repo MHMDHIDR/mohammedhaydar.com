@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { getLanguageskills } from '@/fetchers'
 import { childrenAnimation } from '@/lib/motion'
 import { ProgressBar } from '@/components/elements'
 
 const LanguageSkills = () => {
-  const { data } = useQuery('language-skills', getLanguageskills)
+  const { data } = useQuery(['language-skills'], getLanguageskills)
 
   if (!data) return null
 

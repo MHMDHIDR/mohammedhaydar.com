@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { childrenAnimation } from '@/lib/motion'
 import { SkillsCircle } from '@/components/elements'
 import { skillsProps } from '@/types'
 import { getTechskills } from '@/sanity/sanity-utils'
 
 const TechSkills = () => {
-  const { data } = useQuery<skillsProps[]>('skills', getTechskills)
+  const { data } = useQuery<skillsProps[]>(['skills'], getTechskills)
 
   if (!data) return null
 

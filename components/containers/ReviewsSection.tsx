@@ -1,6 +1,6 @@
 'use client'
 import { useCallback, useRef } from 'react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { Autoplay } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { getClientReviews } from '@/fetchers'
@@ -8,7 +8,7 @@ import { Review } from '@/components/elements'
 import type { Swiper as SwiperType } from 'swiper'
 
 const ReviewsSection = () => {
-  const { data } = useQuery('clientreviews', getClientReviews)
+  const { data } = useQuery(['clientreviews'], getClientReviews)
 
   const sliderRef = useRef<SwiperType | null>(null)
 

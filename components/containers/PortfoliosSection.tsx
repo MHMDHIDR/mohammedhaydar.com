@@ -1,7 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useCallback, useEffect, useState } from 'react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { Portfolio } from '@/components/elements'
 import { PortfolioFilters } from '@/components/utils'
 import type { Project, ProjectFiltersProps } from '@/types'
@@ -14,7 +14,7 @@ const PortfoliosSection = () => {
   const [pageNumber, setPageNumber] = useState(1)
   const [allProjectsLoaded, setAllProjectsLoaded] = useState(false) // New state variable
 
-  const { data: projects } = useQuery('projects', getProjects)
+  const { data: projects } = useQuery(['projects'], getProjects)
 
   useEffect(() => {
     if (projects) {

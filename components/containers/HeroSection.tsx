@@ -8,11 +8,11 @@ import { childrenAnimation } from '@/lib/motion'
 import ReactTyped from 'react-typed'
 import type { HeroSectionProps, informationProps } from '@/types'
 import { abstractSentence } from '@/lib/abstractText'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { getInformation } from '@/sanity/sanity-utils'
 
 const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps) => {
-  const { data } = useQuery<informationProps>('information', getInformation)
+  const { data } = useQuery<informationProps>(['information'], getInformation)
 
   if (!data) return null
 

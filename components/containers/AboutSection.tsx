@@ -2,12 +2,12 @@ import Image from 'next/image'
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import { childrenAnimation } from '@/lib/motion'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { informationProps } from '@/types'
 import { getInformation } from '@/sanity/sanity-utils'
 
 const AboutSection = () => {
-  const { data } = useQuery<informationProps>('information', getInformation)
+  const { data } = useQuery<informationProps>(['information'], getInformation)
 
   if (!data) return null
 

@@ -6,11 +6,11 @@ import FullscreenMenu from './FullscreenMenu'
 import MobileFullmenu from './MobileFullmenu'
 import Sidemenu from './Sidemenu'
 import { SessionProvider } from 'next-auth/react'
-import { QueryClient, QueryClientProvider } from 'react-query'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { AppProvider } from '@/context/appContext'
 import { ToastContainer } from 'react-toastify'
-import { ReactQueryDevtools } from 'react-query/devtools'
 
 const Layout2 = ({
   children,

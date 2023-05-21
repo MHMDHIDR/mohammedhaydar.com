@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion'
 import { RiBriefcaseLine } from 'react-icons/ri'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { childrenAnimation } from '@/lib/motion'
 import { TimelineItem } from '@/components/elements'
 import { getJobExperience } from '@/sanity/sanity-utils'
 import { WorkEducationProps } from '@/types'
 
 const JobTimeline = () => {
-  const { data } = useQuery<WorkEducationProps[]>('jobExperience', getJobExperience)
+  const { data } = useQuery<WorkEducationProps[]>(['jobExperience'], getJobExperience)
 
   if (!data) return null
 

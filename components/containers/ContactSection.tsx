@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { RiMailLine, RiMapPinLine, RiPhoneLine } from 'react-icons/ri'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { childrenAnimation } from '@/lib/motion'
 import ContactForm from './ContactForm'
 import { informationProps } from '@/types'
 import { getInformation } from '@/sanity/sanity-utils'
 
 const ContactSection = () => {
-  const { data } = useQuery<informationProps>('information', getInformation)
+  const { data } = useQuery<informationProps>(['information'], getInformation)
 
   if (!data) return null
 

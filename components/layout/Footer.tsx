@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { SocialIcons } from '@/components/elements'
 import { informationProps } from '@/types'
 import { getInformation } from '@/sanity/sanity-utils'
 
 const Footer = () => {
-  const { data } = useQuery<informationProps>('information', getInformation)
+  const { data } = useQuery<informationProps>(['information'], getInformation)
 
   if (!data) return null
 

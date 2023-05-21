@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { RiCloseLine, RiMenuLine } from 'react-icons/ri'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { imageLoader } from '@/lib/utils'
 import { informationProps } from '@/types'
 import { getInformation } from '@/sanity/sanity-utils'
@@ -14,7 +14,7 @@ type SidemenuProps = {
 }
 
 const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
-  const { data } = useQuery<informationProps>('information', getInformation)
+  const { data } = useQuery<informationProps>(['information'], getInformation)
 
   if (!data) return null
 

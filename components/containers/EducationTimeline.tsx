@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { RiBookLine } from 'react-icons/ri'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { childrenAnimation } from '@/lib/motion'
 import { TimelineItem } from '@/components/elements'
 import { WorkEducationProps } from '@/types'
@@ -8,7 +8,7 @@ import { getEducationBackground } from '@/sanity/sanity-utils'
 
 const EducationTimeline = () => {
   const { data } = useQuery<WorkEducationProps[]>(
-    'educationbackground',
+    ['educationbackground'],
     getEducationBackground
   )
 

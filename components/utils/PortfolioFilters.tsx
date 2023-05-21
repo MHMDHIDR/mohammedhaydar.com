@@ -3,7 +3,7 @@ import { getFilters } from '@/sanity/sanity-utils'
 import { ProjectFiltersProps } from '@/types'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 interface PortfolioFiltersProps {
   currentFilter: string
@@ -14,7 +14,7 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
   currentFilter,
   filterHandler
 }) => {
-  const { data: filterData } = useQuery<ProjectFiltersProps[]>('filters', getFilters)
+  const { data: filterData } = useQuery<ProjectFiltersProps[]>(['filters'], getFilters)
   const [tabs, setTabs] = useState<ProjectFiltersProps[]>([])
 
   const [activeTab, setActiveTab] = useState<string | null>(
