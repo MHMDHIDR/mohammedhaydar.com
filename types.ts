@@ -87,17 +87,6 @@ export type skillsProps = {
   percentage: number
 }
 
-export type PortfolioProps = {
-  portfolio: {
-    title: string
-    subtitle: string
-    coverimage: string
-    imagegallery: string[]
-    videogallery: string[]
-    url: string
-  }
-}
-
 export type WorkEducationProps = {
   id: string
   title: string
@@ -208,6 +197,7 @@ export type Project = {
     _key: string
   }[]
   url: string
+  github: string
   content: PortableTextBlock[]
 }
 

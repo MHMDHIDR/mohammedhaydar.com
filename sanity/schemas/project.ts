@@ -41,6 +41,11 @@ const project = {
       type: 'url'
     },
     {
+      name: 'github',
+      title: 'Github',
+      type: 'url'
+    },
+    {
       name: 'filter',
       title: 'Filter',
       type: 'array',

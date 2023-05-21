@@ -2,14 +2,21 @@ import { useState } from 'react'
 import FsLightbox from 'fslightbox-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { RiExternalLinkLine, RiImageLine, RiVideoLine } from 'react-icons/ri'
+import {
+  RiExternalLinkLine,
+  RiGithubLine,
+  RiImageLine,
+  RiVideoLine
+} from 'react-icons/ri'
 import { Portal } from 'react-portal'
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils'
-import type { PortfolioProps } from '@/types'
+import type { Project } from '@/types'
 
 const Portfolio = ({
-  portfolio: { title, subtitle, coverimage, imagegallery, videogallery, url }
-}: PortfolioProps) => {
+  portfolio: { title, subtitle, coverimage, imagegallery, videogallery, url, github }
+}: {
+  portfolio: Project
+}) => {
   const [videoGalleryOpen, setVideoGalleryOpen] = useState(false)
   const [imageGalleryOpen, setImageGalleryOpen] = useState(false)
 
@@ -55,6 +62,15 @@ const Portfolio = ({
               <RiExternalLinkLine />
             </Link>
           )}
+          {github?.length && github.length > 0 && (
+            <Link
+              href={github}
+              target='_blank'
+              className='inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey'
+            >
+              <RiGithubLine />
+            </Link>
+          )}
         </div>
       </div>
       <div className='mt-4 portfolio-content'>
@@ -63,7 +79,10 @@ const Portfolio = ({
       </div>
       {imagegallery && (
         <Portal>
-          <FsLightbox toggler={imageGalleryOpen} sources={imagegallery} />
+          <FsLightbox
+            toggler={imageGalleryOpen}
+            sources={imagegallery.map(image => `/images/portfolios/${image}`)}
+          />
         </Portal>
       )}
       {videogallery && (
