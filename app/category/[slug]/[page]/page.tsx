@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
@@ -72,7 +73,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
                     className='col-span-2 md:col-span-1'
                     key={index}
                   >
-                    <Blog post={post} />
+                    {/* <Blog post={post} /> */}
                   </motion.div>
                 ))}
               </div>
@@ -151,9 +152,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
                             month: 'short'
                           })} ${new Date(post.date).toLocaleDateString('en-us', {
                             day: '2-digit'
-                          })}, ${
-                            new Date(post.date).getFullYear(/*{ year: 'numeric' }*/)
-                          }`}
+                          })}, ${new Date(post.date).getFullYear()}`}
                         </small>
                       </li>
                     ))}
@@ -170,31 +169,31 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
 
 export default CategoryPosts
 
-export function getStaticPaths() {
-  const paths = getCategoryPaths()
+// export function getStaticPaths() {
+//   const paths = getCategoryPaths()
 
-  return {
-    paths,
-    fallback: false
-  }
-}
+//   return {
+//     paths,
+//     fallback: false
+//   }
+// }
 
-export function getStaticProps({
-  params: { slug, page }
-}: {
-  params: { slug: getAllPostsDataProps['category']; page: number }
-}) {
-  const { posts, hasMore } = getPostsByCategory(slug, page, 6)
-  const categories = getAllCategories()
-  const recentPosts = getRecentPosts()
+// export function getStaticProps({
+//   params: { slug, page }
+// }: {
+//   params: { slug: getAllPostsDataProps['category']; page: number }
+// }) {
+//   const { posts, hasMore } = getPostsByCategory(slug, page, 6)
+//   const categories = getAllCategories()
+//   const recentPosts = getRecentPosts()
 
-  return {
-    props: {
-      posts,
-      hasMore,
-      categories,
-      recentPosts
-    },
-    revalidate: 10
-  }
-}
+//   return {
+//     props: {
+//       posts,
+//       hasMore,
+//       categories,
+//       recentPosts
+//     },
+//     revalidate: 10
+//   }
+// }
