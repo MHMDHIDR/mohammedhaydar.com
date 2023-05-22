@@ -16,8 +16,9 @@ import { Layout } from '@/components/layout'
 import { SectionHeading } from '@/components/utils'
 // import { getPostsByPage } from '@/lib/blogging'
 import type { BlogPostProps } from '@/types'
+import PostPreview from '@/components/posts/PostPreview'
 
-const Home: NextPage<{ posts: BlogPostProps[] }> = ({ posts }) => {
+const Home: NextPage /*{< posts: BlogPostProps[] }>*/ = (/*{ posts }*/) => {
   return (
     <Layout blurred>
       {/* Start Hero Section */}

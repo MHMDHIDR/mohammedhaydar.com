@@ -6,7 +6,7 @@ import { Spinner } from '@/components/utils'
 import type { BlogPostProps } from '@/types'
 import type { Swiper as SwiperType } from 'swiper'
 
-const BlogSection = ({ posts }: { posts: BlogPostProps['post'][] }) => {
+const BlogSection = ({ posts }: { posts: BlogPostProps[] }) => {
   const [mounted, setMounted] = useState(false)
   const sliderRef = useRef<SwiperType | null>(null)
 
@@ -42,7 +42,7 @@ const BlogSection = ({ posts }: { posts: BlogPostProps['post'][] }) => {
           delay: 5000
         }}
         centerInsufficientSlides={true}
-        // onSwiper={swiper => (sliderRef.current = swiper)}
+        onSwiper={swiper => (sliderRef.current = swiper)}
         breakpoints={{
           320: {
             slidesPerView: 1
@@ -55,7 +55,7 @@ const BlogSection = ({ posts }: { posts: BlogPostProps['post'][] }) => {
           }
         }}
       >
-        {posts.map((post: BlogPostProps['post'], index: number) => (
+        {posts.map((post: BlogPostProps, index: number) => (
           <SwiperSlide key={index}>
             <div className='slider-item'>
               <Blog post={post} />

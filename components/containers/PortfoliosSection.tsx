@@ -30,14 +30,6 @@ const PortfoliosSection = () => {
     setAllProjectsLoaded(false) // Reset allProjectsLoaded when a new filter is selected
   }, [])
 
-  useEffect(() => {
-    if (projects && visibleProjects) {
-      const slicedProjects = projects.slice(0, pageNumber * PROJECTS_COUNT)
-      setVisibleProjects(slicedProjects)
-      setAllProjectsLoaded(slicedProjects.length === projects.length)
-    }
-  }, [projects, pageNumber])
-
   if (projects && projects.length === 0) return null
 
   return (
