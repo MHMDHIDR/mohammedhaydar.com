@@ -9,7 +9,7 @@ import {
   getCategoryPaths,
   getPostsByCategory,
   getRecentPosts
-} from '@/app/api/blogging'
+} from '@/lib/blogging'
 import { childrenAnimation } from '@/lib/motion'
 import { createSlug } from '@/lib'
 import { Layout } from '@/components/layout'

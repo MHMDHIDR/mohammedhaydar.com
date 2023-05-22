@@ -4,11 +4,7 @@ import { createSlug } from '@/lib'
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils'
 import type { BlogPostProps } from '@/types'
 
-const Blog = ({
-  post: { title, date, thumb, category, slug }
-}: {
-  post: BlogPostProps
-}) => {
+const Blog = ({ title, date, thumb, category, slug }: BlogPostProps) => {
   return (
     <article className='blog card p-4 md:p-5'>
       <div className='blog-top relative mb-4'>
@@ -29,6 +25,7 @@ const Blog = ({
             blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(400, 240))}`}
           />
         </Link>
+        *
         <div className='blog-date absolute left-auto right-5 top-5 inline-block min-h-[60px] min-w-[60px] rounded bg-primary p-2 text-center text-grey'>
           <span className='month block text-sm uppercase leading-none'>
             {new Date(date).toLocaleDateString('en-us', {
@@ -41,14 +38,14 @@ const Blog = ({
             })}
           </span>
           <span className='year block text-sm leading-none'>
-            {new Date(date).getFullYear(/*{ year: "numeric" }*/)}
+            {new Date(date).getFullYear()}
           </span>
         </div>
       </div>
       <h5 className='mb-0'>
         <Link
           href={`/postdetails/${slug}`}
-          className=' block overflow-hidden overflow-ellipsis whitespace-nowrap transition-colors duration-500 hover:text-primary'
+          className='block overflow-hidden overflow-ellipsis whitespace-nowrap transition-colors duration-500 hover:text-primary'
           title={title}
         >
           {title}
