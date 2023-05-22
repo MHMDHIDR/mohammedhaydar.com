@@ -4,7 +4,11 @@ import { createSlug } from '@/lib'
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils'
 import type { BlogPostProps } from '@/types'
 
-const Blog = ({ post: { title, date, thumb, category, slug } }: BlogPostProps) => {
+const Blog = ({
+  post: { title, date, thumb, category, slug }
+}: {
+  post: BlogPostProps
+}) => {
   return (
     <article className='blog card p-4 md:p-5'>
       <div className='blog-top relative mb-4'>

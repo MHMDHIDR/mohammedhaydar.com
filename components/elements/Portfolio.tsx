@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react'
 import FsLightbox from 'fslightbox-react'
 import Image from 'next/image'

@@ -8,7 +8,7 @@ const LIMIT = 6
 
 // Get all post
 const getAllPosts = () => {
-  return fs.readdirSync(path.join(process.cwd(), '/posts'))
+  return fs.readdirSync(path.join(process.cwd(), 'src/posts'))
 }
 
 // get all posts slug
@@ -24,7 +24,7 @@ const getAllPostsData = (): getAllPostsDataProps[] => {
     const slug = filename.replace(/\.(md|mdx)$/, '')
 
     const markdownWithMeta = fs.readFileSync(
-      path.join(process.cwd(), '/posts', filename),
+      path.join(process.cwd(), 'src/posts', filename),
       'utf-8'
     )
 
@@ -85,7 +85,10 @@ const getPostsPath = () => {
 
 // Get single post data
 const getSinglePost = (slug: string) => {
-  const post = fs.readFileSync(path.join(process.cwd(), '/posts', slug + '.md'), 'utf-8')
+  const post = fs.readFileSync(
+    path.join(process.cwd(), 'src/posts', slug + '.md'),
+    'utf-8'
+  )
   const { data: frontmatter, content } = matter(post)
   return {
     ...frontmatter,

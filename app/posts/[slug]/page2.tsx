@@ -1,25 +1,28 @@
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 import { Blog, Breadcrumb } from '@/components/elements'
+import { createSlug } from '@/lib'
 import {
   getAllCategories,
-  getCategoryPaths,
-  getPostsByCategory,
+  getPagesPath,
+  getPostsByPage,
   getRecentPosts
-} from '@/app/api/blogging'
+} from '@/lib/blogging'
 import { childrenAnimation } from '@/lib/motion'
-import { createSlug } from '@/lib'
 import { Layout } from '@/components/layout'
-import type { PostsPagesProps, getAllPostsDataProps } from '@/types'
+import { LoadingPage } from '@/components/layout/Loading'
+import type { PostsPagesProps } from '@/types'
 
-const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesProps) => {
+const Posts = ({ posts, hasMore, categories, recentPosts }: PostsPagesProps) => {
   const [mounted, setMounted] = useState(false)
   const [uniqueCategories, setUniqueCategories] = useState([''])
 
   const router = useRouter()
+  const { slug: page } = router.query
+  const pageNumber = Array.isArray(page) ? page[0] : page
 
   useEffect(() => {
     setMounted(true)
@@ -29,10 +32,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
     setUniqueCategories([...new Set(categories)])
   }, [categories])
 
-  const { page, slug } = router.query as { page: string; slug: string }
-  const pageNumber: string = Array.isArray(page) ? String(page[0]) : String(page)
-
-  if (!mounted) return <p className='text-center'>Loading...</p>
+  if (!mounted) return <LoadingPage />
   if (!posts) return null
 
   return (
@@ -41,7 +41,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
         <title>Blogs | Mohammed Haydar</title>
       </Head>
       <Breadcrumb
-        title={slug}
+        title='Blogs'
         paths={[
           {
             name: 'Home',
@@ -49,10 +49,6 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
           },
           {
             name: 'Blogs',
-            link: '/posts/1'
-          },
-          {
-            name: slug,
             link: ''
           }
         ]}
@@ -62,32 +58,33 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
           <div className='grid grid-cols-1 gap-7 lg:grid-cols-12'>
             <div className='col-span-1 lg:col-span-9'>
               <div className='grid grid-cols-2 gap-7'>
-                {posts?.map((post, index) => (
-                  <motion.div
-                    initial='hidden'
-                    whileInView='visible'
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 * index }}
-                    variants={childrenAnimation}
-                    className='col-span-2 md:col-span-1'
-                    key={index}
-                  >
-                    <Blog post={post} />
-                  </motion.div>
-                ))}
+                {posts &&
+                  posts?.map((post, index) => (
+                    <motion.div
+                      initial='hidden'
+                      whileInView='visible'
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2 * index }}
+                      variants={childrenAnimation}
+                      className='col-span-2 sm:col-span-1'
+                      key={index}
+                    >
+                      <Blog post={post} />
+                    </motion.div>
+                  ))}
               </div>
               <div className='flex gap-3 pt-10 text-center'>
-                {pageNumber !== '1' && (
+                {pageNumber && pageNumber !== '1' && (
                   <Link
-                    href={`/category/${slug}/${String(parseInt(pageNumber) - 1)}`}
+                    href={`/posts/${String(parseInt(pageNumber) - 1)}`}
                     className='btn btn-small'
                   >
                     <span>Prev</span>
                   </Link>
                 )}
-                {hasMore && (
+                {pageNumber && hasMore && (
                   <Link
-                    href={`/category/${slug}/${String(parseInt(pageNumber) + 1)}`}
+                    href={`/posts/${String(parseInt(pageNumber) + 1)}`}
                     className='btn btn-small'
                   >
                     <span>Next</span>
@@ -136,7 +133,7 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
                     Recent Posts
                   </h5>
                   <ul className='mb-0 list-none pl-0'>
-                    {recentPosts.map((post, index: number) => (
+                    {recentPosts.map((post, index) => (
                       <li key={index} className='mb-4 last:mb-0'>
                         <p className='mb-0'>
                           <Link
@@ -168,10 +165,10 @@ const CategoryPosts = ({ posts, hasMore, categories, recentPosts }: PostsPagesPr
   )
 }
 
-export default CategoryPosts
+export default Posts
 
 export function getStaticPaths() {
-  const paths = getCategoryPaths()
+  const paths = getPagesPath()
 
   return {
     paths,
@@ -179,12 +176,8 @@ export function getStaticPaths() {
   }
 }
 
-export function getStaticProps({
-  params: { slug, page }
-}: {
-  params: { slug: getAllPostsDataProps['category']; page: number }
-}) {
-  const { posts, hasMore } = getPostsByCategory(slug, page, 6)
+export function getStaticProps({ params: { slug } }: { params: { slug: string } }) {
+  const { posts, hasMore } = getPostsByPage(parseInt(slug))
   const categories = getAllCategories()
   const recentPosts = getRecentPosts()
 
