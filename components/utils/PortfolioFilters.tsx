@@ -42,7 +42,7 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
     if (activeTab === null) {
       setActiveTab(currentFilter)
     }
-  }, [currentFilter])
+  }, [currentFilter, activeTab])
 
   if (!tabs) return null
 

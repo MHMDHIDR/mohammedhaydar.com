@@ -32,6 +32,15 @@ export default {
         display: ["'Radio Canada', sans-serif"],
         segoe: ["'Segoe UI', sans-serif"]
       },
+      screens: {
+        xxs: '380px',
+        xs: '480px',
+        '3xl': '1792px',
+        '4xl': '2048px',
+        '5xl': '2304px',
+        '6xl': '2560px',
+        standalone: { raw: '(display-mode: standalone)' }
+      },
       fontSize: {
         sm: ['14px', '1.8'],
         base: ['16px', '1.6'],

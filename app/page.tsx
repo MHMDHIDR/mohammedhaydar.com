@@ -17,7 +17,7 @@ import { SectionHeading } from '@/components/utils'
 // import { getPostsByPage } from '@/lib/blogging'
 import type { BlogPostProps } from '@/types'
 
-const Home: NextPage<{ posts: BlogPostProps['post'][] }> = ({ posts }) => {
+const Home: NextPage<{ posts: BlogPostProps[] }> = ({ posts }) => {
   return (
     <Layout blurred>
       {/* Start Hero Section */}
@@ -108,13 +108,5 @@ const Home: NextPage<{ posts: BlogPostProps['post'][] }> = ({ posts }) => {
     </Layout>
   )
 }
-
-// export function getStaticProps() {
-//   const { posts } = getPostsByPage()
-//   return {
-//     props: { posts },
-//     revalidate: 10
-//   }
-// }
 
 export default Home

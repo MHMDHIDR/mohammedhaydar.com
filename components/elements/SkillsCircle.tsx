@@ -9,7 +9,7 @@ const SkillsCircle = ({ skill: { title, skills } }: { skill: skillsProps }) => {
         {skills?.map(({ label, image, _key }) => (
           <div
             key={_key}
-            className='flex justify-center items-center rounded-xl card skillbg hovercard relative p-4 md:p-5'
+            className='flex justify-center items-center rounded-xl card skillbg hovercard relative p-4 md:p-5 aspect-square'
           >
             <Image
               unoptimized={true}
