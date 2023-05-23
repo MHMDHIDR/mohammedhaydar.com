@@ -46,31 +46,24 @@ export type CommentsProps = {
   slug: string
 }
 
-export type BlogPostProps = {
+export type BlogProps = {
   title: string
+  slug: string
   date: string
   category: string[]
   cover?: string
   thumb: string
-  slug: string
-}
-
-export type PostsPagesProps = {
-  posts: BlogPostProps[]
-  hasMore: boolean
-  categories: string[]
-  recentPosts: BlogPostProps[]
-}
-
-export type PostDetailsPageProps = {
-  title: string
-  date: string
-  cover: string
-  category: string[]
   content: string
 }
 
-export type getAllPostsDataProps = {
+export type BlogsPagesProps = {
+  blogs: BlogProps[]
+  hasMore: boolean
+  categories: string[]
+  recentBlogs: BlogProps[]
+}
+
+export type getAllBlogsDataProps = {
   slug: string
   category: string[]
 }

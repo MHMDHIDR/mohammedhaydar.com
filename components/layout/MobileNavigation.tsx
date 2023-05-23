@@ -15,7 +15,7 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
   const { data: session } = useSession()
 
   const pathname = usePathname()
-  const checkroute = pathname !== '/' && pathname !== '/posts/1'
+  const checkroute = pathname !== '/' && pathname !== '/blogs/1'
 
   const handleClick = () => {
     changeState(false)
@@ -137,7 +137,7 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
           </li>
           <li className='block'>
             <Link
-              href='/posts/1'
+              href='/blogs/1'
               className='relative inline-block py-2 text-lg tracking-wider uppercase cursor-pointer group text-heading before:text-primary'
               onClick={() => handleClick()}
             >

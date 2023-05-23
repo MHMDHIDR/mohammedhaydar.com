@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 import { Element as Section } from 'react-scroll'
 import {
   AboutSection,
-  BlogSection,
   ContactSection,
   HeroSection,
   PortfoliosSection,
@@ -14,11 +13,8 @@ import {
 } from '@/components/containers'
 import { Layout } from '@/components/layout'
 import { SectionHeading } from '@/components/utils'
-// import { getPostsByPage } from '@/lib/blogging'
-import type { BlogPostProps } from '@/types'
-import PostPreview from '@/components/posts/PostPreview'
 
-const Home: NextPage /*{< posts: BlogPostProps[] }>*/ = (/*{ posts }*/) => {
+const Home: NextPage = () => {
   return (
     <Layout blurred>
       {/* Start Hero Section */}
@@ -86,15 +82,6 @@ const Home: NextPage /*{< posts: BlogPostProps[] }>*/ = (/*{ posts }*/) => {
         </div>
       </Section>
       {/* End Reviews Section */}
-
-      {/* Start Blog Section */}
-      <Section name='section-blog' className='pt-24 news-section lg:pt-28 xl:pt-32'>
-        <div className='container mx-auto'>
-          <SectionHeading animated={false} title='Latest Blogs' watermark='Blogs' />
-          {/* <BlogSection posts={posts} /> */}
-        </div>
-      </Section>
-      {/* End Blog Section */}
 
       {/* Start Contact Section */}
       <Section name='section-contact' className='pt-24 contact-section lg:pt-28 xl:pt-32'>

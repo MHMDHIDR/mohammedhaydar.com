@@ -6,7 +6,8 @@ import type {
   servicesProps,
   Project,
   ProjectFiltersProps,
-  WorkEducationProps
+  WorkEducationProps,
+  BlogProps
 } from '@/types'
 
 export async function getInformation(): Promise<informationProps> {
@@ -78,6 +79,20 @@ export async function getFilters(): Promise<ProjectFiltersProps[]> {
       _id,
       title,
       value
+    }`
+  )
+}
+
+export async function getAllBlogs(): Promise<BlogProps[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "blogs"]{
+        title,
+        slug,
+        date,
+        category,
+        cover,
+        thumb,
+        content
     }`
   )
 }

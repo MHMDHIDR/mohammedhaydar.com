@@ -61,16 +61,6 @@ const MobileFullmenu = ({ fullMenuHandler }: FullMenuProps) => {
             </li>
             <li className='block'>
               <Link
-                href='/posts/1'
-                className='group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary'
-                onClick={() => fullMenuHandler(false)}
-              >
-                Blogs
-                <span className='absolute bottom-5 left-0 top-auto inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100'></span>
-              </Link>
-            </li>
-            <li className='block'>
-              <Link
                 href='/contact'
                 className='group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary'
                 onClick={() => fullMenuHandler(false)}

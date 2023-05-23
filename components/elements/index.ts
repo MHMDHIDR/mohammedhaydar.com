@@ -1,4 +1,3 @@
-import Blog from './Blog'
 import Portfolio from './Portfolio'
 import ProgressBar from './ProgressBar'
 import SkillsCircle from './SkillsCircle'
@@ -15,7 +14,6 @@ export {
   TimelineItem,
   Portfolio,
   Review,
-  Blog,
   SocialIcons,
   Breadcrumb
 }

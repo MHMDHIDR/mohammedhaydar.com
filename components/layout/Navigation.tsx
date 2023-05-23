@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 
 const Navigation = () => {
   const pathname = usePathname()
-  const checkroute = pathname !== '/' && pathname !== '/posts/1'
+  const checkroute = pathname !== '/' && pathname !== '/blogs/1'
 
   return (
     <nav className='flex-grow px-5 text-center'>
@@ -105,15 +105,6 @@ const Navigation = () => {
               <span className='absolute left-0 top-auto inline-block w-full h-px align-middle transition-transform duration-500 origin-top-right scale-0 bottom-5 bg-primary group-hover:origin-top-left group-hover:scale-100'></span>
             </ScrollLink>
           )}
-        </li>
-        <li className='inline-block align-middle'>
-          <Link
-            href='/posts/1'
-            className='relative inline-block py-6 text-sm font-medium tracking-wider uppercase cursor-pointer group text-heading before:text-primary'
-          >
-            Blog
-            <span className='absolute left-0 top-auto inline-block w-full h-px align-middle transition-transform duration-500 origin-top-right scale-0 bottom-5 bg-primary group-hover:origin-top-left group-hover:scale-100'></span>
-          </Link>
         </li>
         <li className='inline-block align-middle'>
           {checkroute ? (

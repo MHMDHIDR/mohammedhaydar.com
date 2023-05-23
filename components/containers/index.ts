@@ -1,6 +1,5 @@
 'use client'
 import AboutSection from './AboutSection'
-import BlogSection from './BlogSection'
 import ContactSection from './ContactSection'
 import HeroSection from './HeroSection'
 import PortfoliosSection from './PortfoliosSection'
@@ -17,6 +16,5 @@ export {
   ResumeSection,
   PortfoliosSection,
   ReviewsSection,
-  BlogSection,
   ContactSection
 }

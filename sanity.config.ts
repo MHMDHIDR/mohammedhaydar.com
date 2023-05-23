@@ -6,7 +6,7 @@ const config = defineConfig({
   projectId: 'nnrx9w3l',
   dataset: 'production',
   title: 'Mohammed Haydar',
-  apiVersion: '2023-05-21',
+  apiVersion: '2023-05-23',
   basePath: '/dashboard',
   plugins: [deskTool()],
   schema: { types: schemas }

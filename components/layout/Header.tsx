@@ -26,7 +26,7 @@ const Header = () => {
 
   const pathname = usePathname()
 
-  const checkroute = pathname !== '/' && pathname !== '/posts/1'
+  const checkroute = pathname !== '/' && pathname !== '/blogs/1'
 
   useEventListener('scroll', isSticky)
 

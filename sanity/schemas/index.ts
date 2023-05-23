@@ -1,17 +1,21 @@
-import educationbackground from './educationbackground'
-import information from './information'
-import jobExperience from './jobexperience'
 import project from './project'
-import projectFilters from './project-filters'
-import services from './services'
+import projectFilters from './projectfilters'
+import information from './information'
 import skills from './skills'
+import educationbackground from './educationbackground'
+import jobExperience from './jobexperience'
+import services from './services'
+import blogs from './blogs'
+import blogsCategories from './blogsCategories'
 const schemas = [
   project,
+  projectFilters,
   information,
-  educationbackground,
   skills,
-  services,
+  educationbackground,
   jobExperience,
-  projectFilters
+  services,
+  blogs,
+  blogsCategories
 ]
 export default schemas
