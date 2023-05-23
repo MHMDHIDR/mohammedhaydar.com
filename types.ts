@@ -41,17 +41,13 @@ export type SectionHeadingProps = {
   animated: boolean
 }
 
-export type CommentsProps = {
-  title: string
-  slug: string
-}
-
 export type BlogProps = {
+  _id: string
+  _createdAt: string
   title: string
   slug: string
-  date: string
   category: string[]
-  cover?: string
+  cover: string
   thumb: string
   content: string
 }

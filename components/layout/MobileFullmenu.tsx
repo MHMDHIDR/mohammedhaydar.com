@@ -16,12 +16,12 @@ const MobileFullmenu = ({ fullMenuHandler }: FullMenuProps) => {
         <RiCloseLine className='inline' />
       </button>
       <div className='sidenavmobile flex h-full flex-col justify-between p-7 text-center'>
-        <Logo url='/homepage1' />
+        <Logo url='/' />
         <nav className='sidenav-mobilmenu relative max-h-full w-full overflow-y-auto'>
           <ul className='mb-0 list-none pl-0'>
             <li className='block'>
               <Link
-                href='/homepage1'
+                href='/'
                 className='group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary'
                 onClick={() => fullMenuHandler(false)}
               >
@@ -56,6 +56,16 @@ const MobileFullmenu = ({ fullMenuHandler }: FullMenuProps) => {
                 onClick={() => fullMenuHandler(false)}
               >
                 Works
+                <span className='absolute bottom-5 left-0 top-auto inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100'></span>
+              </Link>
+            </li>
+            <li className='block'>
+              <Link
+                href='/blogs'
+                className='group relative inline-block cursor-pointer overflow-hidden py-2 text-lg uppercase tracking-wider text-heading before:text-primary'
+                onClick={() => fullMenuHandler(false)}
+              >
+                Blogs
                 <span className='absolute bottom-5 left-0 top-auto inline-block h-px w-full origin-top-right scale-0 bg-primary align-middle transition-transform duration-500 group-hover:origin-top-left group-hover:scale-100'></span>
               </Link>
             </li>

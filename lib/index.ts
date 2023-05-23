@@ -20,4 +20,14 @@ const createSlug = (txt: string) =>
 /* A function to remove all dashes */
 const removeSlug = (txt: string) => txt?.replace(/-/g, ' ')
 
-export { sortPostByDate, filterPostsByPage, createSlug, removeSlug }
+/**
+ *
+ * @param text a function that returns text string to capitalize,
+ *  (e.g: hey How arE YoU ThiS is TeXt => Hey How Are You This Is Text)
+ * @returns string
+ */
+const capitalizeText = (text: string) => {
+  return text.toLowerCase().replace(/(^|\s)\S/g, match => match.toUpperCase())
+}
+
+export { sortPostByDate, filterPostsByPage, createSlug, removeSlug, capitalizeText }

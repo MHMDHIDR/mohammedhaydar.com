@@ -5,7 +5,7 @@ import { SectionHeading } from '@/components/utils'
 
 const resume = () => {
   return (
-    <Layout2>
+    <Layout2 whiteTiles>
       <Head>
         <title>Resume | Mohammed Haydar</title>
       </Head>

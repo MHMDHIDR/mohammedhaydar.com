@@ -14,10 +14,12 @@ import { ToastContainer } from 'react-toastify'
 
 const Layout2 = ({
   children,
-  blurred
+  blurred,
+  whiteTiles
 }: {
   children: React.ReactNode
   blurred?: boolean
+  whiteTiles?: boolean
 }): JSX.Element => {
   const [fullMenu, setFullMenu] = useState(false)
   const [fullMobileMenu, setFullMobileMenu] = useState(false)
@@ -34,9 +36,9 @@ const Layout2 = ({
         <ParallaxProvider>
           <AppProvider>
             <div
-              className={`wrapper relative min-h-screen w-full bg-grey ${
-                blurred ? 'blurredBg' : ''
-              }`}
+              className={`wrapper relative min-h-screen w-full bg-grey${
+                blurred ? ' blurredBg' : ''
+              }${whiteTiles ? ' whiteTiles' : ''}`}
             >
               <button
                 className='mobilemenu-trigger fixed left-0 top-[50vh] z-[60] block h-10 min-h-0 w-8 rounded-bl-none rounded-tl-none border-0 bg-primary bg-opacity-20 p-0 text-3xl text-primary lg:hidden'

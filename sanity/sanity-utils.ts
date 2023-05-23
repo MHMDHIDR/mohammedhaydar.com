@@ -84,17 +84,52 @@ export async function getFilters(): Promise<ProjectFiltersProps[]> {
 }
 
 export async function getAllBlogs(): Promise<BlogProps[]> {
-  return createClient(clientConfig).fetch(
+  const blogs: BlogProps[] = await createClient(clientConfig).fetch(
     groq`*[_type == "blogs"]{
+        _id,
+        _createdAt,
         title,
-        slug,
-        date,
-        category,
+        'slug': slug.current,
+        'category': category[]->title,
         cover,
         thumb,
         content
     }`
   )
+
+  return blogs.map(blog => ({
+    ...blog,
+    slug: blog.slug || '',
+    category: blog.category || []
+  }))
+}
+
+export async function getBlogBySlug(slug: string): Promise<BlogProps | null> {
+  const blog = await createClient(clientConfig).fetch(
+    groq`*[_type == "blogs" && slug.current == $slug]{
+        _id,
+        _createdAt,
+        title,
+        'slug': slug.current,
+        'category': category[]->title,
+        cover,
+        thumb,
+        content
+    }`,
+    { slug }
+  )
+
+  if (blog.length === 0) {
+    return null // No blog post found with the given slug
+  }
+
+  const singleBlog = blog[0]
+
+  return {
+    ...singleBlog,
+    slug: singleBlog.slug || '',
+    category: singleBlog.category || []
+  }
 }
 
 export async function getEducationBackground(): Promise<WorkEducationProps[]> {

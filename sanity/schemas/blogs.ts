@@ -1,3 +1,5 @@
+import { createSlug } from '@/lib'
+
 const blogs = {
   name: 'blogs',
   title: 'Blogs',
@@ -9,9 +11,14 @@ const blogs = {
       type: 'string'
     },
     {
-      name: 'date',
-      title: 'Date',
-      type: 'datetime'
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 200, // Adjust the maximum length as needed
+        slugify: (input: string) => createSlug(input)
+      }
     },
     {
       name: 'category',
