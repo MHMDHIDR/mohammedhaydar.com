@@ -7487,7 +7487,6 @@ __metadata:
     styled-components: 5.2.0
     swiper: ^9.3.1
     tailwindcss: ^3.3.2
-    tailwindcss-nested-groups: ^1.2.4
     typescript: ^5.0.4
     usehooks-ts: ^2.9.1
   languageName: unknown
@@ -8633,7 +8632,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-selector-parser@npm:^6.0.11, postcss-selector-parser@npm:^6.0.4":
+"postcss-selector-parser@npm:^6.0.11":
   version: 6.0.13
   resolution: "postcss-selector-parser@npm:6.0.13"
   dependencies:
@@ -10365,17 +10364,6 @@ __metadata:
     "@pkgr/utils": ^2.3.1
     tslib: ^2.5.0
   checksum: 8a9560e5d8f3d94dc3cf5f7b9c83490ffa30d320093560a37b88f59483040771fd1750e76b9939abfbb1b5a23fd6dfbae77f6b338abffe7cae7329cd9b9bb86b
-  languageName: node
-  linkType: hard
-
-"tailwindcss-nested-groups@npm:^1.2.4":
-  version: 1.2.4
-  resolution: "tailwindcss-nested-groups@npm:1.2.4"
-  dependencies:
-    postcss-selector-parser: ^6.0.4
-  peerDependencies:
-    tailwindcss: ">=1 <=2"
-  checksum: 3ea5c36e6cbc8cc5b7f35d662ffbea0047b5bd55207be72e567faad3220c806a174b821e2cee61bae0ff20bf99082434bf9ae22c4bbd873ac1623f22f2d786c2
   languageName: node
   linkType: hard
 
