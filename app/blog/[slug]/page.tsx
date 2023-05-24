@@ -49,13 +49,11 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
               Category :{' '}
               <div className='inline-flex list-none gap-1.5'>
                 {category.map((cat, i) => (
-                  <span key={i} className="after:content-[','] last:after:hidden">
-                    <Link
-                      href={`/category/${createSlug(cat)}/1`}
-                      className='text-body hover:text-primary'
-                    >
-                      {cat}
-                    </Link>
+                  <span
+                    key={i}
+                    className="text-body underline-hover after:content-[','] last:after:hidden"
+                  >
+                    {cat}
                   </span>
                 ))}
               </div>

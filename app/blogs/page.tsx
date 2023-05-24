@@ -52,7 +52,7 @@ const Blogs = async () => {
               {title}
             </Link>
           </h5>
-          <menu className='flex flex-wrap overflow-x-scroll gap-1.5 text-xs'>
+          <menu className='flex flex-wrap overflow-x-hidden gap-1.5 text-xs'>
             {category.map((cat: string, i: number) => (
               <li
                 key={i}
