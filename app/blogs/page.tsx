@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { BlogProps } from '@/types'
 import { RiArticleLine } from 'react-icons/ri'
+import { shimmer, toBase64 } from '@/lib/utils'
 
 export const metadata: Metadata = {
   title: 'Blogs | Mohammed Haydar'
@@ -16,10 +17,10 @@ const Blogs = async () => {
     return (
       <div key={_id} className='col-span-2 sm:col-span-1'>
         <article className='blog card p-2 md:p-3'>
-          <header className='flex items-center justify-between blog-top relative mb-2'>
+          <header className='flex items-center justify-center blog-top relative mb-2'>
             <Link
               href={`blog/${slug}`}
-              className='fiximage hover-scale block'
+              className='fiximage hover-scale block w-full'
               rel='noopener noreferrer'
               title={title}
             >
@@ -28,7 +29,9 @@ const Blogs = async () => {
                 width={400}
                 height={270}
                 alt={`Image of ${title} Blog`}
-                className='object-cover h-auto w-auto rounded-lg'
+                className='object-cover w-full h-full sm:h-full sm:w-full rounded-lg'
+                placeholder='blur'
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(400, 240))}`}
               />
             </Link>
             <div className='blog-date absolute left-auto right-3 top-3 inline-block min-h-[60px] min-w-[60px] rounded bg-primary p-2 text-center text-grey'>

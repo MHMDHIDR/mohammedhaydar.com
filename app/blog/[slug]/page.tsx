@@ -6,6 +6,7 @@ import type { BlogProps } from '@/types'
 import { capitalizeText, createSlug, removeSlug } from '@/lib'
 import { RiArticleLine } from 'react-icons/ri'
 import { marked } from 'marked'
+import { shimmer, toBase64 } from '@/lib/utils'
 
 export async function generateMetadata({
   params: { slug }
@@ -42,6 +43,8 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
               width={1350}
               alt={title}
               className='w-full h-auto object-cover'
+              placeholder='blur'
+              blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(1350, 650))}`}
             />
           </div>
           <div className='flex flex-wrap justify-between gap-x-4'>
