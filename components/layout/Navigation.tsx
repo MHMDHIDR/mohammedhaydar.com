@@ -108,7 +108,7 @@ const Navigation = () => {
         </li>
         <li className='inline-block align-middle'>
           <Link
-            href='/blogs'
+            href='/blogs/1'
             className='group relative inline-block cursor-pointer py-6 text-sm font-medium uppercase tracking-wider text-heading before:text-primary'
           >
             Blog

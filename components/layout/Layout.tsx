@@ -1,24 +1,17 @@
 'use client'
 import { useRef, useState } from 'react'
-import Router from 'next/router'
 import { motion } from 'framer-motion'
 import Scroll from 'react-scroll'
 import Footer from './Footer'
 import Header from './Header'
 import { RiArrowUpSLine } from 'react-icons/ri'
 import useEventListener from '@/hooks/useEventListener'
-import NProgress from 'nprogress'
 import { SessionProvider } from 'next-auth/react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { AppProvider } from '@/context/appContext'
 import { ToastContainer } from 'react-toastify'
-
-NProgress.configure({ showSpinner: true })
-Router.events.on('routeChangeStart', () => NProgress.start())
-Router.events.on('routeChangeComplete', () => NProgress.done())
-Router.events.on('routeChangeError', () => NProgress.done())
 
 const Layout = ({
   children,

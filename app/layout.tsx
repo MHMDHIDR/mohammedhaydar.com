@@ -1,6 +1,5 @@
 import { Radio_Canada } from 'next/font/google'
 import 'normalize.css'
-import 'nprogress/nprogress.css'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'react-toastify/dist/ReactToastify.css'

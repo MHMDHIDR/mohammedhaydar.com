@@ -1,12 +1,12 @@
 import { getBlogBySlug } from '@/sanity/sanity-utils'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Metadata } from 'next'
 import type { BlogProps } from '@/types'
-import { capitalizeText, createSlug, removeSlug } from '@/lib'
+import { capitalizeText, removeSlug } from '@/lib'
 import { RiArticleLine } from 'react-icons/ri'
 import { marked } from 'marked'
 import { shimmer, toBase64 } from '@/lib/utils'
+import { calculateReadTime } from '@/lib/readTime'
 
 export async function generateMetadata({
   params: { slug }
@@ -61,6 +61,12 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
                 ))}
               </div>
             </div>
+            <p className='mb-0 text-heading flex justify-center items-center gap-2'>
+              <RiArticleLine />
+              <span className='text-body leading-3'>
+                {calculateReadTime(content)} min read
+              </span>
+            </p>
             <p className='mb-0 text-heading'>
               Published on :
               <span className='ml-1.5 text-body'>

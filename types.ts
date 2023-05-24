@@ -194,3 +194,13 @@ export type ProjectFiltersProps = {
   title: string
   value: string
 }
+
+export type NoItemsProps = {
+  icon?: JSX.Element
+  msg?: string
+  links?: {
+    to: string
+    label: string
+  }[]
+  className?: string
+}

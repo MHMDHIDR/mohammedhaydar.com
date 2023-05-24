@@ -6,7 +6,7 @@ import { Portfolio } from '@/components/elements'
 import { PortfolioFilters } from '@/components/utils'
 import type { Project, ProjectFiltersProps } from '@/types'
 import { getProjects } from '@/sanity/sanity-utils'
-import { PROJECTS_COUNT } from '@/constants'
+import { ITEMS_PER_RENDER } from '@/constants'
 
 const PortfoliosSection = () => {
   const [visibleProjects, setVisibleProjects] = useState<Project[] | null>(null)
@@ -18,7 +18,7 @@ const PortfoliosSection = () => {
 
   useEffect(() => {
     if (projects) {
-      const slicedProjects = projects.slice(0, pageNumber * PROJECTS_COUNT)
+      const slicedProjects = projects.slice(0, pageNumber * ITEMS_PER_RENDER)
       setVisibleProjects(slicedProjects)
       setAllProjectsLoaded(slicedProjects.length === projects.length)
     }

@@ -9,6 +9,7 @@ import type {
   WorkEducationProps,
   BlogProps
 } from '@/types'
+import { ITEMS_PER_RENDER } from '@/constants'
 
 export async function getInformation(): Promise<informationProps> {
   return createClient(clientConfig).fetch(
@@ -83,7 +84,12 @@ export async function getFilters(): Promise<ProjectFiltersProps[]> {
   )
 }
 
-export async function getAllBlogs(): Promise<BlogProps[]> {
+export async function getAllBlogs(
+  pageNumber: number
+): Promise<{ blogs: BlogProps[]; total: number }> {
+  const limit = ITEMS_PER_RENDER * 3 // Number of blogs per page
+  const offset = (pageNumber - 1) * limit
+
   const blogs: BlogProps[] = await createClient(clientConfig).fetch(
     groq`*[_type == "blogs"]{
         _id,
@@ -94,14 +100,21 @@ export async function getAllBlogs(): Promise<BlogProps[]> {
         cover,
         thumb,
         content
-    }`
+    }[${offset}...${offset + limit}]` // Fetch blogs for the current page
   )
 
-  return blogs.map(blog => ({
-    ...blog,
-    slug: blog.slug || '',
-    category: blog.category || []
-  }))
+  const total: number = await createClient(clientConfig).fetch(
+    groq`count(*[_type == "blogs"])` // Fetch the total count of blogs
+  )
+
+  return {
+    blogs: blogs.map(blog => ({
+      ...blog,
+      slug: blog.slug || '',
+      category: blog.category || []
+    })),
+    total
+  }
 }
 
 export async function getBlogBySlug(slug: string): Promise<BlogProps | null> {

@@ -1,1 +1,1 @@
-export const PROJECTS_COUNT = 5
+export const ITEMS_PER_RENDER = 5

@@ -44,11 +44,7 @@ export default function BlogsLayout({ children }: { children: React.ReactNode })
       <div className='blogs py-24 lg:py-28 xl:py-32'>
         <div className='container mx-auto'>
           <div className='grid grid-cols-1 gap-7 lg:grid-cols-12'>
-            <div className='col-span-1 lg:col-span-12'>
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7'>
-                {children}
-              </div>
-            </div>
+            <div className='col-span-1 lg:col-span-12'>{children}</div>
           </div>
         </div>
       </div>
