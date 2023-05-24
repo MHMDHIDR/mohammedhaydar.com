@@ -16,14 +16,15 @@ const Footer = () => {
           <div className='w-full md:w-auto'>
             <SocialIcons data={data.socialAddress} />
           </div>
-          <p className='w-full mb-0 md:w-auto'>
-            &copy; {new Date().getFullYear()}, All right reserved
+          <p className='w-full mb-0 md:w-auto text-gray-500'>
+            &copy; {new Date().getFullYear()}
             <Link
               href='/'
-              className='pl-1.5 font-medium text-heading no-underline hover:text-primary'
+              className='px-2 inline-block font-medium text-heading no-underline hover:text-primary'
             >
-              Mohammed Haydar
+              Mohammed Haydar.
             </Link>
+            All right reserved
           </p>
         </div>
       </div>
