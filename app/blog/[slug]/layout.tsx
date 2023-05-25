@@ -14,7 +14,7 @@ export default function BlogsLayout({
     title: removeSlug(slug),
     paths: [
       { name: 'Home', link: '/' },
-      { name: 'Blogs', link: '/blogs' },
+      { name: 'Blogs', link: '/blogs/1' },
       { name: removeSlug(slug), link: '' }
     ]
   }
