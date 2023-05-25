@@ -15,8 +15,8 @@
 🌱 &nbsp;I'm on track for learning more about Artificial Intelligence, Homomorphic Encryption, and Computer Vision.\
 ✍️ &nbsp;In my free time, I play guitar, football and pursue writing as my hobbies.\
 💬 &nbsp;Feel free to reach out to me for general consulting, or discussions on the aforementioned topics!\
-✉️ &nbsp;You can email me at mr.hamood277@gmail.com. I'll try to respond as soon as possible!\
-📄 &nbsp;You can check my [Resume](https://drive.google.com/file/d/1g1yf-tS38HYfUHEwn_IwdtD0xdW8CNW4/view?usp=sharing) for more details about work experience.
+✉️ &nbsp;You can email me at info@mohammedhaydar.com. I'll try to respond as soon as possible!\
+📄 &nbsp;You can check my [Resume](https://drive.google.com/file/d/1Z_tnRp6xDhmISvM9thfuR1Ufe2MKkZaG/view?usp=sharing) for more details about work experience.
 
 ### 🛠 &nbsp;Tech Stack
 
@@ -32,7 +32,7 @@
 ### 📫 &nbsp; How to reach me:
 
 <a href="https://www.linkedin.com/in/mohammedhaydar"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> &nbsp;
-<a href="mailto:mr.hamood277@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" /></a> &nbsp;
+<a href="mailto:info@mohammedhaydar.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" /></a> &nbsp;
 <a href="https://instagram.com/mo.hidr"><img src="https://img.shields.io/badge/-@mo.hidr_-E4405F?style=flat&logo=Instagram&logoColor=white"/></a> &nbsp;
 
 <!--
