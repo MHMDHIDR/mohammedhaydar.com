@@ -19,8 +19,6 @@ const Blogs = async ({ params }: { params: { page: string } }) => {
   const totalPages = Math.ceil(total / (ITEMS_PER_RENDER * 3))
   const hasMore = pageNumber < totalPages
 
-  console.log('Blogs Length is ==>..=>:', blogs.length)
-
   return !blogs || blogs.length === 0 ? (
     <NoItems
       icon={<RiGhostLine className='md:w-52 md:h-52' />}

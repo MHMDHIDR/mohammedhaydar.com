@@ -1,6 +1,7 @@
 import Layout from '@/components/layout/Layout'
 import Link from 'next/link'
 import type { BreadcrumbProps } from '@/types'
+import { capitalizeText } from '@/lib'
 
 export default function BlogsLayout({ children }: { children: React.ReactNode }) {
   const props: BreadcrumbProps = {
@@ -18,7 +19,7 @@ export default function BlogsLayout({ children }: { children: React.ReactNode })
         <div className={`relative z-20 bg-grey-darken pt-[73px] bg-opacity-90`}>
           <div className='container mx-auto'>
             <div className='breadcrumb py-16 text-center lg:py-20'>
-              <h2 className='capitalize text-primary'>{props.title}</h2>
+              <h2 className='text-primary'>{capitalizeText(props.title)}</h2>
               {Array.isArray(props.paths) && props.paths.length && (
                 <ul className='mb-0 inline-flex list-none flex-wrap justify-center gap-x-2 pl-0'>
                   {props.paths.map(path => (

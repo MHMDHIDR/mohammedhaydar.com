@@ -1,3 +1,4 @@
+import { capitalizeText } from '@/lib'
 import type { BreadcrumbProps } from '@/types'
 import Link from 'next/link'
 
@@ -14,7 +15,7 @@ const Breadcrumb = ({ title, paths, blurred }: BreadcrumbProps) => {
       >
         <div className='container mx-auto'>
           <div className='breadcrumb py-16 text-center lg:py-20'>
-            <h2 className='capitalize text-primary'>{title}</h2>
+            <h2 className='text-primary'>{capitalizeText(title)}</h2>
             {Array.isArray(paths) && paths.length && (
               <ul className='mb-0 inline-flex list-none flex-wrap justify-center gap-x-2 pl-0'>
                 {paths.map(path => (

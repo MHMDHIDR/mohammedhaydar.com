@@ -348,6 +348,27 @@
     position: absolute;
     z-index: 10000;
   }
+
+  .code-block {
+    position: relative;
+  }
+
+  .copy-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .copy-button:hover {
+    background-color: #ccc;
+  }
 }
 
 // Custom components

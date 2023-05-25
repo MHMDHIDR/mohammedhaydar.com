@@ -27,7 +27,13 @@ const removeSlug = (txt: string) => txt?.replace(/-/g, ' ')
  * @returns string
  */
 const capitalizeText = (text: string) => {
-  return text.toLowerCase().replace(/(^|\s)\S/g, match => match.toUpperCase())
+  return text.replace(/\b\w+\b/g, word => {
+    if (word === word.toUpperCase()) {
+      return word
+    } else {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    }
+  })
 }
 
 export { sortPostByDate, filterPostsByPage, createSlug, removeSlug, capitalizeText }
