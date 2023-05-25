@@ -354,9 +354,9 @@
   }
 
   .copy-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+    position: sticky;
+    bottom: 90%;
+    left: 100%;
     background-color: #f2f2f2;
     color: #333;
     border: none;
@@ -368,6 +368,17 @@
 
   .copy-button:hover {
     background-color: #ccc;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .copy-button {
+      left: 90%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .copy-button {
+      left: 88%;
+    }
   }
 }
 
