@@ -1,4 +1,4 @@
-const information = {
+export default {
   name: 'information',
   title: 'Information',
   type: 'document',
@@ -105,5 +105,3 @@ const information = {
     }
   ]
 }
-
-export default information

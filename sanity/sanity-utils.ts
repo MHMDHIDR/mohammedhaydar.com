@@ -1,5 +1,5 @@
 import { createClient, groq } from 'next-sanity'
-import clientConfig from './config/client-config'
+import clientConfig from '@/sanity/config/client-config'
 import type {
   informationProps,
   skillsProps,
@@ -120,14 +120,22 @@ export async function getAllBlogs(
 export async function getBlogBySlug(slug: string): Promise<BlogProps | null> {
   const blog = await createClient(clientConfig).fetch(
     groq`*[_type == "blogs" && slug.current == $slug]{
+      _id,
+      _createdAt,
+      title,
+      'slug': slug.current,
+      'category': category[]->title,
+      cover,
+      thumb,
+      content,
+      'comments': *[_type == "comment" && references(^._id)]{
         _id,
+        name,
+        email,
+        comment,
         _createdAt,
-        title,
-        'slug': slug.current,
-        'category': category[]->title,
-        cover,
-        thumb,
-        content
+        approved
+      }
     }`,
     { slug }
   )

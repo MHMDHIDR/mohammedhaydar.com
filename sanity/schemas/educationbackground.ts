@@ -1,4 +1,4 @@
-const educationbackground = {
+export default {
   name: 'educationbackground',
   title: 'Education Background',
   type: 'document',
@@ -30,5 +30,3 @@ const educationbackground = {
     }
   ]
 }
-
-export default educationbackground

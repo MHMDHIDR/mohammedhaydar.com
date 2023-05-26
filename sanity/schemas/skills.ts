@@ -1,4 +1,4 @@
-const skills = {
+export default {
   name: 'skills',
   title: 'Skills',
   type: 'document',
@@ -42,5 +42,3 @@ const skills = {
     }
   ]
 }
-
-export default skills

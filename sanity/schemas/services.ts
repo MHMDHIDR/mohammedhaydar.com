@@ -1,4 +1,4 @@
-const services = {
+export default {
   name: 'services',
   title: 'Services',
   type: 'document',
@@ -25,5 +25,3 @@ const services = {
     }
   ]
 }
-
-export default services

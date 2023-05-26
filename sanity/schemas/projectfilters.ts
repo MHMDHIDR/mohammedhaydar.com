@@ -1,4 +1,4 @@
-const projectFilters = {
+export default {
   name: 'projectFilters',
   title: 'Project Filters',
   type: 'document',
@@ -20,5 +20,3 @@ const projectFilters = {
     }
   ]
 }
-
-export default projectFilters

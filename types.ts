@@ -41,6 +41,16 @@ export type SectionHeadingProps = {
   animated: boolean
 }
 
+export type CommentProps = {
+  _id?: string
+  name: string
+  email: string
+  comment: string
+  _createdAt?: string
+  approved?: boolean
+  _type?: string
+}
+
 export type BlogProps = {
   _id: string
   _createdAt: string
@@ -50,6 +60,7 @@ export type BlogProps = {
   cover: string
   thumb: string
   content: string
+  comments: CommentProps[]
 }
 
 export type BlogsPagesProps = {

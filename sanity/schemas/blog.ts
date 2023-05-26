@@ -1,6 +1,6 @@
 import { createSlug } from '@/lib'
 
-const blogs = {
+export default {
   name: 'blogs',
   title: 'Blogs',
   type: 'document',
@@ -43,5 +43,3 @@ const blogs = {
     }
   ]
 }
-
-export default blogs

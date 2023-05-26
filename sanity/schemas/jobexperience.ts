@@ -1,4 +1,4 @@
-const jobExperience = {
+export default {
   name: 'jobExperience',
   title: 'Job Experience',
   type: 'document',
@@ -35,5 +35,3 @@ const jobExperience = {
     }
   ]
 }
-
-export default jobExperience

@@ -2,7 +2,7 @@ import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import schemas from './sanity/schemas'
 
-const config = defineConfig({
+export default defineConfig({
   projectId: 'nnrx9w3l',
   dataset: 'production',
   title: 'Mohammed Haydar',
@@ -11,5 +11,3 @@ const config = defineConfig({
   plugins: [deskTool()],
   schema: { types: schemas }
 })
-
-export default config

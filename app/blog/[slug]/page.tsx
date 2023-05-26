@@ -7,6 +7,8 @@ import { RiArticleLine } from 'react-icons/ri'
 import { marked } from 'marked'
 import { shimmer, toBase64 } from '@/lib/utils'
 import { calculateReadTime } from '@/lib/readTime'
+import Divider from '@/components/layout/Divider'
+import BlogForm from '@/components/elements/BlogForm'
 
 export async function generateMetadata({
   params: { slug }
@@ -30,7 +32,7 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
 
   if (!blog) return null
 
-  const { _createdAt, title, category, cover, content } = blog
+  const { _id, _createdAt, title, category, cover, content, comments } = blog
 
   return (
     <div className='single-post py-24 lg:py-28 xl:py-32'>
@@ -82,7 +84,35 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
         <div
           className='post-body mt-4'
           dangerouslySetInnerHTML={{ __html: marked(content) }}
-        ></div>
+        />
+
+        <Divider />
+
+        <BlogForm id={_id} />
+
+        {comments && (
+          <section className='mt-10'>
+            <h3 className='text-xl font-bold'>Comments:</h3>
+            {comments
+              .filter(comment => comment.approved)
+              .map(comment => (
+                <div
+                  key={comment._id}
+                  className='mb-4 border rounded p-4 border-blue-200 even:bg-gray-900 odd:bg-gray-800'
+                >
+                  <p className='text-xs text-gray-500'>
+                    {`${new Date(comment._createdAt!).toLocaleDateString('en-us', {
+                      month: 'short'
+                    })} ${new Date(comment._createdAt!).toLocaleDateString('en-us', {
+                      day: '2-digit'
+                    })}, ${new Date(comment._createdAt!).getFullYear()}`}
+                  </p>
+                  <p className='text-lg font-semibold'>Name: {comment.name}</p>
+                  <p className='text-body'>Comment: {comment.comment}</p>
+                </div>
+              ))}
+          </section>
+        )}
       </div>
     </div>
   )

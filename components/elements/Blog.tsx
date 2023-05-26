@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { createSlug } from '@/lib'
 import { imageLoader, shimmer, toBase64 } from '@/lib/utils'
 import type { BlogProps } from '@/types'
 

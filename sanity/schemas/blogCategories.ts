@@ -1,4 +1,4 @@
-const blogsCategories = {
+export default {
   name: 'blogsCategories',
   title: 'Blog Categories',
   type: 'document',
@@ -25,5 +25,3 @@ const blogsCategories = {
     }
   ]
 }
-
-export default blogsCategories
