@@ -49,8 +49,10 @@ export default function BlogsLayout({
             .writeText(codeText)
             .then(() => {
               copyButton.textContent = 'Copied!'
+              copyButton.classList.add('-translate-x-4')
               setTimeout(() => {
                 copyButton.textContent = 'Copy'
+                copyButton.classList.remove('-translate-x-4')
               }, 2000)
             })
             .catch((error: string) => {
