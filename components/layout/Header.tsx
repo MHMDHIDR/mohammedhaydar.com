@@ -7,7 +7,6 @@ import Link from 'next/link'
 import useEventListener from '@/hooks/useEventListener'
 import MobileNavigation from './MobileNavigation'
 import Navigation from './Navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useSession } from 'next-auth/react'
 import { Logo } from '@/components/utils'
 import NavMenu from './NavMenu'
@@ -48,19 +47,14 @@ const Header = () => {
             >
               <RiMenuLine />
             </button>
-            {/* <AnimatePresence> */}
-            {mobileMenu && (
-              <div
-                // initial={{ translateY: '100vh' }}
-                // animate={{ translateY: '0px' }}
-                // exit={{ translateY: '-100vh' }}
-                // transition={{ duration: 0.5 }}
-                className='fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen p-4 text-center bg-grey'
-              >
-                <MobileNavigation changeState={setMobileMenu} />
-              </div>
-            )}
-            {/* </AnimatePresence> */}
+
+            <div
+              className={`fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen p-4 text-center bg-grey transition-all duration-500 ${
+                mobileMenu ? 'translate-y-0' : 'translate-y-full'
+              }`}
+            >
+              <MobileNavigation changeState={setMobileMenu} />
+            </div>
           </div>
           <div className='hidden header-nav lg:block'>
             <Navigation />
