@@ -13,6 +13,7 @@ import {
 } from '@/components/containers'
 import { Layout } from '@/components/layout'
 import { SectionHeading } from '@/components/utils'
+import BlogSection from '@/components/containers/BlogSection'
 
 const Home: NextPage = () => {
   return (
@@ -82,6 +83,15 @@ const Home: NextPage = () => {
         </div>
       </Section>
       {/* End Reviews Section */}
+
+      {/* Start Blog Section */}
+      <Section name='section-blog' className='news-section pt-24 lg:pt-28 xl:pt-32'>
+        <div className='container mx-auto'>
+          <SectionHeading animated={false} title='Latest Blogs' watermark='Blogs' />
+          <BlogSection />
+        </div>
+      </Section>
+      {/* End Blog Section */}
 
       {/* Start Contact Section */}
       <Section name='section-contact' className='pt-24 contact-section lg:pt-28 xl:pt-32'>

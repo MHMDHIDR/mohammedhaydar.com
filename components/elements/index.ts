@@ -6,6 +6,7 @@ import Service from './Service'
 import SocialIcons from './SocialIcons'
 import TimelineItem from './TimelineItem'
 import Breadcrumb from './Breadcrumb'
+import Blog from './Blog'
 
 export {
   ProgressBar,
@@ -15,5 +16,6 @@ export {
   Portfolio,
   Review,
   SocialIcons,
-  Breadcrumb
+  Breadcrumb,
+  Blog
 }
