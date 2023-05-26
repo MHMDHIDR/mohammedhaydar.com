@@ -48,21 +48,21 @@ const Header = () => {
             >
               <RiMenuLine />
             </button>
-            <AnimatePresence>
-              {mobileMenu && (
-                <motion.div
-                  initial={{ translateY: '100vh' }}
-                  animate={{ translateY: '0px' }}
-                  exit={{ translateY: '-100vh' }}
-                  transition={{
-                    duration: 0.5
-                  }}
-                  className='fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen p-4 text-center bg-grey'
-                >
-                  <MobileNavigation changeState={setMobileMenu} />
-                </motion.div>
-              )}
-            </AnimatePresence>
+            {/* <AnimatePresence> */}
+            {mobileMenu && (
+              <motion.div
+                initial={{ translateY: '100vh' }}
+                animate={{ translateY: '0px' }}
+                exit={{ translateY: '-100vh' }}
+                transition={{
+                  duration: 0.5
+                }}
+                className='fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen p-4 text-center bg-grey'
+              >
+                <MobileNavigation changeState={setMobileMenu} />
+              </motion.div>
+            )}
+            {/* </AnimatePresence> */}
           </div>
           <div className='hidden header-nav lg:block'>
             <Navigation />
