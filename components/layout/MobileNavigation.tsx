@@ -6,6 +6,8 @@ import { RiCloseLine } from 'react-icons/ri'
 import { useSession } from 'next-auth/react'
 import NavMenu from './NavMenu'
 import { SignInBtn, SignOutBtn } from './AuthButtons'
+import { abstractSentence } from '@/lib/abstractText'
+import { ADMIN_EMAIL } from '@/constants'
 
 type MobileNavStateProps = {
   changeState: (isFull: boolean) => void
@@ -195,10 +197,18 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
             </ScrollLink>
           )}
           {session && session.user ? (
-            <NavMenu label={`Account`} className='text-white'>
+            <NavMenu label={`Account`} className='text-black dark:text-white'>
               <span>
-                Welcome <strong>{session.user.name}</strong>
+                Welcome <strong>{abstractSentence(session.user.name, 2)}</strong>
               </span>
+              {session.user.email == ADMIN_EMAIL && (
+                <Link
+                  href={`/dashboard`}
+                  className='btn hidden sm:block py-1.5 text-white hover:text-blue-900'
+                >
+                  <span>Dashboard</span>
+                </Link>
+              )}
               <SignOutBtn />
             </NavMenu>
           ) : (

@@ -32,7 +32,7 @@ const SignOutBtn = () => {
 
   return (
     <button
-      className='w-full flex items-center justify-center gap-2 px-4 uppercase text-sm rounded-lg text-gray-100 outline outline-1 focus:outline-2 outline-blue-500 hover:outline-blue-500 hover:outline-2 transition-all'
+      className='w-full flex items-center justify-center gap-2 px-4 uppercase text-sm rounded-lg text-inherit outline outline-1 focus:outline-2 outline-blue-500 hover:outline-blue-500 hover:outline-2 transition-all'
       onClick={() => {
         void handleSignOut()
       }}
