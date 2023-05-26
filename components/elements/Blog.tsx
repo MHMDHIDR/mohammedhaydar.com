@@ -12,11 +12,7 @@ const Blog = ({
   return (
     <article className='blog card p-4 md:p-5'>
       <div className='blog-top relative mb-4'>
-        <Link
-          href={`/postdetails/${slug}`}
-          className='fiximage hover-scale block'
-          title={title}
-        >
+        <Link href={`/blog/${slug}`} className='fiximage hover-scale block' title={title}>
           <Image
             loader={imageLoader}
             unoptimized={true}
@@ -41,13 +37,13 @@ const Blog = ({
             })}
           </span>
           <span className='year block text-sm leading-none'>
-            {new Date(_createdAt).getFullYear(/*{ year: "numeric" }*/)}
+            {new Date(_createdAt).getFullYear()}
           </span>
         </div>
       </div>
       <h5 className='mb-0'>
         <Link
-          href={`/postdetails/${slug}`}
+          href={`/blog/${slug}`}
           className=' block overflow-hidden overflow-ellipsis whitespace-nowrap transition-colors duration-500 hover:text-primary'
           title={title}
         >
@@ -57,9 +53,7 @@ const Blog = ({
       <div className='flex list-none gap-1.5 text-sm'>
         {category.map((cat: string, i: number) => (
           <span key={i} className="after:content-[','] last:after:hidden">
-            <Link href={`/category/${createSlug(cat)}/1`} className=' hover:text-primary'>
-              {cat}
-            </Link>
+            {cat}
           </span>
         ))}
       </div>
