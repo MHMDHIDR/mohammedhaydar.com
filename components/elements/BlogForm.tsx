@@ -1,8 +1,9 @@
 import { createClient } from 'next-sanity'
 import clientConfig from '@/sanity/config/client-config'
+import Notification from '@/components/layout/Notification'
 import type { CommentProps } from '@/types'
 
-const BlogForm = ({ id: blogId }: { id: string }) => {
+const BlogForm = ({ slug, id: blogId }: { slug: string; id: string }) => {
   async function handleAddComment(formData: FormData) {
     'use server'
 
@@ -26,6 +27,13 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
       })
 
       console.log('Comment Added!')
+      // Clear the input values in the form UI
+      const nameInput = document.getElementById('name') as HTMLInputElement
+      const emailInput = document.getElementById('email') as HTMLInputElement
+      const commentInput = document.getElementById('comment') as HTMLInputElement
+      nameInput.value = ''
+      emailInput.value = ''
+      commentInput.value = ''
     } catch (error) {
       console.log('OOPS! Comment Was NOT added!')
     }
@@ -41,7 +49,7 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
             type='text'
             id='name'
             name='name'
-            className='bg-gray-800 text-xl'
+            className='bg-gray-800 focus-within:bg-gray-700 transition-colors duration-300 text-xl'
             dir='auto'
             required
           />
@@ -52,7 +60,7 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
             type='email'
             id='email'
             name='email'
-            className='bg-gray-800 text-xl'
+            className='bg-gray-800 focus-within:bg-gray-700 transition-colors duration-300 text-xl'
             // defaultValue={(session && session.user.email) ?? ''}
             required
           />
@@ -62,18 +70,18 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
           <textarea
             id='comment'
             name='comment'
-            className='bg-gray-800 text-xl'
+            className='bg-gray-800 focus-within:bg-gray-700 transition-colors duration-300 text-xl'
             dir='auto'
             required
           />
         </label>
-        <div id='commentMsg'></div>
         <button
           type='submit'
-          className='btn hidden sm:block py-2 mt-2 text-white hover:text-blue-900'
+          className='btn inline-block py-2 mt-2 text-white hover:text-blue-900'
         >
-          <span>Add Comment</span>
+          <span>Add</span>
         </button>
+        {/* <Notification>hi</Notification> */}
       </form>
     </section>
   )

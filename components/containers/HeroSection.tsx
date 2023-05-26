@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { childrenAnimation } from '@/lib/motion'
 import ReactTyped from 'react-typed'
 import type { HeroSectionProps, informationProps } from '@/types'
-import { abstractSentence } from '@/lib/abstractText'
+import { limitWords } from '@/lib/abstractText'
 import { useQuery } from '@tanstack/react-query'
 import { getInformation } from '@/sanity/sanity-utils'
 
@@ -90,7 +90,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
                 variants={childrenAnimation}
                 className='lead mb-0'
               >
-                {abstractSentence(data.bio, 15)}
+                {limitWords(data.bio, 15)}
               </motion.p>
               <motion.div
                 initial='hidden'

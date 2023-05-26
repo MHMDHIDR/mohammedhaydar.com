@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import type { NavMenuPros } from '@/types'
-import { abstractText } from '@/lib/abstractText'
 import Image from 'next/image'
+import { abstractText } from '@/lib/abstractText'
+import type { NavMenuPros } from '@/types'
 
 const NavMenu: React.FC<NavMenuPros> = ({
   children,

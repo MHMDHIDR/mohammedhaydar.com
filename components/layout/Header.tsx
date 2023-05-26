@@ -11,7 +11,7 @@ import { useSession } from 'next-auth/react'
 import { Logo } from '@/components/utils'
 import NavMenu from './NavMenu'
 import { SignInBtn, SignOutBtn } from './AuthButtons'
-import { abstractSentence } from '@/lib/abstractText'
+import { limitWords } from '@/lib/abstractText'
 import { ADMIN_EMAIL } from '@/constants'
 
 const Header = () => {
@@ -85,7 +85,7 @@ const Header = () => {
             {session && session.user ? (
               <NavMenu label={`Account`} className='text-black dark:text-white'>
                 <span>
-                  Welcome <strong>{abstractSentence(session.user.name, 2)}</strong>
+                  Welcome <strong>{limitWords(session.user.name, 2)}</strong>
                 </span>
 
                 {session.user.email == ADMIN_EMAIL && (

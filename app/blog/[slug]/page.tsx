@@ -9,6 +9,7 @@ import { shimmer, toBase64 } from '@/lib/utils'
 import { calculateReadTime } from '@/lib/readTime'
 import Divider from '@/components/layout/Divider'
 import BlogForm from '@/components/elements/BlogForm'
+import { limitWords, abstractText } from '@/lib/abstractText'
 
 export async function generateMetadata({
   params: { slug }
@@ -88,9 +89,10 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
 
         <Divider />
 
-        <BlogForm id={_id} />
+        <BlogForm slug={params.slug} id={_id} />
 
-        {comments && (
+        {/* if comments is defined and there is at least one is approved */}
+        {comments && comments.some(comment => comment.approved) && (
           <section className='mt-10'>
             <h3 className='text-xl font-bold'>Comments:</h3>
             {comments
@@ -107,8 +109,15 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
                       day: '2-digit'
                     })}, ${new Date(comment._createdAt!).getFullYear()}`}
                   </p>
-                  <p className='text-lg font-semibold'>Name: {comment.name}</p>
-                  <p className='text-body'>Comment: {comment.comment}</p>
+                  <p
+                    className='text-lg font-semibold'
+                    title={`Comment of ${comment.name}`}
+                  >
+                    {abstractText(limitWords(comment.name, 2), 50)}
+                  </p>
+                  <p className='text-body'>
+                    {abstractText(limitWords(comment.comment, 100), 1000)}
+                  </p>
                 </div>
               ))}
           </section>

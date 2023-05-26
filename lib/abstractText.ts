@@ -14,7 +14,7 @@ export const abstractText = (txt: string, txtLength: number) => {
  * @param wordLimit Takes a wordLimit of type number
  * @returns Returns a string of how many wordLimit I set as a limit
  */
-export const abstractSentence = (txt: string, wordLimit: number) => {
+export const limitWords = (txt: string, wordLimit: number) => {
   const words = txt.trim().split(/\s+/)
   const abstractedText = words.slice(0, wordLimit).join(' ')
   return abstractedText

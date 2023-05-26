@@ -154,6 +154,11 @@ export type NotifyProps = {
   duration?: number
 }
 
+export type notificationProps = {
+  isOk?: boolean
+  children: React.ReactNode
+}
+
 export type ContactFormInputsProps = {
   name: string
   email?: string
