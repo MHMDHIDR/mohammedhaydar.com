@@ -79,7 +79,7 @@ const Header = () => {
                 duration={1000}
                 className='btn hidden sm:block py-1.5 text-white hover:text-blue-900 rounded-full'
               >
-                <span>Hire Mes</span>
+                <span>Hire Me</span>
               </ScrollLink>
             )}
             {session && session.user ? (
