@@ -10,6 +10,7 @@ import Divider from '@/components/layout/Divider'
 import BlogForm from '@/components/elements/BlogForm'
 import { limitWords, abstractText } from '@/lib/abstractText'
 import type { BlogProps } from '@/types'
+import React from 'react'
 
 export async function generateMetadata({
   params: { slug }
@@ -102,8 +103,13 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
                   key={comment._id}
                   className='mb-4 border-b border-b-blue-700 bg-gray-700'
                 >
-                  <p className='text-body text-lg p-4'>
-                    {abstractText(limitWords(comment.comment, 100), 1000)}
+                  <p className='text-body text-lg p-4 whitespace-pre'>
+                    {comment.comment.split('\n').map((line, index) => (
+                      <React.Fragment key={index}>
+                        {abstractText(limitWords(line, 100), 1000)}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </p>
                   <div
                     className='flex items-center gap-x-3 bg-gray-800 px-4 py-1.5'
