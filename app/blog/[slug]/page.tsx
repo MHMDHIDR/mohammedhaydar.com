@@ -1,7 +1,6 @@
 import { getBlogBySlug } from '@/sanity/sanity-utils'
 import Image from 'next/image'
 import { Metadata } from 'next'
-import type { BlogProps } from '@/types'
 import { capitalizeText, removeSlug } from '@/lib'
 import { RiArticleLine } from 'react-icons/ri'
 import { marked } from 'marked'
@@ -10,6 +9,7 @@ import { calculateReadTime } from '@/lib/readTime'
 import Divider from '@/components/layout/Divider'
 import BlogForm from '@/components/elements/BlogForm'
 import { limitWords, abstractText } from '@/lib/abstractText'
+import type { BlogProps } from '@/types'
 
 export async function generateMetadata({
   params: { slug }
@@ -89,7 +89,7 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
 
         <Divider />
 
-        <BlogForm slug={params.slug} id={_id} />
+        <BlogForm id={_id} />
 
         {/* if comments is defined and there is at least one is approved */}
         {comments && comments.some(comment => comment.approved) && (
@@ -100,24 +100,27 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
               .map(comment => (
                 <div
                   key={comment._id}
-                  className='mb-4 border rounded p-4 border-blue-200 even:bg-gray-900 odd:bg-gray-800'
+                  className='mb-4 border-b border-b-blue-700 bg-gray-700'
                 >
-                  <p className='text-xs text-gray-500'>
-                    {`${new Date(comment._createdAt!).toLocaleDateString('en-us', {
-                      month: 'short'
-                    })} ${new Date(comment._createdAt!).toLocaleDateString('en-us', {
-                      day: '2-digit'
-                    })}, ${new Date(comment._createdAt!).getFullYear()}`}
-                  </p>
-                  <p
-                    className='text-lg font-semibold'
-                    title={`Comment of ${comment.name}`}
-                  >
-                    {abstractText(limitWords(comment.name, 2), 50)}
-                  </p>
-                  <p className='text-body'>
+                  <p className='text-body text-lg p-4'>
                     {abstractText(limitWords(comment.comment, 100), 1000)}
                   </p>
+                  <div
+                    className='flex items-center gap-x-3 bg-gray-800 px-4 py-1.5'
+                    title={`Comment of ${comment.name}`}
+                  >
+                    <p className='mb-0 text-sm text-gray-400'>
+                      {`${new Date(comment._createdAt!).toLocaleDateString('en-us', {
+                        month: 'short'
+                      })} ${new Date(comment._createdAt!).toLocaleDateString('en-us', {
+                        day: '2-digit'
+                      })}, ${new Date(comment._createdAt!).getFullYear()}`}
+                    </p>
+                    -
+                    <p className='text-sm text-blue-400'>
+                      {abstractText(limitWords(comment.name, 2), 50)}
+                    </p>
+                  </div>
                 </div>
               ))}
           </section>
