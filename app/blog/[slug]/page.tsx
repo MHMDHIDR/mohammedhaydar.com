@@ -24,7 +24,7 @@ export async function generateMetadata({
     }
 
   return {
-    title: capitalizeText(removeSlug(slug)),
+    title: `${capitalizeText(removeSlug(slug))} | Mohammed Haydar`,
     openGraph: { images: [thumb, cover] }
   }
 }
