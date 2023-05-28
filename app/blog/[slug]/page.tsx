@@ -1,8 +1,10 @@
-import { getBlogBySlug } from '@/sanity/sanity-utils'
+import React from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
+import { getBlogBySlug, getPreviousAndNextBlogs } from '@/sanity/sanity-utils'
 import { capitalizeText, removeSlug } from '@/lib'
-import { RiArticleLine } from 'react-icons/ri'
+import { RiArticleLine, RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
 import { marked } from 'marked'
 import { shimmer, toBase64 } from '@/lib/utils'
 import { calculateReadTime } from '@/lib/readTime'
@@ -10,7 +12,6 @@ import Divider from '@/components/layout/Divider'
 import BlogForm from '@/components/elements/BlogForm'
 import { limitWords, abstractText } from '@/lib/abstractText'
 import type { BlogProps } from '@/types'
-import React from 'react'
 
 export async function generateMetadata({
   params: { slug }
@@ -29,8 +30,12 @@ export async function generateMetadata({
   }
 }
 
-const Blogs = async ({ params }: { params: { slug: string } }) => {
+const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog: BlogProps | null = await getBlogBySlug(params.slug)
+  const {
+    previous: { previousSlug, previousTitle },
+    next: { nextSlug, nextTitle }
+  } = await getPreviousAndNextBlogs(params.slug)
 
   if (!blog) return null
 
@@ -131,9 +136,31 @@ const Blogs = async ({ params }: { params: { slug: string } }) => {
               ))}
           </section>
         )}
+
+        {/* Previous and Next blog links */}
+        <div className='flex justify-between mt-10'>
+          {previousSlug && previousTitle && (
+            <Link
+              href={`/blog/${previousSlug}`}
+              className='flex items-center underline-hover group'
+            >
+              <RiArrowLeftSLine className='transition-transform duration-300 group-hover:-translate-x-1' />
+              {capitalizeText(removeSlug(previousTitle))}
+            </Link>
+          )}
+          {nextSlug && nextTitle && (
+            <Link
+              href={`/blog/${nextSlug}`}
+              className='flex items-center underline-hover group'
+            >
+              {capitalizeText(removeSlug(nextTitle))}
+              <RiArrowRightSLine className='transition-transform duration-300 group-hover:translate-x-1' />
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   )
 }
 
-export default Blogs
+export default Blog

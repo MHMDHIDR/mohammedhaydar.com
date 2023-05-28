@@ -42,7 +42,12 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
           />
         </label>
         <label htmlFor='email' className='flex flex-col gap-y-3'>
-          <span>Email</span>
+          <span>
+            Email
+            <small className='text-sm mx-2'>
+              Your Email <em>(kept private)</em>
+            </small>
+          </span>
           <input
             type='email'
             name='email'

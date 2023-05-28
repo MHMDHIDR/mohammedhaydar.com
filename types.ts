@@ -63,6 +63,17 @@ export type BlogProps = {
   comments: CommentProps[]
 }
 
+export type getPreviousAndNextBlogsProps = {
+  previous: {
+    previousSlug: BlogProps['slug'] | null
+    previousTitle: BlogProps['title'] | null
+  }
+  next: {
+    nextSlug: BlogProps['slug'] | null
+    nextTitle: BlogProps['title'] | null
+  }
+}
+
 export type BlogsPagesProps = {
   blogs: BlogProps[]
   hasMore: boolean
