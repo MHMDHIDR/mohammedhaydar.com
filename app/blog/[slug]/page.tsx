@@ -138,7 +138,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         )}
 
         {/* Previous and Next blog links */}
-        <div className='flex justify-between mt-10'>
+        <div className='flex flex-wrap gap-3 justify-center xs:justify-between items-center mt-10'>
           {previousSlug && previousTitle && (
             <Link
               href={`/blog/${previousSlug}`}
