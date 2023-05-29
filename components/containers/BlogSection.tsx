@@ -20,7 +20,7 @@ const BlogSection = () => {
       setBlogsTotal(total)
     }
     getBlogs()
-  }, [])
+  }, [pageNumber])
 
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return
