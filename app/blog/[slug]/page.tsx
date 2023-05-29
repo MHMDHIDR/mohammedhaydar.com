@@ -6,6 +6,8 @@ import { getBlogBySlug, getPreviousAndNextBlogs } from '@/sanity/sanity-utils'
 import { capitalizeText, removeSlug } from '@/lib'
 import { RiArticleLine, RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
 import { marked } from 'marked'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/monokai-sublime.css'
 import { shimmer, toBase64 } from '@/lib/utils'
 import { calculateReadTime } from '@/lib/readTime'
 import Divider from '@/components/layout/Divider'
@@ -40,6 +42,16 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
   if (!blog) return null
 
   const { _id, _createdAt, title, category, cover, content, comments } = blog
+
+  marked.setOptions({
+    highlight: function (code, language) {
+      if (language && hljs.getLanguage(language)) {
+        return hljs.highlight(language, code).value
+      } else {
+        return hljs.highlightAuto(code).value
+      }
+    }
+  })
 
   return (
     <div className='single-post py-24 lg:py-28 xl:py-32'>
