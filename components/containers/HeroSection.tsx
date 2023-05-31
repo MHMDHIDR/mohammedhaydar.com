@@ -109,7 +109,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
                 smooth='easeInQuad'
                 offset={-74}
                 duration={1000}
-                className='btn sm:hidden mt-10 text-white hover:text-blue-900'
+                className='btn md:hidden mt-10 text-white hover:text-blue-900'
               >
                 <span>Hire Me</span>
               </ScrollLink>
@@ -126,6 +126,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
             >
               <ScrollLink
                 activeClass='active'
+                href='/'
                 to='section-about'
                 spy={true}
                 smooth='easeInQuad'

@@ -53,7 +53,7 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
           key={tab._id}
           className={`${
             activeTab === tab._id ? '' : 'hover:text-blue-600'
-          } relative rounded-full px-3 py-1.5 max-w-fit min-w-fit text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2 ${
+          }relative rounded-full px-3 py-1.5 max-w-fit min-w-fit text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2 ${
             currentFilter === tab.value
               ? 'before:invisible'
               : 'btn-transparent text-blue-400 hover:text-white'

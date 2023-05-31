@@ -70,8 +70,16 @@ const BlogSection = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className='swiper-button-prev' onClick={handlePrev}></button>
-      <button className='swiper-button-next' onClick={handleNext}></button>
+      <button
+        className='swiper-button-prev'
+        aria-label='Swipe to Previous'
+        onClick={handlePrev}
+      ></button>
+      <button
+        className='swiper-button-next'
+        aria-label='Swipe to Next'
+        onClick={handleNext}
+      ></button>
     </div>
   )
 }

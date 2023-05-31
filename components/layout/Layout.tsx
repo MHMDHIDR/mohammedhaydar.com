@@ -73,6 +73,7 @@ const Layout = ({
                   x: backToTop ? 0 : 1000
                 }}
                 className='btn fixed bottom-12 left-auto top-auto right-7 z-30 rounded-full p-2.5 text-xl'
+                aria-label='Scroll To The Top'
                 onClick={() => scroll.scrollToTop()}
               >
                 <RiArrowUpSLine />

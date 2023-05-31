@@ -28,7 +28,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         name='description'
         content='Mohammed Haydar Personal Portfolio Website Where I showcase My Porjects, Work Experiences, and More...'
       />
-      <meta name='robots' content='noindex, nofollow' />
       <meta
         name='keywords'
         content='Mohammed, Haydar, Personal, Portfolio, Website, Where I showcase My Porjects, Work Experiences, Webapp'

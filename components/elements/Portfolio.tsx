@@ -41,6 +41,7 @@ const Portfolio = ({
           {imagegallery && imagegallery.length > 0 && (
             <button
               className='inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey'
+              aria-label='Image Link'
               onClick={() => setImageGalleryOpen(true)}
             >
               <RiImageLine />
@@ -49,6 +50,7 @@ const Portfolio = ({
           {videogallery && videogallery.length > 0 && (
             <button
               className='inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey'
+              aria-label='Video Link'
               onClick={() => setVideoGalleryOpen(true)}
             >
               <RiVideoLine />
@@ -59,6 +61,7 @@ const Portfolio = ({
               href={url}
               target='_blank'
               className='inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey'
+              aria-label='External Link'
             >
               <RiExternalLinkLine />
             </Link>
@@ -68,6 +71,7 @@ const Portfolio = ({
               href={github}
               target='_blank'
               className='inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey'
+              aria-label='Github Link'
             >
               <RiGithubLine />
             </Link>

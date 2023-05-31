@@ -16,6 +16,7 @@ const SocialIcons = ({ data, rounded }: SocialIconsProps) => {
         <li className='inline-block align-middle'>
           <a
             href={data.instagram}
+            aria-label='Visit My instagram Page'
             target='_blank'
             rel='noopener noreferrer'
             className={`group relative inline-block h-10 w-10 overflow-hidden border border-white border-opacity-10 text-center align-middle text-lg leading-none text-body ${
@@ -35,6 +36,7 @@ const SocialIcons = ({ data, rounded }: SocialIconsProps) => {
         <li className='inline-block align-middle'>
           <a
             href={data.twitter}
+            aria-label='Visit My twitter Page'
             target='_blank'
             rel='noopener noreferrer'
             className={`group relative inline-block h-10 w-10 overflow-hidden border border-white border-opacity-10 text-center align-middle text-lg leading-none text-body ${
@@ -54,6 +56,7 @@ const SocialIcons = ({ data, rounded }: SocialIconsProps) => {
         <li className='inline-block align-middle'>
           <a
             href={data.github}
+            aria-label='Visit My github Page'
             target='_blank'
             rel='noopener noreferrer'
             className={`group relative inline-block h-10 w-10 overflow-hidden border border-white border-opacity-10 text-center align-middle text-lg leading-none text-body ${
@@ -73,6 +76,7 @@ const SocialIcons = ({ data, rounded }: SocialIconsProps) => {
         <li className='inline-block align-middle'>
           <a
             href={data.linkedin}
+            aria-label='Visit My linkedin Page'
             target='_blank'
             rel='noopener noreferrer'
             className={`group relative inline-block h-10 w-10 overflow-hidden border border-white border-opacity-10 text-center align-middle text-lg leading-none text-body ${

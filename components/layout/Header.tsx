@@ -61,7 +61,7 @@ const Header = () => {
           <div className='hidden header-nav lg:block'>
             <Navigation />
           </div>
-          <div className='flex md:flex gap-x-3 md:justify-center md:items-center'>
+          <div className='flex gap-x-3 md:justify-center md:items-center'>
             {checkroute ? (
               <Link
                 href='/'
@@ -72,12 +72,13 @@ const Header = () => {
             ) : (
               <ScrollLink
                 activeClass='active'
+                href='/'
                 to={checkroute ? '/' : 'section-contact'}
                 spy={true}
                 smooth='easeInQuad'
                 offset={-74}
                 duration={1000}
-                className='btn hidden sm:block py-1.5 text-white hover:text-blue-900 rounded-full'
+                className='btn hidden md:block py-1.5 text-white hover:text-blue-900 rounded-full'
               >
                 <span>Hire Me</span>
               </ScrollLink>

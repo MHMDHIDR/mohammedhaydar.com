@@ -46,6 +46,7 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
             ) : (
               <ScrollLink
                 activeClass='text-primary'
+                href='/'
                 to='section-home'
                 spy={true}
                 smooth='easeInQuad'
@@ -72,6 +73,7 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
             ) : (
               <ScrollLink
                 activeClass='text-primary'
+                href='/'
                 to='section-about'
                 spy={true}
                 smooth='easeInQuad'
@@ -98,6 +100,7 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
             ) : (
               <ScrollLink
                 activeClass='text-primary'
+                href='/'
                 to='section-resume'
                 spy={true}
                 smooth='easeInQuad'
@@ -124,6 +127,7 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
             ) : (
               <ScrollLink
                 activeClass='text-primary'
+                href='/'
                 to='section-portfolios'
                 spy={true}
                 smooth='easeInQuad'
@@ -160,6 +164,7 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
             ) : (
               <ScrollLink
                 activeClass='text-primary'
+                href='/'
                 to='section-contact'
                 spy={true}
                 smooth='easeInQuad'
