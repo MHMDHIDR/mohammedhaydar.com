@@ -334,7 +334,7 @@
   }
 
   .underline-hover {
-    @apply relative text-sm before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-blue-500 before:transition-all hover:before:w-full xl:text-base inline-block whitespace-nowrap overflow-hidden text-ellipsis;
+    @apply relative text-sm before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-blue-500 before:transition-all hover:before:w-full xl:text-base inline-block overflow-hidden text-ellipsis;
   }
 
   .rtl {
