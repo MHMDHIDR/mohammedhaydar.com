@@ -45,6 +45,7 @@ const Header = () => {
           <div className='block header-mobilenav lg:hidden'>
             <button
               className='px-3 text-3xl btn btn-small btn-transparent'
+              aria-label='toggle navigation menu button'
               onClick={() => setMobileMenu(prev => !prev)}
             >
               <RiMenuLine />
