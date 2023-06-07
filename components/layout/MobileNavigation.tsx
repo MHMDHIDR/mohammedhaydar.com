@@ -206,10 +206,10 @@ const MobileNavigation = ({ changeState }: MobileNavStateProps) => {
               <span>
                 Welcome <strong>{limitWords(session.user.name, 2)}</strong>
               </span>
-              {session.user.email == ADMIN_EMAIL && (
+              {session.user.email === ADMIN_EMAIL && (
                 <Link
                   href={`/dashboard`}
-                  className='btn hidden sm:block py-1.5 text-white hover:text-blue-900'
+                  className='btn py-1.5 text-white hover:text-blue-900'
                 >
                   <span>Dashboard</span>
                 </Link>
