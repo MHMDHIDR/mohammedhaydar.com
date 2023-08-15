@@ -21,7 +21,7 @@ export default {
     {
       name: 'thumbImage',
       title: 'Thumbnail Image',
-      type: 'url'
+      type: 'string'
     },
     {
       name: 'largeImage',
