@@ -8,7 +8,8 @@ export default {
     {
       name: 'title',
       title: 'Title',
-      type: 'string'
+      type: 'string',
+      validation: (Rule: { required: () => any }) => Rule.required()
     },
     {
       name: 'slug',
@@ -18,13 +19,15 @@ export default {
         source: 'title',
         maxLength: 200, // Adjust the maximum length as needed
         slugify: (input: string) => createSlug(input)
-      }
+      },
+      validation: (Rule: { required: () => any }) => Rule.required()
     },
     {
       name: 'category',
       title: 'Category',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'blogsCategories' }] }]
+      of: [{ type: 'reference', to: [{ type: 'blogsCategories' }] }],
+      validation: (Rule: { required: () => any }) => Rule.required()
     },
     {
       name: 'cover',
@@ -32,7 +35,8 @@ export default {
       type: 'image',
       options: {
         hotspot: true // Enables hotspot for image cropping
-      }
+      },
+      validation: (Rule: { required: () => any }) => Rule.required()
     },
     {
       name: 'thumb',
@@ -40,12 +44,14 @@ export default {
       type: 'image',
       options: {
         hotspot: true // Enables hotspot for image cropping
-      }
+      },
+      validation: (Rule: { required: () => any }) => Rule.required()
     },
     {
       name: 'content',
       title: 'Content',
-      type: 'text'
+      type: 'text',
+      validation: (Rule: { required: () => any }) => Rule.required()
     }
   ]
 }

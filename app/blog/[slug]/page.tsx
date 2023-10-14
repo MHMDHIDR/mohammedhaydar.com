@@ -15,22 +15,22 @@ import BlogForm from '@/components/elements/BlogForm'
 import { limitWords, abstractText } from '@/lib/abstractText'
 import type { BlogProps } from '@/types'
 
-export async function generateMetadata({
-  params: { slug }
-}: {
-  params: { slug: string }
-}): Promise<Metadata> {
-  const { thumb, cover }: { thumb: BlogProps['thumb']; cover: BlogProps['cover'] } =
-    (await getBlogBySlug(slug)) ?? {
-      thumb: '/images/logo.png',
-      cover: '/images/logo.png'
-    }
+// export async function generateMetadata({
+//   params: { slug }
+// }: {
+//   params: { slug: string }
+// }): Promise<Metadata> {
+//   const { thumb, cover }: { thumb: BlogProps['thumb']; cover: BlogProps['cover'] } =
+//     (await getBlogBySlug(slug)) ?? {
+//       thumb: '/images/logo.png',
+//       cover: '/images/logo.png'
+//     }
 
-  return {
-    title: `${capitalizeText(removeSlug(slug))} | Mohammed Haydar`,
-    openGraph: { images: [thumb, cover] }
-  }
-}
+//   return {
+//     title: `${capitalizeText(removeSlug(slug))} | Mohammed Haydar`,
+//     openGraph: { images: [thumb, cover] }
+//   }
+// }
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog: BlogProps | null = await getBlogBySlug(params.slug)
