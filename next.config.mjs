@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['www.researchgate.net']
+    domains: ['cdn.sanity.io']
   },
   experimental: {
     serverActions: true

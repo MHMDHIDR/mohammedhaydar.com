@@ -40,8 +40,7 @@ const Blogs = async ({ params }: { params: { page: string } }) => {
                     rel='noopener noreferrer'
                     title={title}
                   >
-                    HERE IS A BLOG IMAGE
-                    {/* <Image
+                    <Image
                       src={thumb}
                       width={400}
                       height={270}
@@ -51,7 +50,7 @@ const Blogs = async ({ params }: { params: { page: string } }) => {
                       blurDataURL={`data:image/svg+xml;base64,${toBase64(
                         shimmer(400, 240)
                       )}`}
-                    /> */}
+                    />
                   </Link>
                   <div className='blog-date absolute left-auto right-3 top-3 inline-block min-h-[60px] min-w-[60px] rounded bg-primary p-2 text-center text-grey'>
                     <span className='month block text-sm uppercase leading-none'>

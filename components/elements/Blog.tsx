@@ -12,8 +12,7 @@ const Blog = ({
     <article className='blog card p-4 md:p-5'>
       <div className='blog-top relative mb-4'>
         <Link href={`/blog/${slug}`} className='fiximage hover-scale block' title={title}>
-          HERE IS A BLOG IMAGE
-          {/* <Image
+          <Image
             loader={imageLoader}
             unoptimized={true}
             src={thumb}
@@ -23,7 +22,7 @@ const Blog = ({
             className='object-cover h-auto w-auto'
             placeholder='blur'
             blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(400, 240))}`}
-          /> */}
+          />
         </Link>
         <div className='blog-date absolute left-auto right-5 top-5 inline-block min-h-[60px] min-w-[60px] rounded bg-primary p-2 text-center text-grey'>
           <span className='month block text-sm uppercase leading-none'>

@@ -15,22 +15,22 @@ import BlogForm from '@/components/elements/BlogForm'
 import { limitWords, abstractText } from '@/lib/abstractText'
 import type { BlogProps } from '@/types'
 
-// export async function generateMetadata({
-//   params: { slug }
-// }: {
-//   params: { slug: string }
-// }): Promise<Metadata> {
-//   const { thumb, cover }: { thumb: BlogProps['thumb']; cover: BlogProps['cover'] } =
-//     (await getBlogBySlug(slug)) ?? {
-//       thumb: '/images/logo.png',
-//       cover: '/images/logo.png'
-//     }
+export async function generateMetadata({
+  params: { slug }
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const { thumb, cover }: { thumb: BlogProps['thumb']; cover: BlogProps['cover'] } =
+    (await getBlogBySlug(slug)) ?? {
+      thumb: '/images/logo.png',
+      cover: '/images/logo.png'
+    }
 
-//   return {
-//     title: `${capitalizeText(removeSlug(slug))} | Mohammed Haydar`,
-//     openGraph: { images: [thumb, cover] }
-//   }
-// }
+  return {
+    title: `${capitalizeText(removeSlug(slug))} | Mohammed Haydar`,
+    openGraph: { images: [thumb, cover] }
+  }
+}
 
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog: BlogProps | null = await getBlogBySlug(params.slug)
@@ -58,8 +58,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
       <div className='container mx-auto'>
         <div className='post-header mb-8'>
           <div className='fiximage mb-5 overflow-hidden rounded border border-white border-opacity-20'>
-            HERE IS A BLOG IMAGE
-            {/* <Image
+            <Image
               src={cover!}
               height={650}
               width={1350}
@@ -67,7 +66,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
               className='w-full h-auto object-cover'
               placeholder='blur'
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(1350, 650))}`}
-            /> */}
+            />
           </div>
           <div className='flex flex-wrap justify-between gap-x-4'>
             <div className='mb-0 flex gap-2 text-heading'>

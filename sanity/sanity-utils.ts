@@ -98,8 +98,8 @@ export async function getAllBlogs(
         title,
         'slug': slug.current,
         'category': category[]->title,
-        cover,
-        thumb,
+        'cover': cover.asset->url,
+        'thumb': thumb.asset->url,
         content
     }[${offset}...${offset + limit}]` // Fetch blogs for the current page
   )
@@ -126,8 +126,8 @@ export async function getBlogBySlug(slug: string): Promise<BlogProps | null> {
       title,
       'slug': slug.current,
       'category': category[]->title,
-      cover,
-      thumb,
+      'cover': cover.asset->url,
+      'thumb': thumb.asset->url,
       content,
       'comments': *[_type == "comment" && references(^._id)]{
         _id,
