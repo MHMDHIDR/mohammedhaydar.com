@@ -19,7 +19,7 @@ const Blog = ({
             height={240}
             width={400}
             alt={`Image of ${title} Blog`}
-            className='object-cover h-auto w-auto'
+            className='object-cover min-h-[10rem] max-h-40 w-full'
             placeholder='blur'
             blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(400, 240))}`}
           />
