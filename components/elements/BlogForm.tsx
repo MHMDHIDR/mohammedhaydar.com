@@ -45,7 +45,7 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
           <span>
             Email
             <small className='text-sm mx-2'>
-              Your Email <em>(kept private)</em>
+              <em>(kept private)</em>
             </small>
           </span>
           <input

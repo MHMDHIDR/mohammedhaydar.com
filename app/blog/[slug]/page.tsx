@@ -58,7 +58,8 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
       <div className='container mx-auto'>
         <div className='post-header mb-8'>
           <div className='fiximage mb-5 overflow-hidden rounded border border-white border-opacity-20'>
-            <Image
+            HERE IS A BLOG IMAGE
+            {/* <Image
               src={cover!}
               height={650}
               width={1350}
@@ -66,7 +67,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
               className='w-full h-auto object-cover'
               placeholder='blur'
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(1350, 650))}`}
-            />
+            /> */}
           </div>
           <div className='flex flex-wrap justify-between gap-x-4'>
             <div className='mb-0 flex gap-2 text-heading'>
