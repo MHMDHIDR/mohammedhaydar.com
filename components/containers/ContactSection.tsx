@@ -54,7 +54,7 @@ const ContactSection = () => {
                 <RiMailLine />
               </span>
               <div className='content'>
-                <h5 className='mb-2'>Contact on mail</h5>
+                <h5 className='mb-2'>Contact on email</h5>
                 {data.emailAddress?.map((email: string, index: number) => (
                   <p className='mb-0' key={index}>
                     <Link href={`mailto:${email}`} className='no-underline'>

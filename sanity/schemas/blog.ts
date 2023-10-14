@@ -29,12 +29,18 @@ export default {
     {
       name: 'cover',
       title: 'Cover',
-      type: 'string'
+      type: 'image',
+      options: {
+        hotspot: true // Enables hotspot for image cropping
+      }
     },
     {
       name: 'thumb',
       title: 'Thumbnail',
-      type: 'string'
+      type: 'image',
+      options: {
+        hotspot: true // Enables hotspot for image cropping
+      }
     },
     {
       name: 'content',

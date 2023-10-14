@@ -76,12 +76,12 @@ const Home: NextPage = () => {
       {/* End Portfolios Section */}
 
       {/* Start Reviews Section */}
-      <Section name='section-reviews' className='pt-24 reviews-section lg:pt-28 xl:pt-32'>
+      {/* <Section name='section-reviews' className='pt-24 reviews-section lg:pt-28 xl:pt-32'>
         <div className='container mx-auto'>
           <SectionHeading animated={false} title='Client Reviews' watermark='Reviews' />
           <ReviewsSection />
         </div>
-      </Section>
+      </Section> */}
       {/* End Reviews Section */}
 
       {/* Start Blog Section */}
