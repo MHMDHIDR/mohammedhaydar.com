@@ -34,6 +34,7 @@ const AboutSection = () => {
               height={422}
               width={660}
               alt={data.fullName}
+              className='w-auto h-auto'
               placeholder='blur'
               blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(660, 422))}`}
             />

@@ -45,7 +45,7 @@ const Blogs = async ({ params }: { params: { page: string } }) => {
                       width={400}
                       height={270}
                       alt={`Image of ${title} Blog`}
-                      className='object-cover w-full h-full sm:h-full sm:w-full rounded-lg'
+                      className='object-cover w-full min-h-[10rem] max-h-40 sm:w-full rounded-lg'
                       placeholder='blur'
                       blurDataURL={`data:image/svg+xml;base64,${toBase64(
                         shimmer(400, 240)
