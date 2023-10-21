@@ -29,11 +29,47 @@
 
 📄 &nbsp; For a deeper dive into my professional journey, check out my [Resume](https://drive.google.com/file/d/1Z_tnRp6xDhmISvM9thfuR1Ufe2MKkZaG/view?usp=sharing).
 
-> ### 🛠 &nbsp;Tech Stack
+### 🛠 &nbsp;Tech Stack
 
-<img src="https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript" width="70" height="20" />&nbsp;<img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs" width="70" height="20" />&nbsp;<img src="https://img.shields.io/badge/-Tailwindcss-05122A?style=flat&logo=tailwindcss&logoColor=563D7C" width="70" height="20" />&nbsp;<img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" width="70" height="20" />
+<a href="https://www.javascript.com">
+  <img src="https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://www.nextjs.org">
+  <img src="https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://www.tailwindcss.com">
+  <img src="https://img.shields.io/badge/-Tailwindcss-05122A?style=flat&logo=tailwindcss&logoColor=563D7C" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://www.sass-lang.com">
+  <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" width="70" height="20" />
+</a>
 
-<img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5" width="50" height="20" />&nbsp;<img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6" width="50" height="20" />&nbsp;<img src="https://img.shields.io/badge/-Git-05122A?style=flat&logo=git" width="50" height="20" />&nbsp;<img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white" width="50" height="20" />&nbsp;<img src="https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github" width="70" height="20" />&nbsp;<img src="https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC" width="120" height="20" />
+<a href="https://html.spec.whatwg.org/multipage">
+  <img src="https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://www.w3.org/Style/CSS/Overview.en.html">
+  <img src="https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://git-scm.com">
+  <img src="https://img.shields.io/badge/-Git-05122A?style=flat&logo=git" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://www.yarnpkg.com">
+  <img src="https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://www.github.com">
+  <img src="https://img.shields.io/badge/-GitHub-05122A?style=flat&logo=github" width="70" height="20" />
+</a>
+&nbsp;
+<a href="https://code.visualstudio.com">
+  <img src="https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC" width="70" height="20" />
+</a>
 
 > ### 📫 &nbsp; How to reach me:
 
