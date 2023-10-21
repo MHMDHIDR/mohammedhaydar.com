@@ -1,12 +1,11 @@
-<a href="https://github.com/MHMDHIDR" style="border-radius: 1rem">
-<img alt="Profile Picture" src="https://raw.githubusercontent.com/MHMDHIDR/mhmdhidr/main/public/banner.png" width="250" height="250" />
-</a>
-
 <a href="https://github.com/MHMDHIDR">
-<img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
+<img alt="Profile Picture" src="https://raw.githubusercontent.com/MHMDHIDR/mhmdhidr/main/public/banner.png" width="600" height="300" />
 </a>
 
-### Hi There!
+<img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
+<a href="https://github.com/MHMDHIDR">
+<h2>Hi There!</h2>
+</a>
 
 ![version :21.10.2023](https://img.shields.io/badge/version-21.10.2023-informational)&nbsp;
 ![profile count](https://komarev.com/ghpvc/?username=MHMDHIDR&color=red)&nbsp;
@@ -49,6 +48,7 @@
 <a href="https://www.tailwindcss.com">
   <img src="https://img.shields.io/badge/-Tailwindcss-05122A?style=flat&logo=tailwindcss&logoColor=563D7C" width="70" height="20" />
 </a>
+
 &nbsp;
 
 <!-- 4- SASS Lang -->
