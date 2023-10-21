@@ -3,8 +3,10 @@
 </a>
 
 <a href="https://github.com/MHMDHIDR">
-<h2>Hi There!</h2>
+<h2>
+Hi There!
 <img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
+</h2>
 </a>
 
 ![version :21.10.2023](https://img.shields.io/badge/version-21.10.2023-informational)&nbsp;
