@@ -3,10 +3,8 @@
 </a>
 
 <a href="https://github.com/MHMDHIDR">
-<h2>
-Hi There!
+<h2 style="display: inline-block">Hi There!</h2>
 <img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
-</h2>
 </a>
 
 ![version :21.10.2023](https://img.shields.io/badge/version-21.10.2023-informational)&nbsp;
@@ -34,7 +32,7 @@ Hi There!
 
 📄 &nbsp; For a deeper dive into my professional journey, check out my [Resume](https://drive.google.com/file/d/1Z_tnRp6xDhmISvM9thfuR1Ufe2MKkZaG/view?usp=sharing).
 
-### 🛠 &nbsp;Tech Stack
+> ### 🛠 &nbsp;Tech Stack
 
 <!-- 1- Javascript -->
 <a href="https://www.javascript.com">
