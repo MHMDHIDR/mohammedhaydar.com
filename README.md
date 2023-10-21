@@ -1,9 +1,10 @@
 <a href="https://github.com/MHMDHIDR">
-<img alt="Profile Picture" src="https://raw.githubusercontent.com/MHMDHIDR/mhmdhidr/main/public/banner.png" width="600" height="300" />
+<img alt="Profile Picture" src="https://raw.githubusercontent.com/MHMDHIDR/mhmdhidr/main/public/banner.png" width="700" height="300" />
 </a>
 
-<img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
 <a href="https://github.com/MHMDHIDR">
+<img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
+
 <h2>Hi There!</h2>
 </a>
 
@@ -48,8 +49,6 @@
 <a href="https://www.tailwindcss.com">
   <img src="https://img.shields.io/badge/-Tailwindcss-05122A?style=flat&logo=tailwindcss&logoColor=563D7C" width="70" height="20" />
 </a>
-
-&nbsp;
 
 <!-- 4- SASS Lang -->
 <a href="https://www.sass-lang.com">
