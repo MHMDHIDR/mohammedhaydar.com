@@ -3,9 +3,8 @@
 </a>
 
 <a href="https://github.com/MHMDHIDR">
-<img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
-
 <h2>Hi There!</h2>
+<img alt="handwavegif" src="https://user-images.githubusercontent.com/39513876/112366216-8cfe7400-8cfe-11eb-8116-7d3dbae20e97.gif" width="40" />
 </a>
 
 ![version :21.10.2023](https://img.shields.io/badge/version-21.10.2023-informational)&nbsp;
@@ -85,7 +84,9 @@
   <img src="https://img.shields.io/badge/-Visual%20Studio%20Code-05122A?style=flat&logo=visual-studio-code&logoColor=007ACC" width="120" height="20" />
 </a>
 
-> ### 📫 &nbsp; How to reach me:
+&nbsp;
+
+> ### 📫 &nbsp;How to reach me
 
 <a href="https://www.linkedin.com/in/mohammedhaydar">
 <img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a>
