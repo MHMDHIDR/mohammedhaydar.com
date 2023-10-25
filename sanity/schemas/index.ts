@@ -8,6 +8,7 @@ import services from './services'
 import blog from './blog'
 import blogCategories from './blogCategories'
 import comments from './comment'
+import upload from './upload'
 
 const schemas = [
   project,
@@ -19,6 +20,7 @@ const schemas = [
   services,
   blog,
   blogCategories,
-  comments
+  comments,
+  upload
 ]
 export default schemas
