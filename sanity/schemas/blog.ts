@@ -1,10 +1,20 @@
 import { createSlug } from '@/lib'
+import { v4 as uuidv4 } from 'uuid'
 
 export default {
   name: 'blogs',
   title: 'Blogs',
   type: 'document',
   fields: [
+    {
+      name: 'articleId',
+      title: 'Article ID',
+      type: 'string',
+      validation: (Rule: { required: () => any }) => Rule.required(),
+      initialValue: () => uuidv4(),
+      hidden: true,
+      readOnly: true
+    },
     {
       name: 'title',
       title: 'Title',

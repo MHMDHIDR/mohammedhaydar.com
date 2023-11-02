@@ -35,7 +35,7 @@ const Blogs = async ({ params }: { params: { page: string } }) => {
               <article className='blog card p-2 md:p-3'>
                 <header className='flex items-center justify-center blog-top relative mb-2'>
                   <Link
-                    href={`blog/${slug}`}
+                    href={`/blog/${slug}`}
                     className='fiximage hover-scale block w-full'
                     rel='noopener noreferrer'
                     title={title}
