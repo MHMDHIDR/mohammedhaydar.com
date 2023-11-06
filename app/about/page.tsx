@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { AboutSection, ReviewsSection, ServicesSection } from '@/components/containers'
+import { AboutSection, ServicesSection } from '@/components/containers'
 import { Layout2 } from '@/components/layout'
 import { SectionHeading } from '@/components/utils'
 
@@ -27,15 +27,6 @@ const about = () => {
         </div>
       </section>
       {/* End Service Section */}
-
-      {/* Start Reviews Section */}
-      <section id='section-reviews' className='pt-24 reviews-section lg:pt-28 xl:pt-32'>
-        <div className='container mx-auto'>
-          <SectionHeading title='Client Reviews' watermark='Reviews' animated={false} />
-          <ReviewsSection />
-        </div>
-      </section>
-      {/* End Reviews Section */}
 
       <span className='block pb-24 lg:pb-28 xl:pb-32'></span>
     </Layout2>
