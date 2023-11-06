@@ -7,7 +7,6 @@ import {
   HeroSection,
   PortfoliosSection,
   ResumeSection,
-  ReviewsSection,
   ServicesSection,
   SkillsSection
 } from '@/components/containers'
@@ -74,15 +73,6 @@ const Home: NextPage = () => {
         </div>
       </Section>
       {/* End Portfolios Section */}
-
-      {/* Start Reviews Section */}
-      {/* <Section name='section-reviews' className='pt-24 reviews-section lg:pt-28 xl:pt-32'>
-        <div className='container mx-auto'>
-          <SectionHeading animated={false} title='Client Reviews' watermark='Reviews' />
-          <ReviewsSection />
-        </div>
-      </Section> */}
-      {/* End Reviews Section */}
 
       {/* Start Blog Section */}
       <Section name='section-blog' className='news-section pt-24 lg:pt-28 xl:pt-32'>

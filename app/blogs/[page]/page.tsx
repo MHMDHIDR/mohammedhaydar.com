@@ -113,4 +113,6 @@ const Blogs = async ({ params }: { params: { page: string } }) => {
   )
 }
 
+export const revalidate = 10
+
 export default Blogs
