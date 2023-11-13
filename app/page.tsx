@@ -86,7 +86,7 @@ const Home: NextPage = () => {
       {/* Start Contact Section */}
       <Section name='section-contact' className='pt-24 contact-section lg:pt-28 xl:pt-32'>
         <div className='container mx-auto'>
-          <SectionHeading animated={false} title='Contact Us' watermark='Contact' />
+          <SectionHeading animated={false} title='Contact me' watermark='Contact' />
           <ContactSection />
         </div>
       </Section>

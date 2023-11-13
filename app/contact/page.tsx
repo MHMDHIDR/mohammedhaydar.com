@@ -13,7 +13,7 @@ const contact = () => {
       {/* Start Contact Section */}
       <section id='section-contact' className='pt-24 contact-section lg:pt-28 xl:pt-32'>
         <div className='container mx-auto'>
-          <SectionHeading title='Contact Us' watermark='Contact' animated={false} />
+          <SectionHeading title='Contact me' watermark='Contact' animated={false} />
           <ContactSection />
         </div>
       </section>
