@@ -7,14 +7,21 @@ export default {
       name: 'thumb',
       title: 'Images',
       type: 'array',
-      of: [{ type: 'image' }]
+      of: [
+        {
+          type: 'image',
+          options: {
+            accept: 'image/*'
+          }
+        }
+      ]
     },
     {
       name: 'sound',
       title: 'Sound',
-      type: 'file', // Use the 'file' type for sound uploads
+      type: 'file',
       options: {
-        accept: 'audio/*' // Specify the accepted audio file types
+        accept: 'audio/*'
       },
       validation: (Rule: { required: () => any }) => Rule.required()
     }
