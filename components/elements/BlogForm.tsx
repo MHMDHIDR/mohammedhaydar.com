@@ -27,7 +27,9 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
 
   return (
     <section>
-      <h3 className='text-2xl font-bold'>Share Your thoughts!</h3>
+      <h3 className='text-2xl font-bold uppercase'>
+        Would Love to Read your opinion down below!
+      </h3>
       <form className='mt-7 flex flex-col' onSubmit={handleSubmit}>
         <label htmlFor='name' className='flex flex-col gap-y-3'>
           <span>Name</span>
@@ -45,7 +47,7 @@ const BlogForm = ({ id: blogId }: { id: string }) => {
           <span>
             Email
             <small className='text-sm mx-2'>
-              <em>(kept private)</em>
+              <em>(kept safe & private)</em>
             </small>
           </span>
           <input
