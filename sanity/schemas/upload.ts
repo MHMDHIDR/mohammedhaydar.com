@@ -1,6 +1,6 @@
 export default {
   name: 'upload',
-  title: 'upload',
+  title: 'Upload',
   type: 'document',
   fields: [
     {
@@ -24,6 +24,19 @@ export default {
         accept: 'audio/*'
       },
       validation: (Rule: { required: () => any }) => Rule.required()
+    },
+    {
+      name: 'videos',
+      title: 'Videos',
+      type: 'array',
+      of: [
+        {
+          type: 'file',
+          options: {
+            accept: 'video/*'
+          }
+        }
+      ]
     }
   ]
 }
