@@ -1,10 +1,12 @@
 'use client'
 import { useEffect } from 'react'
-import Layout from '@/components/layout/Layout'
 import Link from 'next/link'
-import type { BreadcrumbProps } from '@/types'
+import Layout from '@/components/layout/Layout'
+import useFullScreenMedia from '@/hooks/useFullScreenMedia'
 import { capitalizeText, removeSlug } from '@/lib'
 import notify from '@/lib/notify'
+import '../../globals.scss'
+import type { BreadcrumbProps } from '@/types'
 
 export default function BlogsLayout({
   children,
@@ -66,9 +68,10 @@ export default function BlogsLayout({
         codeContainer.appendChild(copyButton)
       })
     }
-
     copyCodeToClipboard()
   }, [])
+
+  useFullScreenMedia()
 
   return (
     <Layout>
