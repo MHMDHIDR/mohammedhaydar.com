@@ -5,7 +5,6 @@ import Layout from '@/components/layout/Layout'
 import useFullScreenMedia from '@/hooks/useFullScreenMedia'
 import { capitalizeText, removeSlug } from '@/lib'
 import notify from '@/lib/notify'
-import '../../globals.scss'
 import type { BreadcrumbProps } from '@/types'
 
 export default function BlogsLayout({

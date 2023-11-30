@@ -745,6 +745,11 @@
 }
 
 /* Full-screen-overlay component */
+.post-body img,
+.post-body video {
+  cursor: pointer;
+}
+
 .full-screen-overlay {
   position: fixed;
   top: 0;
