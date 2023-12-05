@@ -748,6 +748,11 @@
 .post-body img,
 .post-body video {
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.post-body img:hover,
+.post-body video:hover {
+  transform: scale(1.1);
 }
 
 .full-screen-overlay {
