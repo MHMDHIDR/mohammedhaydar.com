@@ -180,11 +180,15 @@
       }
     }
   }
-  code {
+  code:not(pre code) {
     @apply rounded bg-slate-800 px-1 font-mono text-heading;
   }
   pre {
-    @apply border border-gray-700 h-auto max-w-full overflow-x-auto overflow-y-auto bg-slate-800 p-5 rounded-xl;
+    @apply border border-gray-700 h-auto max-w-full overflow-x-auto overflow-y-auto p-5 rounded-xl;
+  }
+  pre,
+  code.hljs {
+    @apply bg-[rgb(30_30_30_/_.75)];
   }
   table {
     @apply w-full table-auto border-collapse border border-white border-opacity-10;

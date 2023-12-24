@@ -46,7 +46,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
 
   const marked = new Marked(
     markedHighlight({
-      langPrefix: 'hljs language-',
+      langPrefix: 'language-',
       highlight(code, lang) {
         const language = hljs.getLanguage(lang) ? lang : 'plaintext'
         return hljs.highlight(code, { language }).value
