@@ -15,7 +15,7 @@ const TechSkills = () => {
 
   return (
     <div className='grid grid-cols-4 gap-7'>
-      {data?.map((skill, index) => (
+      {data?.map((skill: skillsProps, index: number) => (
         <motion.div
           initial='hidden'
           whileInView='visible'

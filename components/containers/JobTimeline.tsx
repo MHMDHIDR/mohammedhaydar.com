@@ -20,7 +20,7 @@ const JobTimeline = () => {
         <RiBriefcaseLine className='mr-2 inline-block text-primary' />
         Working Experience
       </h4>
-      {data?.map((timeline, index) => (
+      {data?.map((timeline: WorkEducationProps, index: number) => (
         <motion.div
           initial='hidden'
           whileInView='visible'

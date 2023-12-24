@@ -87,7 +87,7 @@ export type getAllBlogsDataProps = {
 }
 
 export type skillsProps = {
-  id?: number
+  id: number
   title: string
   skills?: {
     _key?: string

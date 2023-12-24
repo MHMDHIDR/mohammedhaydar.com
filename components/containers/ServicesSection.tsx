@@ -15,7 +15,7 @@ const ServicesSection = () => {
 
   return (
     <div className='services-wrapper grid grid-cols-3 gap-7'>
-      {data?.map((service, index) => (
+      {data?.map((service: servicesProps, index: number) => (
         <motion.div
           initial='hidden'
           whileInView='visible'

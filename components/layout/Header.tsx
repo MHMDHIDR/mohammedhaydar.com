@@ -39,7 +39,7 @@ const Header = () => {
           : 'absolute'
       }`}
     >
-      <div className='container mx-auto py-2.5'>
+      <div className={`container mx-auto${sticky ? 'py-0' : ' py-4'}`}>
         <div className='flex items-center justify-between header-inner'>
           <Logo url='/' />
           <div className='block header-mobilenav lg:hidden'>

@@ -18,7 +18,12 @@ const TimelineItem = ({
         <h5 className='mb-0 text-primary'>{title}</h5>
         <p className='mb-2 text-heading'>
           {link ? (
-            <a href={link} className='no-underline underline-hover break-words'>
+            <a
+              href={link}
+              className='no-underline underline-hover break-words'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
               {meta}
             </a>
           ) : (

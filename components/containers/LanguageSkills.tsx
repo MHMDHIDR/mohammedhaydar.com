@@ -3,9 +3,10 @@ import { useQuery } from '@tanstack/react-query'
 import { getLanguageskills } from '@/fetchers'
 import { childrenAnimation } from '@/lib/motion'
 import { ProgressBar } from '@/components/elements'
+import type { skillsProps } from '@/types'
 
 const LanguageSkills = () => {
-  const { data } = useQuery({
+  const { data } = useQuery<skillsProps[]>({
     queryKey: ['language-skills'],
     queryFn: async () => await getLanguageskills()
   })
@@ -14,7 +15,7 @@ const LanguageSkills = () => {
 
   return (
     <div className='grid grid-cols-2 gap-7'>
-      {data?.map((skill, index) => (
+      {data?.map((skill: skillsProps, index: number) => (
         <motion.div
           initial='hidden'
           whileInView='visible'
