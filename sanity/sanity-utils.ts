@@ -1,5 +1,6 @@
-import { createClient, groq } from 'next-sanity'
-import clientConfig from '@/sanity/config/client-config'
+import { groq } from 'next-sanity'
+import { client } from '@/sanity/config/client-config'
+import { ITEMS_PER_RENDER } from '@/constants'
 import type {
   informationProps,
   skillsProps,
@@ -10,10 +11,9 @@ import type {
   BlogProps,
   getPreviousAndNextBlogsProps
 } from '@/types'
-import { ITEMS_PER_RENDER } from '@/constants'
 
 export async function getInformation(): Promise<informationProps> {
-  return createClient(clientConfig).fetch(
+  return await client.fetch(
     groq`*[_type == "information"][0]{
       firstName,
       lastName,
@@ -35,7 +35,7 @@ export async function getInformation(): Promise<informationProps> {
 }
 
 export async function getTechskills(): Promise<skillsProps[]> {
-  return createClient(clientConfig).fetch(
+  return await client.fetch(
     groq`*[_type == "skills"]{
       id,
       title,
@@ -46,7 +46,7 @@ export async function getTechskills(): Promise<skillsProps[]> {
 }
 
 export async function getServices(): Promise<servicesProps[]> {
-  return createClient(clientConfig).fetch(
+  return await client.fetch(
     groq`*[_type == "services"]{
       id,
       title,
@@ -57,7 +57,7 @@ export async function getServices(): Promise<servicesProps[]> {
 }
 
 export async function getProjects(): Promise<Project[]> {
-  return createClient(clientConfig).fetch(
+  return await client.fetch(
     groq`*[_type == "project"]{
       _id,
       _createdAt,
@@ -76,7 +76,7 @@ export async function getProjects(): Promise<Project[]> {
 }
 
 export async function getFilters(): Promise<ProjectFiltersProps[]> {
-  return createClient(clientConfig).fetch(
+  return await client.fetch(
     groq`*[_type == "projectFilters"]{
       _id,
       title,
@@ -88,10 +88,10 @@ export async function getFilters(): Promise<ProjectFiltersProps[]> {
 export async function getAllBlogs(
   pageNumber: number
 ): Promise<{ blogs: BlogProps[]; total: number }> {
-  const limit = ITEMS_PER_RENDER * 3 // Number of blogs per page
+  const limit = ITEMS_PER_RENDER * 3 // 5 * 3 = [15 blogs per page]
   const offset = (pageNumber - 1) * limit
 
-  const blogs: BlogProps[] = await createClient(clientConfig).fetch(
+  const blogs: BlogProps[] = await client.fetch(
     groq`*[_type == "blogs"]{
         _id,
         _createdAt,
@@ -104,7 +104,7 @@ export async function getAllBlogs(
     }[${offset}...${offset + limit}]` // Fetch blogs for the current page
   )
 
-  const total: number = await createClient(clientConfig).fetch(
+  const total: number = await client.fetch(
     groq`count(*[_type == "blogs"])` // Fetch the total count of blogs
   )
 
@@ -119,7 +119,7 @@ export async function getAllBlogs(
 }
 
 export async function getBlogBySlug(slug: string): Promise<BlogProps | null> {
-  const blog = await createClient(clientConfig).fetch(
+  const blog = await client.fetch(
     groq`*[_type == "blogs" && slug.current == $slug]{
       _id,
       _createdAt,
@@ -157,7 +157,7 @@ export async function getBlogBySlug(slug: string): Promise<BlogProps | null> {
 export async function getPreviousAndNextBlogs(
   slug: string
 ): Promise<getPreviousAndNextBlogsProps> {
-  const blogs: BlogProps[] = await createClient(clientConfig).fetch(
+  const blogs: BlogProps[] = await client.fetch(
     groq`*[_type == "blogs"] | order(_createdAt desc) {
       'slug': slug.current,
       title
@@ -183,7 +183,7 @@ export async function getPreviousAndNextBlogs(
 }
 
 export async function getEducationBackground(): Promise<WorkEducationProps[]> {
-  return createClient(clientConfig).fetch(
+  return await client.fetch(
     groq`*[_type == "educationbackground"]{
       id,
       title,
@@ -195,7 +195,7 @@ export async function getEducationBackground(): Promise<WorkEducationProps[]> {
 }
 
 export async function getJobExperience(): Promise<WorkEducationProps[]> {
-  return createClient(clientConfig).fetch(
+  return await client.fetch(
     groq`*[_type == "jobExperience"]{
       id,
       title,

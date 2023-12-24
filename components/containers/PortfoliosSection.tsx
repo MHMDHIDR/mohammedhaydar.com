@@ -14,7 +14,10 @@ const PortfoliosSection = () => {
   const [pageNumber, setPageNumber] = useState(1)
   const [allProjectsLoaded, setAllProjectsLoaded] = useState(false) // New state variable
 
-  const { data: projects } = useQuery(['projects'], getProjects)
+  const { data: projects } = useQuery({
+    queryKey: ['projects'],
+    queryFn: async () => await getProjects()
+  })
 
   useEffect(() => {
     if (projects) {

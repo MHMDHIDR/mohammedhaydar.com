@@ -12,7 +12,10 @@ import { useQuery } from '@tanstack/react-query'
 import { getInformation } from '@/sanity/sanity-utils'
 
 const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps) => {
-  const { data } = useQuery<informationProps>(['information'], getInformation)
+  const { data } = useQuery<informationProps>({
+    queryKey: ['information'],
+    queryFn: async () => await getInformation()
+  })
 
   if (!data) return null
 

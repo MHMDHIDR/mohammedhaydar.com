@@ -1,10 +1,10 @@
 import { useCallback, useRef, useState, useEffect } from 'react'
-import { Autoplay } from 'swiper'
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { Blog } from '@/components/elements'
 import { Spinner } from '@/components/utils'
 import type { BlogProps } from '@/types'
 import { getAllBlogs } from '@/sanity/sanity-utils'
+import { Autoplay } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import type { Swiper as SwiperType } from 'swiper'
 
 const BlogSection = () => {
@@ -45,21 +45,13 @@ const BlogSection = () => {
         modules={[Autoplay]}
         spaceBetween={28}
         slidesPerView={3}
-        autoplay={{
-          delay: 5000
-        }}
         centerInsufficientSlides={true}
         onSwiper={swiper => (sliderRef.current = swiper)}
+        autoplay={{ delay: 2000 }}
         breakpoints={{
-          320: {
-            slidesPerView: 1
-          },
-          768: {
-            slidesPerView: 2
-          },
-          1024: {
-            slidesPerView: 3
-          }
+          320: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 }
         }}
       >
         {blogs.map((post: BlogProps, index: number) => (

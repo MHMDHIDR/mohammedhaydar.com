@@ -1,13 +1,12 @@
 'use server'
-import { createClient } from 'next-sanity'
-import clientConfig from '@/sanity/config/client-config'
+import { client } from '@/sanity/config/client-config'
 import type { CommentProps } from '@/types'
 
 export async function handleAddComment(newComment: CommentProps) {
   const { _id, name, email, comment } = newComment
 
   try {
-    await createClient(clientConfig).create({
+    await client.create({
       _type: 'comment',
       blog: {
         _type: 'reference',

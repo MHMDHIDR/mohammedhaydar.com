@@ -6,7 +6,10 @@ import { servicesProps } from '@/types'
 import { getServices } from '@/sanity/sanity-utils'
 
 const ServicesSection = () => {
-  const { data } = useQuery<servicesProps[]>(['services'], getServices)
+  const { data } = useQuery<servicesProps[]>({
+    queryKey: ['services'],
+    queryFn: async () => await getServices()
+  })
 
   if (!data) return null
 

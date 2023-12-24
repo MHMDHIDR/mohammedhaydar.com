@@ -1,4 +1,4 @@
-import { PortableTextBlock } from 'sanity'
+import { SanityClient } from 'sanity'
 
 export type informationProps = {
   firstName: string
@@ -213,7 +213,7 @@ export type Project = {
   }[]
   url: string
   github: string
-  content: PortableTextBlock[]
+  content: SanityClient[]
 }
 
 export type ProjectFiltersProps = {

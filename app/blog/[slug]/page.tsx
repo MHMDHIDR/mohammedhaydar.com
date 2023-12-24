@@ -1,11 +1,12 @@
-import React from 'react'
+import { Fragment } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Metadata } from 'next'
 import { getBlogBySlug, getPreviousAndNextBlogs } from '@/sanity/sanity-utils'
 import { capitalizeText, removeSlug } from '@/lib'
 import { RiArticleLine, RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
-import { marked } from 'marked'
+import { Marked } from 'marked'
+import { markedHighlight } from 'marked-highlight'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
 import { shimmer, toBase64 } from '@/lib/utils'
@@ -43,15 +44,15 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
 
   const { _id, _createdAt, title, category, cover, content, comments } = blog
 
-  marked.setOptions({
-    highlight: function (code, language) {
-      if (language && hljs.getLanguage(language)) {
-        return hljs.highlight(language, code).value
-      } else {
-        return hljs.highlightAuto(code).value
+  const marked = new Marked(
+    markedHighlight({
+      langPrefix: 'hljs language-',
+      highlight(code, lang) {
+        const language = hljs.getLanguage(lang) ? lang : 'plaintext'
+        return hljs.highlight(code, { language }).value
       }
-    }
-  })
+    })
+  )
 
   return (
     <div className='single-post py-24 lg:py-28 xl:py-32'>
@@ -102,7 +103,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         </div>
         <div
           className='post-body mt-4'
-          dangerouslySetInnerHTML={{ __html: marked(content) }}
+          dangerouslySetInnerHTML={{ __html: await marked.parse(content) }}
         />
 
         <Divider />
@@ -122,10 +123,10 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
                 >
                   <p className='text-body text-lg p-4 whitespace-pre'>
                     {comment.comment.split('\n').map((line, index) => (
-                      <React.Fragment key={index}>
+                      <Fragment key={index}>
                         {abstractText(limitWords(line, 100), 1000)}
                         <br />
-                      </React.Fragment>
+                      </Fragment>
                     ))}
                   </p>
                   <div

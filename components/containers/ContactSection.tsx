@@ -8,7 +8,10 @@ import { informationProps } from '@/types'
 import { getInformation } from '@/sanity/sanity-utils'
 
 const ContactSection = () => {
-  const { data } = useQuery<informationProps>(['information'], getInformation)
+  const { data } = useQuery<informationProps>({
+    queryKey: ['information'],
+    queryFn: async () => await getInformation()
+  })
 
   if (!data) return null
 

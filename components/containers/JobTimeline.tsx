@@ -7,7 +7,10 @@ import { getJobExperience } from '@/sanity/sanity-utils'
 import { WorkEducationProps } from '@/types'
 
 const JobTimeline = () => {
-  const { data } = useQuery<WorkEducationProps[]>(['jobExperience'], getJobExperience)
+  const { data } = useQuery<WorkEducationProps[]>({
+    queryKey: ['jobExperience'],
+    queryFn: async () => await getJobExperience()
+  })
 
   if (!data) return null
 

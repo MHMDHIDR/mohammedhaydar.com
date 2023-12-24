@@ -5,7 +5,10 @@ import { childrenAnimation } from '@/lib/motion'
 import { ProgressBar } from '@/components/elements'
 
 const LanguageSkills = () => {
-  const { data } = useQuery(['language-skills'], getLanguageskills)
+  const { data } = useQuery({
+    queryKey: ['language-skills'],
+    queryFn: async () => await getLanguageskills()
+  })
 
   if (!data) return null
 

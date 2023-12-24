@@ -14,7 +14,10 @@ type SidemenuProps = {
 }
 
 const Sidemenu = ({ fullMenu, fullMenuHandler }: SidemenuProps) => {
-  const { data } = useQuery<informationProps>(['information'], getInformation)
+  const { data } = useQuery<informationProps>({
+    queryKey: ['information'],
+    queryFn: async () => await getInformation()
+  })
 
   if (!data) return null
 

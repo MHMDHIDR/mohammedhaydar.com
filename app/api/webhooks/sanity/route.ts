@@ -19,22 +19,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: 'Unauthorized request.' }, { status: 401 })
     }
 
-    // You can add logic to handle different types of events here
-    // For example, check the event type and update your website accordingly.
-
-    // Example: Trigger a redeployment in Vercel
-    // Replace this with the actual logic to redeploy your site
-    // You may need to use Vercel's API to trigger deployments
-    // Make sure to set up Vercel authentication as needed
-
-    // const response = await axios.post('https://api.vercel.com/v12/now/deployments', {/* deployment options */}, {
-    //   headers: {
-    //     Authorization: `Bearer ${VERCEL_API_KEY}`, // Replace with your Vercel API key
-    //   },
-    // });
-
     // Log the incoming data for debugging
-
     return NextResponse.json(
       { message: 'Webhook received and action triggered.' },
       { status: 200 }

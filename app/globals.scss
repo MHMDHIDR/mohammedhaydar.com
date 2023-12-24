@@ -46,7 +46,7 @@
   }
 
   p {
-    @apply font-body text-base font-normal text-body;
+    @apply font-body text-lg leading-relaxed font-normal text-body;
 
     &.lead {
       @apply text-lg;

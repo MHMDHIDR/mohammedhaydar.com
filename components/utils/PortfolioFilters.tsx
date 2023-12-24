@@ -14,9 +14,12 @@ const PortfolioFilters: React.FC<PortfolioFiltersProps> = ({
   currentFilter,
   filterHandler
 }) => {
-  const { data: filterData } = useQuery<ProjectFiltersProps[]>(['filters'], getFilters)
-  const [tabs, setTabs] = useState<ProjectFiltersProps[]>([])
+  const { data: filterData } = useQuery<ProjectFiltersProps[]>({
+    queryKey: ['filters'],
+    queryFn: async () => await getFilters()
+  })
 
+  const [tabs, setTabs] = useState<ProjectFiltersProps[]>([])
   const [activeTab, setActiveTab] = useState<string | null>(
     currentFilter === 'ALL' ? 'ALL' : null
   )

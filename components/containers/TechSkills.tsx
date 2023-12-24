@@ -6,7 +6,10 @@ import { skillsProps } from '@/types'
 import { getTechskills } from '@/sanity/sanity-utils'
 
 const TechSkills = () => {
-  const { data } = useQuery<skillsProps[]>(['skills'], getTechskills)
+  const { data } = useQuery<skillsProps[]>({
+    queryKey: ['skills'],
+    queryFn: async () => await getTechskills()
+  })
 
   if (!data) return null
 

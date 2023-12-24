@@ -7,10 +7,10 @@ import { WorkEducationProps } from '@/types'
 import { getEducationBackground } from '@/sanity/sanity-utils'
 
 const EducationTimeline = () => {
-  const { data } = useQuery<WorkEducationProps[]>(
-    ['educationbackground'],
-    getEducationBackground
-  )
+  const { data } = useQuery<WorkEducationProps[]>({
+    queryKey: ['educationbackground'],
+    queryFn: async () => await getEducationBackground()
+  })
 
   if (!data) return null
 
