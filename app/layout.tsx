@@ -14,7 +14,7 @@ const RadioCanada = Radio_Canada({
 export const metadata = {
   title: 'Mohammed Haydar',
   description:
-    'Mohammed Haydar Personal Portfolio Website Where I showcase My Porjects, Work Experiences, and More...'
+    'Mohammed Haydar is the Personal Portfolio Website that shows his projects and work that he has been doing over the last few years, and More...'
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -24,10 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         name='viewport'
         content='width=device-width, initial-scale=1 maximum-scale=1'
       />
-      <meta
-        name='description'
-        content='Mohammed Haydar Personal Portfolio Website Where I showcase My Porjects, Work Experiences, and More...'
-      />
+      <meta name='description' content={metadata.description} />
       <meta
         name='keywords'
         content='Mohammed, Haydar, Personal, Portfolio, Website, Where I showcase My Porjects, Work Experiences, Webapp'
@@ -38,22 +35,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel='manifest' href='/manifest.json' />
       <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
       <link rel='apple-touch-icon' href='/icon-192x128.png' />
+      {/* Open Graph Data */}
       <meta property='og:type' content='website' />
       <meta property='og:site_name' content='Mohammed Haydar' />
       <meta
         property='og:title'
         content='Mohammed Haydar - Personal Mohammed Haydar Portfolio'
       />
-      <meta
-        property='og:description'
-        content='Mohammed Haydar is the Personal Portfolio Website that shows his projects and work that he has been doing over the last few years.'
-      />
+      <meta property='og:description' content={metadata.description} />
       <meta property='og:image' content='https://mohammedhaydar.com/icon-192x128.png' />
       <meta property='og:image:width' content='192' />
       <meta property='og:image:height' content='128' />
       <meta property='og:url' content='https://mohammedhaydar.com/' />
       <meta property='og:locale' content='en_GB' />
       <meta property='og:locale:alternate' content='ar_AR' />
+      {/* Twitter Data */}
       <meta
         property='twitter:title'
         content='Mohammed Haydar - Personal Mohammed Haydar Portfolio'
@@ -61,7 +57,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name='twitter:image' content='https://mohammedhaydar.com/icon-192x128.png' />
       <meta name='twitter:card' content='MHMDHIDR' />
       <meta name='twitter:site' content='@MHMDHIDR' />
+      <meta property='twitter:description' content={metadata.description}></meta>
       <meta name='github:site' content='@MHMDHIDR' />
+      <meta name='github:creator' content='@MHMDHIDR' />
       <body className={RadioCanada.className}>{children}</body>
     </html>
   )
