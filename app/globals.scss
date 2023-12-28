@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  // Typography
-
   *,
   *::before,
   *::after {
@@ -16,6 +14,7 @@
   *::selection {
     @apply bg-primary text-grey;
   }
+
   *::-moz-selection {
     @apply bg-primary text-grey;
   }
@@ -562,6 +561,7 @@
   position: relative;
   margin-bottom: 68px;
 }
+
 .swiper {
   &-button-next,
   &-button-prev {
