@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const SkillsCircle = ({ skill: { title, skills } }: { skill: skillsProps }) => {
   return (
-    <div className='circleprogress card hovercard relative p-4 text-center md:p-5'>
-      <div className='relative mb-5 text-primary grid grid-cols-2 grid-rows-2 gap-4'>
+    <div className='circleprogress card hovercard relative p-4 text-center md:p-5 min-w-fit max-w-screen-xs mx-auto'>
+      <div className='relative mb-5 text-primary grid grid-cols-[repeat(2,_1fr)] grid-rows-2 gap-4'>
         {skills?.map(({ label, image, _key }) => (
           <div
             key={_key}

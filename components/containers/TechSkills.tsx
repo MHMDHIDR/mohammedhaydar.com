@@ -14,7 +14,7 @@ const TechSkills = () => {
   if (!data) return null
 
   return (
-    <div className='grid grid-cols-4 gap-7'>
+    <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8'>
       {data?.map((skill: skillsProps, index: number) => (
         <motion.div
           initial='hidden'
@@ -22,7 +22,7 @@ const TechSkills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.2 * index }}
           variants={childrenAnimation}
-          className='col-span-4 sm:col-span-2 lg:col-span-1'
+          className='col-span-1'
           key={skill.id}
         >
           <SkillsCircle skill={skill} />

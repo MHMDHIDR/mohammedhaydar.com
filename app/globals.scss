@@ -718,7 +718,7 @@
   }
 
   .skillbg {
-    @apply bg-opacity-20;
+    @apply bg-opacity-20 min-w-32;
   }
 }
 
