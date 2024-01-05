@@ -14,7 +14,7 @@ const TechSkills = () => {
   if (!data) return null
 
   return (
-    <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8'>
+    <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-8 skillsCard'>
       {data?.map((skill: skillsProps, index: number) => (
         <motion.div
           initial='hidden'
@@ -24,6 +24,7 @@ const TechSkills = () => {
           variants={childrenAnimation}
           className='col-span-1'
           key={skill.id}
+          data-glow
         >
           <SkillsCircle skill={skill} />
         </motion.div>
