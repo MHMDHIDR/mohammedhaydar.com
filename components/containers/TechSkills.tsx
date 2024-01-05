@@ -24,7 +24,6 @@ const TechSkills = () => {
           variants={childrenAnimation}
           className='col-span-1'
           key={skill.id}
-          data-glow
         >
           <SkillsCircle skill={skill} />
         </motion.div>
