@@ -125,7 +125,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 1 }}
               variants={childrenAnimation}
-              className='herosection-bottom absolute bottom-20 sm:bottom-32 left-0 top-auto w-full justify-between text-center'
+              className='herosection-bottom absolute bottom-5 xl:bottom-16 2xl:bottom-32 left-0 w-full justify-between text-center'
             >
               <ScrollLink
                 activeClass='active'
@@ -135,7 +135,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
                 smooth='easeInQuad'
                 offset={-74}
                 duration={1000}
-                className='cursor-pointer text-xs font-medium uppercase tracking-widest transition-all hover:text-primary'
+                className='cursor-pointer text-xs lg:text-lg xl:text-2xl font-medium uppercase tracking-widest transition-all hover:text-primary'
               >
                 <RiArrowDownLine className='inline animate-bounce text-base' />
                 <span className='pl-2' data-tooltip='Find Out More About ME!'>
