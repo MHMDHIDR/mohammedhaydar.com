@@ -111,7 +111,7 @@ export async function getAllBlogs(
   return {
     blogs: blogs.map(blog => ({
       ...blog,
-      slug: blog.slug || '',
+      slug: blog.slug ?? '',
       category: blog.category || []
     })),
     total
@@ -171,12 +171,12 @@ export async function getPreviousAndNextBlogs(
   const currentBlogIndex = blogs.findIndex(blog => blog.slug === slug)
 
   if (currentBlogIndex > 0) {
-    previousSlug = blogs[currentBlogIndex - 1].slug
-    previousTitle = blogs[currentBlogIndex - 1].title
+    previousSlug = blogs[currentBlogIndex - 1]?.slug ?? ''
+    previousTitle = blogs[currentBlogIndex - 1]?.title ?? ''
   }
   if (currentBlogIndex < blogs.length - 1) {
-    nextSlug = blogs[currentBlogIndex + 1].slug
-    nextTitle = blogs[currentBlogIndex + 1].title
+    nextSlug = blogs[currentBlogIndex + 1]?.slug ?? ''
+    nextTitle = blogs[currentBlogIndex + 1]?.title ?? ''
   }
 
   return { previous: { previousSlug, previousTitle }, next: { nextSlug, nextTitle } }

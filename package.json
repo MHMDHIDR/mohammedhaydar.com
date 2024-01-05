@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "push": "next lint && git add . && git commit -am \"updates\" && git push -u origin main"
+    "type-check": "tsc --noEmit",
+    "push": "next lint && npm run type-check && git add . && git diff --quiet  && git commit -am \"updates\" && git push -u origin main"
   },
   "dependencies": {
     "@sanity/client": "^6.10.0",
