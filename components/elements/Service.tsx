@@ -3,7 +3,7 @@ import { ReactSVG } from 'react-svg'
 
 const Service = ({ service: { title, text, icon } }: { service: servicesProps }) => {
   return (
-    <div className='service card hovercard relative overflow-hidden p-4 md:p-5'>
+    <div className='service card hovercard relative overflow-hidden p-4 md:p-5 min-h-full'>
       <span className='service-icon mb-6 flex h-20 w-20 items-center justify-center overflow-hidden rounded-full bg-primary bg-opacity-10 p-5 text-4xl text-primary'>
         <ReactSVG
           className='fill-current text-primary'
