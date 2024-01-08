@@ -125,7 +125,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 1 }}
               variants={childrenAnimation}
-              className='herosection-bottom absolute bottom-5 xl:bottom-16 2xl:bottom-32 left-0 w-full justify-between text-center'
+              className='herosection-bottom absolute bottom-10 xl:bottom-16 2xl:bottom-32 left-0 w-full justify-between text-center'
             >
               <ScrollLink
                 activeClass='active'
