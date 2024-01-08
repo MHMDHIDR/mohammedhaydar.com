@@ -135,11 +135,11 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
                 smooth='easeInQuad'
                 offset={-74}
                 duration={1000}
-                className='cursor-pointer text-xs lg:text-lg xl:text-2xl font-medium uppercase tracking-widest transition-all hover:text-primary'
+                className='cursor-pointer text-xs lg:text-base xl:text-lg font-medium uppercase tracking-widest transition-all hover:text-primary'
               >
                 <RiArrowDownLine className='inline animate-bounce text-base' />
                 <span className='pl-2' data-tooltip='Find Out More About ME!'>
-                  Scroll Down
+                  Interested to know more?
                 </span>
               </ScrollLink>
             </motion.div>

@@ -13,8 +13,26 @@ import {
 import { Layout } from '@/components/layout'
 import { SectionHeading } from '@/components/utils'
 import BlogSection from '@/components/containers/BlogSection'
+import { getInformation } from '@/sanity/sanity-utils'
+import { useEffect, useState } from 'react'
 
 const Home: NextPage = () => {
+  const [resumeLink, setResumeLink] = useState<string | null>(null)
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getInformation()
+        setResumeLink(data.resumeLink)
+      } catch (error) {
+        console.error('Error fetching Resume Link:', error)
+      }
+    }
+    fetchData()
+  }, [])
+
+  if (!resumeLink) return null
+
   return (
     <Layout blurred>
       {/* Start Hero Section */}
@@ -57,6 +75,13 @@ const Home: NextPage = () => {
       <Section name='section-resume' className='pt-24 resume-section lg:pt-28 xl:pt-32'>
         <div className='container mx-auto'>
           <SectionHeading animated={false} title='My Resume' watermark='Resume' />
+          <a
+            href={resumeLink}
+            target='_blank'
+            className='flex w-fit mx-auto mb-16 btn text-white hover:text-blue-900'
+          >
+            <span>View Resume</span>
+          </a>
           <ResumeSection />
         </div>
       </Section>

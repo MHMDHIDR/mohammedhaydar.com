@@ -1,8 +1,8 @@
 {
-  "name": "mhmdhidr",
+  "name": "mohammedhaydar.com",
   "description": "Mohammed Haydar Personal Portfolio Website Where I showcase My Porjects, Work Experiences, and More...",
   "author": "Mohammed Haydar",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --experimental-https",
