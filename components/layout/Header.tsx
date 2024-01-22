@@ -7,15 +7,14 @@ import Link from 'next/link'
 import useEventListener from '@/hooks/useEventListener'
 import MobileNavigation from './MobileNavigation'
 import Navigation from './Navigation'
-import { useSession } from 'next-auth/react'
 import { Logo } from '@/components/utils'
-import NavMenu from './NavMenu'
-import { SignInBtn, SignOutBtn } from './AuthButtons'
-import { limitWords } from '@/lib/abstractText'
-import { ADMIN_EMAIL } from '@/constants'
+// import { useSession } from 'next-auth/react'
+// import NavMenu from './NavMenu'
+// import { limitWords } from '@/lib/abstractText'
+// import { ADMIN_EMAIL } from '@/constants'
 
 const Header = () => {
-  const { data: session } = useSession()
+  // const { data: session } = useSession()
 
   const [sticky, setSticky] = useState(false)
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -84,7 +83,7 @@ const Header = () => {
                 <span>Hire Me</span>
               </ScrollLink>
             )}
-            {session && session.user ? (
+            {/* {session && session.user ? (
               <NavMenu
                 label={`Account`}
                 className='text-black dark:text-white pr-14 sm:pr-2'
@@ -105,7 +104,7 @@ const Header = () => {
               </NavMenu>
             ) : (
               <SignInBtn />
-            )}
+            )} */}
           </div>
         </div>
       </div>

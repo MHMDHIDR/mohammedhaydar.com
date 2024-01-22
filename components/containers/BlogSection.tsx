@@ -10,7 +10,7 @@ import type { Swiper as SwiperType } from 'swiper'
 const BlogSection = () => {
   const pageNumber = parseInt('1')
   const [blogs, setBlogs] = useState<BlogProps[]>()
-  const [total, setBlogsTotal] = useState<number>()
+  const [_total, setBlogsTotal] = useState<number>()
   const sliderRef = useRef<SwiperType | null>(null)
 
   useEffect(() => {

@@ -1,7 +1,10 @@
 'use client'
 import type { SectionHeadingProps } from '@/types'
 
-const SectionHeading = ({ title, watermark, animated = true }: SectionHeadingProps) => {
+const SectionHeading = ({
+  title,
+  watermark /*, animated = true*/
+}: SectionHeadingProps) => {
   return (
     <div className='relative overflow-hidden text-center section-heading pb-14'>
       <h2 className='relative z-10 mb-2 uppercase'>{title}</h2>
