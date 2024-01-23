@@ -64,7 +64,7 @@ const HeroSection = ({ blurred, scroll = true, typed = true }: HeroSectionProps)
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: 0.4 }}
                 variants={childrenAnimation}
-                className='mb-5 text-heading text-2xl sm:text-2xl md:text-4xl'
+                className='mb-5 text-heading text-2xl sm:text-2xl md:text-4xl select-none'
               >
                 <span className='block sm:inline'>Hi, I am</span>{' '}
                 {typed ? (
