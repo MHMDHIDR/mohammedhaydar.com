@@ -41,23 +41,6 @@ const Header = () => {
       <div className={`container mx-auto ${sticky ? 'py-0' : 'py-4'}`}>
         <div className='flex items-center justify-between header-inner'>
           <Logo url='/' />
-          <div className='block header-mobilenav lg:hidden'>
-            <button
-              className='px-3 text-3xl btn btn-small btn-transparent'
-              aria-label='toggle navigation menu button'
-              onClick={() => setMobileMenu(prev => !prev)}
-            >
-              <RiMenuLine />
-            </button>
-
-            <div
-              className={`fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen p-4 text-center bg-grey transition-all duration-500 ${
-                mobileMenu ? 'translate-y-0' : 'translate-y-full'
-              }`}
-            >
-              <MobileNavigation changeState={setMobileMenu} />
-            </div>
-          </div>
           <div className='hidden header-nav lg:block'>
             <Navigation />
           </div>
@@ -105,6 +88,23 @@ const Header = () => {
             ) : (
               <SignInBtn />
             )} */}
+          </div>
+          <div className='block header-mobilenav lg:hidden'>
+            <button
+              className='px-3 text-3xl btn btn-small btn-transparent'
+              aria-label='toggle navigation menu button'
+              onClick={() => setMobileMenu(prev => !prev)}
+            >
+              <RiMenuLine />
+            </button>
+
+            <div
+              className={`fixed top-0 left-0 z-50 flex items-center justify-center w-screen h-screen p-4 text-center bg-grey transition-all duration-500 ${
+                mobileMenu ? 'translate-y-0' : 'translate-y-full'
+              }`}
+            >
+              <MobileNavigation changeState={setMobileMenu} />
+            </div>
           </div>
         </div>
       </div>

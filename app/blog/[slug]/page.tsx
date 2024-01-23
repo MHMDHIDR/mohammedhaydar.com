@@ -36,8 +36,8 @@ export async function generateMetadata({
 const Blog = async ({ params }: { params: { slug: string } }) => {
   const blog: BlogProps | null = await getBlogBySlug(params.slug)
   const {
-    previous: { previousSlug, previousTitle },
-    next: { nextSlug, nextTitle }
+    previous: { previousSlug, previousTitle, previousBlogThumb },
+    next: { nextSlug, nextTitle, nextBlogThumb }
   } = await getPreviousAndNextBlogs(params.slug)
 
   if (!blog) return null
@@ -155,19 +155,42 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           {previousSlug && previousTitle && (
             <Link
               href={`/blog/${previousSlug}`}
-              className='flex items-center underline-hover group'
+              className='flex gap-y-2 items-center justify-center group max-w-md'
             >
-              <RiArrowLeftSLine className='transition-transform duration-300 group-hover:-translate-x-1' />
-              {capitalizeText(removeSlug(previousTitle))}
+              <RiArrowLeftSLine className='transition-transform text-5xl duration-300 group-hover:-translate-x-1' />
+              <Image
+                src={previousBlogThumb!}
+                height={160}
+                width={160}
+                alt={title}
+                className='w-full mx-10 inline-block h-auto max-w-40 max-h-40 object-cover rounded-md'
+                placeholder='blur'
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(160, 160))}`}
+              />
+              <span className='underline-hover'>
+                {capitalizeText(removeSlug(previousTitle))}
+              </span>
             </Link>
           )}
+
           {nextSlug && nextTitle && (
             <Link
               href={`/blog/${nextSlug}`}
-              className='flex items-center underline-hover group'
+              className='flex gap-y-2 items-center justify-center group max-w-md'
             >
-              {capitalizeText(removeSlug(nextTitle))}
-              <RiArrowRightSLine className='transition-transform duration-300 group-hover:translate-x-1' />
+              <Image
+                src={nextBlogThumb!}
+                height={160}
+                width={160}
+                alt={title}
+                className='w-full mx-10 inline-block h-auto max-w-40 max-h-40 object-cover rounded-md'
+                placeholder='blur'
+                blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(160, 160))}`}
+              />
+              <span className='underline-hover'>
+                {capitalizeText(removeSlug(nextTitle))}
+              </span>
+              <RiArrowRightSLine className='transition-transform text-5xl duration-300 group-hover:-translate-x-1' />
             </Link>
           )}
         </div>

@@ -160,26 +160,35 @@ export async function getPreviousAndNextBlogs(
   const blogs: BlogProps[] = await client.fetch(
     groq`*[_type == "blogs"] | order(_createdAt desc) {
       'slug': slug.current,
-      title
+      title,
+      'thumb': thumb.asset->url
     }`
   )
 
   let previousSlug: string | null = null
   let previousTitle: string | null = null
+  let previousBlogThumb: string | null = null
   let nextSlug: string | null = null
   let nextTitle: string | null = null
+  let nextBlogThumb: string | null = null
+
   const currentBlogIndex = blogs.findIndex(blog => blog.slug === slug)
 
   if (currentBlogIndex > 0) {
     previousSlug = blogs[currentBlogIndex - 1]?.slug ?? ''
     previousTitle = blogs[currentBlogIndex - 1]?.title ?? ''
+    previousBlogThumb = blogs[currentBlogIndex - 1]?.thumb ?? null
   }
   if (currentBlogIndex < blogs.length - 1) {
     nextSlug = blogs[currentBlogIndex + 1]?.slug ?? ''
     nextTitle = blogs[currentBlogIndex + 1]?.title ?? ''
+    nextBlogThumb = blogs[currentBlogIndex + 1]?.thumb ?? null
   }
 
-  return { previous: { previousSlug, previousTitle }, next: { nextSlug, nextTitle } }
+  return {
+    previous: { previousSlug, previousTitle, previousBlogThumb },
+    next: { nextSlug, nextTitle, nextBlogThumb }
+  }
 }
 
 export async function getEducationBackground(): Promise<WorkEducationProps[]> {

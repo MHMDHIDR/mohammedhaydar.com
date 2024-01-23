@@ -67,10 +67,12 @@ export type getPreviousAndNextBlogsProps = {
   previous: {
     previousSlug: BlogProps['slug'] | null
     previousTitle: BlogProps['title'] | null
+    previousBlogThumb: BlogProps['thumb'] | null
   }
   next: {
     nextSlug: BlogProps['slug'] | null
     nextTitle: BlogProps['title'] | null
+    nextBlogThumb: BlogProps['thumb'] | null
   }
 }
 
