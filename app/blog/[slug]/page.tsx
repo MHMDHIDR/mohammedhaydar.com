@@ -106,7 +106,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           dangerouslySetInnerHTML={{ __html: await marked.parse(content) }}
         />
 
-        <Divider />
+        <Divider className='my-16 sm:my-24' />
 
         <BlogForm id={_id} />
 
