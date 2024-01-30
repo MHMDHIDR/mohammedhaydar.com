@@ -1,20 +1,20 @@
-import { Fragment } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { Metadata } from 'next'
-import { getBlogBySlug, getPreviousAndNextBlogs } from '@/sanity/sanity-utils'
+import BlogForm from '@/components/elements/BlogForm'
+import Divider from '@/components/layout/Divider'
 import { capitalizeText, removeSlug } from '@/lib'
-import { RiArticleLine, RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
-import { Marked } from 'marked'
-import { markedHighlight } from 'marked-highlight'
+import { abstractText, limitWords } from '@/lib/abstractText'
+import { calculateReadTime } from '@/lib/readTime'
+import { shimmer, toBase64 } from '@/lib/utils'
+import { getBlogBySlug, getPreviousAndNextBlogs } from '@/sanity/sanity-utils'
+import type { BlogProps } from '@/types'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
-import { shimmer, toBase64 } from '@/lib/utils'
-import { calculateReadTime } from '@/lib/readTime'
-import Divider from '@/components/layout/Divider'
-import BlogForm from '@/components/elements/BlogForm'
-import { limitWords, abstractText } from '@/lib/abstractText'
-import type { BlogProps } from '@/types'
+import { Marked } from 'marked'
+import { markedHighlight } from 'marked-highlight'
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Fragment } from 'react'
+import { RiArrowLeftSLine, RiArrowRightSLine, RiArticleLine } from 'react-icons/ri'
 
 export async function generateMetadata({
   params: { slug }
@@ -151,13 +151,13 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
         )}
 
         {/* Previous and Next blog links */}
-        <div className='flex flex-wrap gap-3 justify-center xs:justify-between items-center mt-10'>
+        <div className='flex flex-wrap flex-col md:flex-row gap-3 justify-center xs:justify-between items-center mt-10'>
           {previousSlug && previousTitle && (
             <Link
               href={`/blog/${previousSlug}`}
-              className='flex gap-y-2 items-center justify-center group max-w-md'
+              className='flex flex-col md:flex-row gap-y-2 items-center justify-center group max-w-md'
             >
-              <RiArrowLeftSLine className='transition-transform text-5xl duration-300 group-hover:-translate-x-1' />
+              <RiArrowLeftSLine className='hidden sm:block transition-transform text-5xl duration-300 group-hover:-translate-x-1' />
               <Image
                 src={previousBlogThumb!}
                 height={160}
@@ -167,7 +167,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
                 placeholder='blur'
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(160, 160))}`}
               />
-              <span className='underline-hover'>
+              <span className='text-blue-400 md:text-white md:underline-hover'>
                 {capitalizeText(removeSlug(previousTitle))}
               </span>
             </Link>
@@ -176,7 +176,7 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
           {nextSlug && nextTitle && (
             <Link
               href={`/blog/${nextSlug}`}
-              className='flex gap-y-2 items-center justify-center group max-w-md'
+              className='flex flex-col md:flex-row gap-y-2 items-center justify-center group max-w-md'
             >
               <Image
                 src={nextBlogThumb!}
@@ -187,10 +187,10 @@ const Blog = async ({ params }: { params: { slug: string } }) => {
                 placeholder='blur'
                 blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(160, 160))}`}
               />
-              <span className='underline-hover'>
+              <span className='text-blue-400 md:text-white md:underline-hover'>
                 {capitalizeText(removeSlug(nextTitle))}
               </span>
-              <RiArrowRightSLine className='transition-transform text-5xl duration-300 group-hover:-translate-x-1' />
+              <RiArrowRightSLine className='hidden sm:block transition-transform text-5xl duration-300 group-hover:-translate-x-1' />
             </Link>
           )}
         </div>
