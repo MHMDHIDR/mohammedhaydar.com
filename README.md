@@ -94,6 +94,7 @@
 <a href="mailto:info@mohammedhaydar.com">
 <img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" /></a>
 &nbsp;
-<a href="https://instagram.com/mo.hidr">
-<img alt="Instagram" src="https://img.shields.io/badge/-Instagram_-E4405F?style=flat&logo=Instagram&logoColor=white"/></a>
+<a target="_blank" href="https://twitter.com/mohmdhidr" class="transition-transform hover:-translate-y-1">
+  <img alt="Twitter" src="https://img.shields.io/twitter/url?url=https%3A%2F%2Ftwitter.com%2Fmohmdhidr" />
+</a>
 &nbsp;
