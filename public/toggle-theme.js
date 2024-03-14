@@ -26,7 +26,9 @@ function setPreference() {
 function reflectPreference() {
   document.firstElementChild.setAttribute("data-theme", themeValue);
 
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+  document
+    .querySelector("#theme-toggler")
+    ?.setAttribute("aria-label", themeValue);
 
   // Get a reference to the body element
   const body = document.body;
@@ -55,7 +57,7 @@ window.onload = () => {
     reflectPreference();
 
     // now this script can find and listen for clicks on the control
-    document.querySelector("#theme-btn")?.addEventListener("click", () => {
+    document.querySelector("#theme-toggler")?.addEventListener("click", () => {
       themeValue = themeValue === "light" ? "dark" : "light";
       setPreference();
     });
