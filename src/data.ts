@@ -27,6 +27,14 @@ export const workEducationData: WorkEducationProps[] = [
 export const jobExperienceData: WorkEducationProps[] = [
   {
     id: 1,
+    title: "Shms Agricultural",
+    meta: "Shms Agricultural Services",
+    link: "https://shmsagricultural.com",
+    text: "Engineered a sleek agricultural website for peanuts with Next.js, Amazon Web Service, and MySQL RDS, amplifying user engagement and content richness through expert collaboration and innovative design.",
+    year: "Jan 2024 - Mar 2024",
+  },
+  {
+    id: 2,
     title: "Front-end Developer",
     meta: "INLINE Company",
     link: "https://inline.qa",
@@ -34,7 +42,7 @@ export const jobExperienceData: WorkEducationProps[] = [
     year: "Jan 2023 - Mar 2023",
   },
   {
-    id: 2,
+    id: 3,
     title: "Web Developer",
     meta: "Sudan Academic Journal for Research and Science",
     link: "http://sudanacademicjournalresearch.online/index?page=1",
@@ -42,7 +50,7 @@ export const jobExperienceData: WorkEducationProps[] = [
     year: "Jun 2016 - May 2021",
   },
   {
-    id: 3,
+    id: 4,
     meta: "Qatar University",
     link: "https://sesri.qu.edu.qa",
     text: "Utilized statistical analysis and data collection tools to input accurate and complete information into databases, organized and analyzed data to identify patterns and trends, collaborated with team members to develop efficient data entry processes, communicated findings to inform decision making, monitored processes for improvement and met strict deadlines.",
@@ -80,6 +88,27 @@ export const filteredProjectsData: ProjectFiltersProps[] = [
 ];
 
 export const projectsData: Project[] = [
+  {
+    _createdAt: "2024-03-21T12:22:48Z",
+    title: "Shms Agricultural Services",
+    slug: null,
+    coverimage: "shms.svg",
+    imagegallery: ["shms.svg"],
+    videogallery: null,
+    description:
+      "Engineered a sleek agricultural website for peanuts with Next.js, Amazon Web Service, and MySQL RDS, amplifying user engagement and content richness through expert collaboration and innovative design.",
+    _id: "03562b37-2f27-4446-8266-6056e60051fe",
+    subtitle: null,
+    url: "https://shmsagricultural.com",
+    github: "https://github.com/MHMDHIDR/shms-agricultural",
+    filter: [
+      {
+        _ref: "fa7bdbe5-2118-40ae-806a-99da85849ff7",
+        _type: "reference",
+        _key: "3b3e8ee8e2b2",
+      },
+    ],
+  },
   {
     _createdAt: "2023-05-21T12:22:48Z",
     title: "Academic Journal for Research and Science",
