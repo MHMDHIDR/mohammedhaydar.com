@@ -101,25 +101,21 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <div class="pt-24 portfolios-section lg:pt-28 xl:pt-32">
-      <div class="container mx-auto">
-        <SectionHeading watermark="Projects">My Projects</SectionHeading>
-        <PortfoliosSection client:only />
-      </div>
+    <div class="pt-10 container mx-auto">
+      <SectionHeading watermark="Projects">My Projects</SectionHeading>
+      <PortfoliosSection client:only />
     </div>
 
     <div class="pt-10 container mx-auto">
-      <div class="mx-auto">
-        <SectionHeading watermark="Resume">My Resume</SectionHeading>
-        <a
-          href={`https://drive.google.com/file/d/1s8kDoSgboYZWhAzYwdY0Mb759cJqsAeC/view`}
-          target="_blank"
-          class="flex w-fit mx-auto mb-16 btn text-white hover:text-blue-900"
-        >
-          <span class="underline-hover">View Resume</span>
-        </a>
-        <ResumeSection client:only />
-      </div>
+      <SectionHeading watermark="Resume">My Resume</SectionHeading>
+      <a
+        href={`https://drive.google.com/file/d/1s8kDoSgboYZWhAzYwdY0Mb759cJqsAeC/view`}
+        target="_blank"
+        class="flex w-fit mx-auto mb-16 btn text-white hover:text-blue-900"
+      >
+        <span class="underline-hover">View Resume</span>
+      </a>
+      <ResumeSection client:only />
     </div>
 
     {
