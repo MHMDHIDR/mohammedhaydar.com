@@ -147,8 +147,8 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis.md": {
-	id: "exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis.md";
+"exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis/index.md": {
+	id: "exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis/index.md";
   slug: "exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis";
   body: string;
   collection: "blog";

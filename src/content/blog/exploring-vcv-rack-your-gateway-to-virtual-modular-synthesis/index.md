@@ -30,7 +30,7 @@ imagine modular **synthesis** like building your own musical universe. You conne
 
 <br /><br />
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/31f0e15878f26641ecdf864c804e2bfa0085f231-1888x1122.png" width="650" hight="350" alt="Exploring VCV Rack: Your Gateway to Virtual Modular Synthesis" />
+# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./1.png)
 
 ---
 
@@ -47,7 +47,7 @@ And I patched them together to give me this type of Rack
 
 <br />
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/0dc86f8f113e6e3b3fd800502e51fe9b711b8c41-1888x1122.png" width="650" hight="350" alt="Exploring VCV Rack: Your Gateway to Virtual Modular Synthesis" />
+# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./2.png)
 
 And it sounded like this :
 
@@ -62,7 +62,7 @@ I can control the pitch with my MIDI controller. However, I'm facing a challenge
 
 But as I increase the amplifier, I noticed that the levels darken because the envelope is now in control. To reset the envelope to a favorable starting position, a manual adjustment can be made. By pressing the push button, the envelope can be triggered manually. However, a more common approach involves utilizing the gate signal from our MIDI device:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/35e323a2967249b07c0c394bebc8f3ca15b4c9d3-1888x1436.png" width="650" hight="350" alt="Exploring VCV Rack: Your Gateway to Virtual Modular Synthesis" />
+# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./3.png)
 
 When I press the key it triggers the attack decay and sustain stage and when and when I release the key it triggers the release stage and it sounds like this :
 
@@ -79,7 +79,7 @@ To enhance expression, I can use a second envelope to govern the cutoff frequenc
 
 Then I got this result:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/613691f75c6e75fbb98250c788518ad9bdb6e86f-1888x1436.png" width="650" hight="350" alt="Exploring VCV Rack: Your Gateway to Virtual Modular Synthesis" />
+# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./4.png)
 
 And It sounds like this:
 
