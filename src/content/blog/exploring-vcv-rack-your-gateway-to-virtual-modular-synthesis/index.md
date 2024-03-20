@@ -52,7 +52,7 @@ And I patched them together to give me this type of Rack
 And it sounded like this :
 
 <video width="850" height="440" style="width: 400px" controls>
-  <source src="1.mov" type="video/mov">
+  <source src="/exploring-vcv-rack-1.mp4" type="video/mp4">
   Your browser does not support this video.
 </video>
 
