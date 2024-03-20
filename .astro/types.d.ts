@@ -126,22 +126,22 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
-"evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview.md": {
-	id: "evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview.md";
+"evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview/index.md": {
+	id: "evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview/index.md";
   slug: "evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"exploring-3d-sound-and-images-a-journey-into-haas-and-anaglyph.md": {
-	id: "exploring-3d-sound-and-images-a-journey-into-haas-and-anaglyph.md";
+"exploring-3d-sound-and-images-a-journey-into-haas-and-anaglyph/index.md": {
+	id: "exploring-3d-sound-and-images-a-journey-into-haas-and-anaglyph/index.md";
   slug: "exploring-3d-sound-and-images-a-journey-into-haas-and-anaglyph";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"exploring-the-art-of-image-synthesis-unleashing-terragen.md": {
-	id: "exploring-the-art-of-image-synthesis-unleashing-terragen.md";
+"exploring-the-art-of-image-synthesis-unleashing-terragen/index.md": {
+	id: "exploring-the-art-of-image-synthesis-unleashing-terragen/index.md";
   slug: "exploring-the-art-of-image-synthesis-unleashing-terragen";
   body: string;
   collection: "blog";
@@ -154,71 +154,71 @@ declare module 'astro:content' {
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images.md": {
-	id: "getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images.md";
+"getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images/index.md": {
+	id: "getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images/index.md";
   slug: "getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"how-to-install-nodejs.md": {
-	id: "how-to-install-nodejs.md";
+"how-to-install-nodejs/index.md": {
+	id: "how-to-install-nodejs/index.md";
   slug: "how-to-install-nodejs";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"image-filters-design-a-dive-on-convolution.md": {
-	id: "image-filters-design-a-dive-on-convolution.md";
+"image-filters-design-a-dive-on-convolution/index.md": {
+	id: "image-filters-design-a-dive-on-convolution/index.md";
   slug: "image-filters-design-a-dive-on-convolution";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"sampling-theory-and-compression.md": {
-	id: "sampling-theory-and-compression.md";
+"sampling-theory-and-compression/index.md": {
+	id: "sampling-theory-and-compression/index.md";
   slug: "sampling-theory-and-compression";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"sonification-turning-data-into-sound.md": {
-	id: "sonification-turning-data-into-sound.md";
+"sonification-turning-data-into-sound/index.md": {
+	id: "sonification-turning-data-into-sound/index.md";
   slug: "sonification-turning-data-into-sound";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"the-intriguing-world-of-steganography-unveiling-hidden-messages-in-the-digital-age.md": {
-	id: "the-intriguing-world-of-steganography-unveiling-hidden-messages-in-the-digital-age.md";
+"the-intriguing-world-of-steganography-unveiling-hidden-messages-in-the-digital-age/index.md": {
+	id: "the-intriguing-world-of-steganography-unveiling-hidden-messages-in-the-digital-age/index.md";
   slug: "the-intriguing-world-of-steganography-unveiling-hidden-messages-in-the-digital-age";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"understanding-morphing-image-transformation.md": {
-	id: "understanding-morphing-image-transformation.md";
+"understanding-morphing-image-transformation/index.md": {
+	id: "understanding-morphing-image-transformation/index.md";
   slug: "understanding-morphing-image-transformation";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"vj-effects-discovering-visual-creativity.md": {
-	id: "vj-effects-discovering-visual-creativity.md";
+"vj-effects-discovering-visual-creativity/index.md": {
+	id: "vj-effects-discovering-visual-creativity/index.md";
   slug: "vj-effects-discovering-visual-creativity";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"web-design-trends-2023.md": {
-	id: "web-design-trends-2023.md";
+"web-design-trends-2023/index.md": {
+	id: "web-design-trends-2023/index.md";
   slug: "web-design-trends-2023";
   body: string;
   collection: "blog";
   data: InferEntrySchema<"blog">
 } & { render(): Render[".md"] };
-"wordpress-a-powerful-platform-for-e-commerce-stores.md": {
-	id: "wordpress-a-powerful-platform-for-e-commerce-stores.md";
+"wordpress-a-powerful-platform-for-e-commerce-stores/index.md": {
+	id: "wordpress-a-powerful-platform-for-e-commerce-stores/index.md";
   slug: "wordpress-a-powerful-platform-for-e-commerce-stores";
   body: string;
   collection: "blog";

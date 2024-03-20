@@ -30,7 +30,7 @@ imagine modular **synthesis** like building your own musical universe. You conne
 
 <br /><br />
 
-# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./1.png)
+![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./1.png)
 
 ---
 
@@ -47,13 +47,13 @@ And I patched them together to give me this type of Rack
 
 <br />
 
-# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./2.png)
+![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./2.png)
 
 And it sounded like this :
 
-<video width="550" height="340" style="width: 400px" controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/afcfe2dcb75e131247bedd8349c22465df1f2c25.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+<video width="850" height="440" style="width: 400px" controls>
+  <source src="1.mov" type="video/mov">
+  Your browser does not support this video.
 </video>
 
 <br />
@@ -68,7 +68,7 @@ When I press the key it triggers the attack decay and sustain stage and when and
 
 <video width="550" height="340" style="width: 400px" controls>
   <source src="https://cdn.sanity.io/files/nnrx9w3l/production/3bae2b97b7cfcae82881299cc72ee45c3b6b608e.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+   Your browser does not support this video.
 </video>
 
 ---
@@ -87,7 +87,7 @@ And It sounds like this:
 
 <video width="550" height="340" style="width: 400px" controls>
   <source src="https://cdn.sanity.io/files/nnrx9w3l/production/983db3de86cb2bb4ed67f37dc7cdbc6ac9b9d790.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+   Your browser does not support this video.
 </video>
 
 <br /><br />
