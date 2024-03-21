@@ -97,13 +97,13 @@ export const projectsData: Project[] = [
     videogallery: null,
     description:
       "Engineered a sleek agricultural website for peanuts with Next.js, Amazon Web Service, and MySQL RDS, amplifying user engagement and content richness through expert collaboration and innovative design.",
-    _id: "03562b37-2f27-4446-8266-6056e60051fe",
+    _id: "23412345-2f27-4446-8266-6056e60051fe",
     subtitle: null,
     url: "https://shmsagricultural.com",
     github: "https://github.com/MHMDHIDR/shms-agricultural",
     filter: [
       {
-        _ref: "fa7bdbe5-2118-40ae-806a-99da85849ff7",
+        _ref: "24wfsf244-2118-40ae-806a-se3242421ssfs",
         _type: "reference",
         _key: "3b3e8ee8e2b2",
       },
