@@ -51,7 +51,7 @@ When we compress sound, we sometimes lose a little bit of detail in the music. I
 
 #### Here is an example of the image compressed
 
-[My Article on **Getting To Grips With Data Exploring The Fusion Of Sound And Images**](https://mohammedhaydar.com/blog/getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images)
+[My Article on **Getting To Grips With Data Exploring The Fusion Of Sound And Images**](/posts/getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images)
 
 <img src="https://cdn.sanity.io/images/nnrx9w3l/production/42cf347a4526c1a4343b16fab2db6625ff37e983-1366x686.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
 

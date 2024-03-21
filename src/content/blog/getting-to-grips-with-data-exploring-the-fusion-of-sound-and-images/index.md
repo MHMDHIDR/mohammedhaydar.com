@@ -42,51 +42,41 @@ Our task "An Image With Echo!" exemplified this concept. We began with a bitmap 
 
 1. First, we take out the image and change its mood to Grayscale
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/e87c6a4b0726bc02a8077a02a960ee402981f17a-2546x1468.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![First, we take out the image and change its mood to Grayscale](./1.png)
 
 ---
 
 2. Record the height and width of the image using a notepad or a paper
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/c8d52284e8dc96a28bacf10629393c0beb246d64-2546x1468.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![Record the height and width of the image using a notepad or a paper](./2.png)
 
 ---
 
 3. Then save it as a bitmap image (.bmp)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/ac30b52839225b35a03df51eb90dfaf9059fe0c9-2546x1468.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/812f492770f0241292c4ea5b93f96e1b431142d7-2546x1468.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![save it as a bitmap image](./3.png)
 
 ---
 
-4. Save the image also as a raw file (image.raw) with no file header.
+1. Save the image also as a raw file (image.raw) with no file header.
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/e824e962b645477a792c7141bccbbb8c0658d0cf-2546x1468.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/d93ee5b0692b287c1dea4f7e78a4f042bf612786-2546x1468.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![save it as a bitmap image](./4.png)
 
 ---
 
 5. Open Audition and open the (image.raw) file as unsigned 8 bit data (the sampling rate can be left as the default).
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/f795bda276d78f698995212785df9e287ccffd10-2546x1468.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/db192d9f5d37228f71ea526a92c6c601876354ce-2772x1642.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![Open Audition and open the (image.raw)](./5.png)
 
 ---
 
-6. Play the sound - does it sound like the picture?
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/3a8342e371e1f3616b18554d0516b4c8ed4b838f-2772x1642.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
-
 ---
 
-7. Use the transform menu to add an echo.
+1. Use the transform menu to add an echo.
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/0ddebde7de6160884ac70d84b48ea667306bd9f0-2772x1642.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![Use the transform menu to add an echo](./6.png)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/7a5edaeffe9a9b79402c8e12b2de2e7f955ccf37-2772x1642.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![Use the transform menu to add an echo](./7.png)
 
 ---
 
