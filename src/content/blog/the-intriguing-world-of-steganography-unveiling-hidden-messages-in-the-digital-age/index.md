@@ -45,37 +45,37 @@ Robust steganography aims to ensure that hidden messages remain intact, even in 
 
 **1. Open an Image (it has to be a BMP format as it has a smaller size and it should be in greyscale) inside the winhip_en.exe Program we'll use it to hide text inside our Image:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/731fad6fa04cb234025348d2c1931acb2c71b517-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+![Discovering Visual Creativity](./1.png)
 
 **2. From the menu above go to Image => hide file then select the text file you want to hide inside the image:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/f64eb346ef1801a6aa04b1876e4b475a87a56596-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+![Discovering Visual Creativity](./2.png)
 
 **3. You will be introduced to entering a password to keep the secret file hidden:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/25f72fde99f865c6562b77a2a80b1b653d0b7ce0-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+![Discovering Visual Creativity](./3.png)
 
 **4. From the Menu above Click on Image => Save Picture :**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/e4ad817c5f15bf3e8169c330c797fa3fe55b39de-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+![Discovering Visual Creativity](./4.png)
 
 **5. After the picture has been saved, you can open it in a new window, by clicking on Image => retrieve file From the Menu above:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/4edb10d25ae5cd54b3c0196bb4fb9a41992b2339-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+![Discovering Visual Creativity](./5.png)
 
 **6. Insert the password that has been set to keep the secret text file safe:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/c55760c8649085a4faf04c086de9cc1158aeacd8-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+![Discovering Visual Creativity](./6.png)
 
 **7. If the password is correct the file will be unlocked and you will be presented with the file save window to select a location for saving the file:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/e58a1b71c12a4c764c3916b78e1e9abf7ab2d990-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+![Discovering Visual Creativity](./7.png)
 
 **Results:-**
 
-The link to the file with the hidden message: (Password to unlock is 123123)
+The link to the file with the hidden message: (Password to unlock is 123)
 
-https://drive.google.com/file/d/1GCNSb7MAqj2UzTCfcmCYl5EY3Ls5PgV4/view?usp=sharing
+https://drive.google.com/file/d/1Js3N4-niinSs0Tku2VeE4JZWBq6ABx1y/view?usp=sharing
 
 ---
 
