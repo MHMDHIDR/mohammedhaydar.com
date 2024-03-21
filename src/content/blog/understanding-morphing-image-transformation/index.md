@@ -42,7 +42,7 @@ Tweening, a similar effect in animation using vector graphics, shares some princ
 3. After Morphing James Bond into the Duck the result is:
 
 <video width="550" height="340" style="width: 400px" controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/d693a4579e8b9fbb17b84f36d2530041f07d4e99.webm" type="video/webm">
+  <source src="/blogs/understanding-morphing-image-transformation/1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -50,41 +50,24 @@ Tweening, a similar effect in animation using vector graphics, shares some princ
 
 4. Another Image:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/37603854aa7576db8142e6ddc5fd99691c1f06cf-1280x720.jpg" width="600" height="450" alt="Understand Morphing Transformation" style="width: 400px" />
+![Understand Morphing Transformation](./3.jpg)
 
 And morphing it with the image of this cat:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/f33d230fccdb23cb02c93a9c0fd6244fefde8c1d-680x425.jpg" width="600" height="450" alt="Understand Morphing Transformation" style="width: 400px" />
+![Understand Morphing Transformation](./4.jpg)
 
-5. We find this interesting result:
+5. So using my trusty program "WinMorph" I open the images, And try to add the shapes to both images to match the face from the left image with the right image:
 
-<video width="550" height="340" style="width: 400px" controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/0fd7162acc8225825e380ca87c3540c46dfc0d86.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video>
+![Understand Morphing Transformation](./5.png)
 
----
+6. Then I render the morphing process, like this:
 
-6. One other image I'm trying to morph is:
+![Understand Morphing Transformation](./6.png)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/4957f36832b0b6692c6a1d4f739b45266972bae6-800x950.jpg" width="600" height="450" alt="Understand Morphing Transformation" style="width: 400px" />
-
-7. So using my trusty program "WinMorph" I open the images:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/4516b0822b97712db03ba49248b5f494eca65cca-2880x1684.png" width="600" height="450" alt="Understand Morphing Transformation" style="width: 400px" />
-
-8. Then just open the images:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/cbfbd305c84ea61fe51fef89119b27c992844eee-2880x1684.png" width="600" height="450" alt="Understand Morphing Transformation" style="width: 400px" />
-
-9. And try to add the shapes to both images to match the face from the left image with the right image:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/8f9ece5a851992c9d74f92be7fc98209a82db3cf-2880x1684.png" width="600" height="450" alt="Understand Morphing Transformation" style="width: 400px" />
-
-10. I tried morphing it with my Batman image and got this result:
+7.  I tried morphing it with my Batman image and got this result:
 
 <video width="550" height="340" style="width: 400px" controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/89245e32569436f8762734372adf52bd09fde36d.webm" type="video/webm">
+  <source src="/blogs/understanding-morphing-image-transformation/2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
