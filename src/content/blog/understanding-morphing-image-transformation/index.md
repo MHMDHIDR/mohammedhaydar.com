@@ -33,11 +33,11 @@ Tweening, a similar effect in animation using vector graphics, shares some princ
 
 1. I'll take this image as an example:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/4957f36832b0b6692c6a1d4f739b45266972bae6-800x950.jpg" width="600" height="450" alt="Understand Morphing Transformation" />
+![Understand Morphing Transformation](./1.jpg)
 
 2. Another Image to make the morphing interesting:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/a8c9ee95dbe14d54ec679734620c76ddcc147845-235x353.jpg" width="600" height="450" alt="Understand Morphing Transformation" style="width: 400px" />
+![Understand Morphing Transformation](./2.jpg)
 
 3. After Morphing James Bond into the Duck the result is:
 

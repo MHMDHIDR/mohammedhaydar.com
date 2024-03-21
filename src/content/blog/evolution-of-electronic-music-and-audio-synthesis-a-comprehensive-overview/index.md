@@ -77,31 +77,31 @@ It covers customization options and explores the messages used to control a synt
 
 1. Osclliator:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/96854ebf8c486d1b454ca36aa8ee5fc390c4638e-1626x978.png" alt="3D Image Anaglyph" height="450" width="600"  />
+![Evolution of Audio Synthesis](./Osclliator.png)
 
 ---
 
-2. Moog + Oscukkator
+1. Moog + Oscukkator
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/f8c4a8e41ed762cd2baf9b02ab33a04f8120a9ac-1721x1074.png" alt="3D Image Anaglyph" height="450" width="600"  />
+![Evolution of Audio Synthesis](./Moog+Oscukkator.png)
 
 ---
 
 3. Moog + Oscukkator + VCA
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/091c12b119ff997c2c1f1f7415cb0362486fa5e9-1885x1029.png" alt="3D Image Anaglyph" height="450" width="600"  />
+![Evolution of Audio Synthesis](./Moog+Oscukkator+VCA.png)
 
 ---
 
 4. Keyboard MIDI
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/c75eea3d808772e24082af7835e637a09383dec9-1913x916.png" alt="3D Image Anaglyph" height="450" width="600"  />
+![Evolution of Audio Synthesis](./Keyboard-MIDI.png)
 
 ---
 
 5. Second Oscukkator
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/8aabbb55070ee49bc45d701bedd21d21020e9505-1496x940.png" alt="3D Image Anaglyph" height="450" width="600"  />
+![Evolution of Audio Synthesis](./Seconds-Osclliator.png)
 
 ---
 
@@ -109,14 +109,14 @@ It covers customization options and explores the messages used to control a synt
 
 Here We need to connect Our Arduino Kit to the connector (Cable) that will send the signals to the Software (SynthEdit):
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/47014ec747382c8a1cc8ea4dec5b2dc3d24008e1-1000x555.jpg" alt="3D Image Anaglyph" height="450" width="600"  />
+![Evolution of Audio Synthesis](./MIDI-in-with-Arduino.png)
 
 <br />
 <br />
 
 ## By using this _**Connector**_ (MIDI Connector):
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/5602e14c50da7d354a54ad4f147a12119b7005a8-400x722.jpg" alt="3D Image Anaglyph" height="450" width="600"  />
+![Evolution of Audio Synthesis](./MIDI-in-with-Arduino-2.png)
 
 ## Then we need to upload this Code used to run Arduino and implement MIDI notes:
 
@@ -146,14 +146,6 @@ void noteOn(int cmd, int pitch, int velocity) {
   Serial.write(velocity);
 }
 ```
-
-6. MIDI in with Arduino-2
-   <img src="https://cdn.sanity.io/images/nnrx9w3l/production/d6be9781c8d6cfdcc90d3d33b0336102b7387a03-1010x747.png" alt="3D Image Anaglyph" height="450" width="600"  />
-
----
-
-7. MIDI in with Arduino
-   <img src="https://cdn.sanity.io/images/nnrx9w3l/production/c6e39a354fa421b9c1241d94b747d11fae23eee5-1734x1033.png" alt="3D Image Anaglyph" height="450" width="600"  />
 
 ## 9. Conclusion
 

@@ -62,7 +62,7 @@ I can control the pitch with my MIDI controller. However, I'm facing a challenge
 
 But as I increase the amplifier, I noticed that the levels darken because the envelope is now in control. To reset the envelope to a favorable starting position, a manual adjustment can be made. By pressing the push button, the envelope can be triggered manually. However, a more common approach involves utilizing the gate signal from our MIDI device:
 
-# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./3.png)
+![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./3.png)
 
 When I press the key it triggers the attack decay and sustain stage and when and when I release the key it triggers the release stage and it sounds like this :
 
@@ -79,7 +79,7 @@ To enhance expression, I can use a second envelope to govern the cutoff frequenc
 
 Then I got this result:
 
-# ![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./4.png)
+![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./4.png)
 
 And It sounds like this:
 
