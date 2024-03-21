@@ -48,7 +48,8 @@ Use free software. There are tutorials too, so no worries about where to start.
 ##### For example, I wish to create an interesting scene from this crystal:
 
 1. This is my starting Image:
-   <img src="https://cdn.sanity.io/images/nnrx9w3l/production/bbe0579e53ea4d55460235f7f25b9d834ea190d0-470x470.jpg" width="470" height="470" alt=" Discovering Visual Creativity" style="width: 400px" />
+
+# ![Discovering Visual Creativity](./1.jpg)
 
 2. After dragging my handy tool (Picture Loader), I will be able to import my image to the canvas to apply visual Effects on it:
    <img src="https://cdn.sanity.io/images/nnrx9w3l/production/62e7632378b096d1eb829f7e5f76124e00d61b02-1904x968.png" width="470" height="470" alt=" Discovering Visual Creativity" style="width: 400px" />
