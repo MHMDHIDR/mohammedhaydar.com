@@ -49,35 +49,39 @@ Use free software. There are tutorials too, so no worries about where to start.
 
 1. This is my starting Image:
 
-# ![Discovering Visual Creativity](./1.jpg)
+![Discovering Visual Creativity](./1.jpg)
 
-2. After dragging my handy tool (Picture Loader), I will be able to import my image to the canvas to apply visual Effects on it:
-   <img src="https://cdn.sanity.io/images/nnrx9w3l/production/62e7632378b096d1eb829f7e5f76124e00d61b02-1904x968.png" width="470" height="470" alt=" Discovering Visual Creativity" style="width: 400px" />
+1. After dragging my handy tool (Picture Loader), I will be able to import my image to the canvas to apply visual Effects on it:
 
-3. I added Some Effects so I can make my image interesting, the effects are:
+![Discovering Visual Creativity](./2.png)
 
-- 2D Effect Distortion
-- 2D Effect Polar
-- 3D Effect Sphere
+2. I added Some Effects so I can make my image interesting, the effects are:
+
+- 2D Rotozoom Distortion
+- 3D Effect Raytracing
 
 This is what my Image looks like:
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/5683b7e78c788720a00713f2369edd00984adca0-1405x818.png" width="470" height="470" alt=" Discovering Visual Creativity" style="width: 400px" />
+
+![Discovering Visual Creativity](./3.png)
+
+3. After adding the effects, I can render it as a video from File -> Export Movie:
+   ![Discovering Visual Creativity](./4.png)
 
 4. After Rendering it as a video this is what it looks like:
 
 <video width="550" height="340" style="width: 400px" controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/394c05a422460347a22a79891fe2ffab2edc6e9e.webm" type="video/webm">
+  <source src="/blogs/vj-effects-discovering-visual-creativity/1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 5. We can also use the power of Visual Jockey Software to use a sound and include it in my video from File -> Export Movie, and We need to check the write sound to track:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/0652484526f39c2b65f38289f2b1c90c73ff532f-1749x957.png" width="470" height="470" alt="Discovering Visual Creativity" style="width: 400px" />
+   ![Discovering Visual Creativity](./5.png)
 
 6. Here is the Rendered out put video after including the sound:
 
 <video width="550" height="340" style="width: 400px" controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/22d51cd738183cf28d1e17b714f116481f04c69c.webm" type="video/webm">
+  <source src="/blogs/vj-effects-discovering-visual-creativity/2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
