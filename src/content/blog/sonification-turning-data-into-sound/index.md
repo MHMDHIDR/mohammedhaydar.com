@@ -13,9 +13,9 @@ description: Sonification | Turning Data into Sound
 
 ## Table of contents
 
-## Sonification: Transforming Data into Sound
+## Making Data into Sound: Sonification
 
-Sonification is like turning data into music for your ears. Instead of seeing numbers and graphs, you can hear them as sounds. This way, you can use your ears to understand information [1].
+Sonification is like turning data into music for your ears. Instead of seeing numbers and graphs, you can hear them as sounds. With sonification, you can use your ears to understand information instead of just looking at it.
 
 ## Why Use Sonification?
 
@@ -140,25 +140,24 @@ Using a two-tone tool online we can convert a dataset and make sonification on i
 
 1. **Download a data set from Kaggle (a small data set)**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/d14fd9bc0ecc82e5cbb73f17ea50e10e9453a385-2314x1202.png" alt="compressed Image" height="500" width="800" />
+![data set from Kaggle](./1.png)
 
 <br />
 
 2. **Upload it to the two-tone tool online to make sonification on it:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/0c40dee3bfd4c475f6f67f2b49d32d9ccddac017-2584x1382.png" alt="compressed Image" height="400" width="600" />
+![two-tone tool online to make sonification](./2.png)
 
 <br />
 
 3. **After Further Manipulation of the sound we can generate something different:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/b9e0fff85fca6bb9c903d20c82bef6ac29cb9f0b-2826x1450.png" alt="compressed Image" height="500" width="800" />
-
+![two-tone tool online to make sonification](./3.png)
 <br />
 
 4. **We can also click on narration audio to give us a different variation of the audio and we just adjust it to have a more interesting result:**
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/c2f330c5e63367817289bf5c77aff82b780d3c72-2826x1450.png" width="800" />
+![two-tone tool online to make sonification](./4.png)
 
 <br />
 
@@ -166,14 +165,14 @@ Using a two-tone tool online we can convert a dataset and make sonification on i
 
 we can export the generated sound into mp3 and hear it:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/2a0fe1fdee07a6f1ef271935590683b0d61e66cb-2832x1330.png" alt="compressed Image" height="500" width="800" />
+![two-tone tool online to make sonification](./5.png)
 
 <br />
 
 This is the output sound after using **"two-tone"**:
 
-<audio controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/d1f9a5b2dadf325c7b6f60c4fb3ddeaeb0f83052.mp3" type="audio/mpeg">
+<audio controls style="width: 100%">
+  <source src="/blogs/sonification-turning-data-into-sound/premierleague.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
