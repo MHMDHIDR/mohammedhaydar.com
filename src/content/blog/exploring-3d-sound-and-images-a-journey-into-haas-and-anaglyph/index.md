@@ -26,71 +26,35 @@ Now, let's explore Anaglyph, a nifty technique that gives your images an extra d
 
 ## Examples of how to create Anaglyph 3D Images:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/96e4445c4c40ec814f4d98f8c9daedcc228f5e5a-2626x1438.png" alt="3D Image Anaglyph" height="650" width="900"  />
+First of we need to create 2 copies of our original Image, and then switch off the Channels of the Green, and Blue to create the effect step of our 3D effect.
+
+![create Anaglyph 3D Images](./1.png)
 
 ---
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/b51f98f2309f48d4ded5ee17fea555d0d2cb0451-2626x1438.png" alt="3D Image Anaglyph" height="650" width="900"  />
+Then we need to switch off the Channels of the Red to create the second effect of our 3D effect.
+
+![create Anaglyph 3D Images](./2.png)
 
 ---
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/1607c7480da10f8e3d6276d4d6bed401a542d6c6-2626x1438.png" alt="3D Image Anaglyph" height="650" width="900"  />
+Here is the final result of our 3D effect.
+
+![create Anaglyph 3D Images](./3.png)
 
 ---
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/d49e2d41be271131b7a63e68b1b3bb75543251d8-2626x1438.png" alt="3D Image Anaglyph" height="650" width="900"  />
+We can do the same with various images, and here are some examples:
+
+Before the 3D effect:
+
+![create Anaglyph 3D Images](./4.jpg)
 
 ---
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/a551e5c661405464b3df66b38e6be1a63f10c548-2626x1438.png" alt="3D Image Anaglyph" height="650" width="900"  />
+After the 3D effect:
 
----
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/b2b582d1f6dd5b52b07abc9823b1a8465363951d-500x889.jpg" alt="3D Image Anaglyph" height="650" width="900"  />
-
----
-
-Frankly. Here the images are back to front, which means we need to wear the glasses backwards.
-
-So to fix it I can change the image positions of the channels of Red, Green, and Blue to correct the direction of them.
-
-Just as follows:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/f71190727c2d615d56f147a7f3e75fbc3e05cd5c-921x1372.png" alt="3D Image Anaglyph" height="650" width="900"  />
-
----
-
-## Other Images:
-
-Before:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/e3357a03809e6ea3662321352d9077037e6d56ff-1537x2048.jpg" alt="3D Image Anaglyph" height="650" width="900"  />
-
----
-
-After:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/b82b8fabbf670e04b229e209fc526c54d44aa9f5-850x1133.jpg" alt="3D Image Anaglyph" height="650" width="900"  />
-
-After inverting the Red, Green, and Blue channels positions:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/daa20c5f260ce0bae08350020c9523b2ca119cb9-1425x2030.png" alt="3D Image Anaglyph" height="650" width="900"  />
-
----
-
-Before:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/9c489a60f9bd447c3522cee7dd647c9dc2d1b8b0-1200x1600.jpg" alt="3D Image Anaglyph" height="650" width="900"  />
-
----
-
-After:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/eff1e96157f0d9cbcb0270a03735f3ddd6f96b4f-850x1133.jpg" alt="3D Image Anaglyph" height="650" width="900"  />
-
-After inverting the Red, Green, and Blue channels positions:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/5ab7ca82b29e557c204763be32b1289a4bbd435a-1170x1570.png" alt="3D Image Anaglyph" height="650" width="900"  />
+![create Anaglyph 3D Images](./5.png)
 
 ---
 
@@ -116,33 +80,45 @@ In essence, the psychology of 3D sound and image is grounded in the principles o
 
 ## The Haas Effect: A Simple Trick for Enhanced Sound
 
-Let's consider a straightforward example. Imagine you're listening to a voice recording, and it sounds somewhat dry and centralized. You can transform this by using the Haas Effect, which involves introducing a slight delay on one side of the stereo audio. This simple trick creates a sense of space and direction without adding reverb or complex sound enhancements.
+Let's consider a straightforward example. Imagine you're listening to a voice recording, and it sounds somewhat dry and centralized. You can transform this by using the Haas Effect, which involves introducing a slight delay on one side of the stereo audio. This simple trick creates a sense of space and direction without adding complexity to the sound.
 
-## Some Images on How to make Haas Effect:
+## The steps on How to make Haas Effect:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/841f0ddc73b259b73b3979065776ed9116b55066-2626x1438.png" alt="3D Image Anaglyph" height="650" width="900"  />
+First of all, we need to open the audio file in Audacity.
 
----
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/de718b1dd0c0ae9b742fe6ac474eb24ee75e35b3-2264x1618.png" alt="3D Image Anaglyph" height="650" width="900"  />
+![create Anaglyph 3D Images](./6.png)
 
 ---
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/6f8251cdcf12d2ae93313c3d73c6ebce1d197257-2264x1618.png" alt="3D Image Anaglyph" height="650" width="900"  />
+Then we need to duplicate the audio track to create the effect, and set the first track to the left, and the second track to the right for the audio channels, And from Generate tab we select the Silence option.
+
+![create Anaglyph 3D Images](./7.png)
+
+---
+
+Then set it to 0.002 seconds as the delay time.
+
+![create Anaglyph 3D Images](./8.png)
+
+---
+
+Finally, we can export the audio file to save the changes, and we can listen to the audio before and after the effect.
+
+![create Anaglyph 3D Images](./9.png)
 
 ---
 
 The Sound Before:
 
-<audio controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/26f072d1223597b6a84dcde3e4ef594e59175b6f.mp3" type="audio/mpeg">
+<audio style="width: 100%;" controls>
+  <source src="/blogs/exploring-3d-sound-and-images-a-journey-into-haas-and-anaglyph/audio-before.mp3" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
 
 The Sound After:
 
-<audio controls>
-  <source src="https://cdn.sanity.io/files/nnrx9w3l/production/b963f612f04a4c0aa5ebe90de794936a4994a1d8.mp3" type="audio/mpeg">
+<audio style="width: 100%;" controls>
+  <source src="/blogs/exploring-3d-sound-and-images-a-journey-into-haas-and-anaglyph/audio-after.mp3" type="audio/mp3">
   Your browser does not support the audio element.
 </audio>
 
