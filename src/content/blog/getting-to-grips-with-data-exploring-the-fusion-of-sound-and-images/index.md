@@ -12,15 +12,11 @@ description: Getting to Grips with Data | Exploring the Fusion of Sound and Imag
 
 ## Table of contents
 
-## Introduction
-
 In the world of media, combining sounds and images has gone beyond the usual. It's opened new doors for creativity and learning. Our journey to understand media data and try new things has been a real eye-opener. We've not only figured out the technical stuff but also how different types of media are connected. So, let's jump into the world of playing with data and see how images and sounds mix.
 
 ## Intro to Sound and Image Editors
 
 To start on this journey, we looked into the world of sound and image editors. For manipulating images, we harnessed the creative power of Photoshop. This versatile tool not only allows for creative image enhancements but also offers the ability to make corrective modifications with precision.
-
-In the realm of audio, we relied on Audition which provided us with the means to work creatively and correctively on audio files. The scope ranged from comprehensive sound alterations to fine-tuning tiny segments of sound. These editors served as our palette, enabling us to paint with both pixels and waveforms, pushing the boundaries of creative expression.
 
 ## Understanding Digital Image and Sound
 

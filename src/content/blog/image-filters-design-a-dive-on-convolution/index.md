@@ -43,8 +43,6 @@ The process of combining these disparate images is often subconscious, as the br
 
 Binaural hearing involves the reception of sound by two ears, each capturing a slightly different auditory input. The time it takes for a sound to reach each ear and the subtle differences in intensity and frequency provide crucial cues for the brain to calculate the direction and proximity of the sound source. This ability is particularly evident in our capacity to pinpoint the location of a sound or voice in space.
 
-Whether processing visual or auditory information, the brain seamlessly integrates these cues, allowing us to perceive the rich tapestry of our surroundings with depth and precision.
-
 ## Custom Filter
 
 Creating custom filters offers a unique opportunity to experiment with image manipulation. Online tutorials can guide individuals in building custom filters, fostering creativity and a deeper understanding of image processing algorithms.
@@ -53,35 +51,27 @@ Creating custom filters offers a unique opportunity to experiment with image man
 
 ##### 1. We take our example as this flower Image:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/19f4ec6750355b852dd544f5f38b3ad2cc690d1b-4858x3239.jpg?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
+![Flower Image](./1.png)
 
 ##### 2. Then We go to filters -> other -> custom and click on it:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/3db15f1964ec6447d158cf7d60ba02da17cbbbb5-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
+![Flower Image](./2.png)
 
 ##### 3. Then we play with the values, and the key here is to focus on how big the image size actually is, if the image dimensions and sizes are huge then we need to apply bigger values to see the change:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/ecd5c8aca738fbd8f9dac62da01954330afc35a0-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
+![Flower Image](./3.png)
 
 ##### 4. So with a bit of creativity, look at the result:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/6f5a8dfedbbdc7b815490c440c863302dc568401-1858x1239.png?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
+![Flower Image](./4.png)
 
-##### 5. Guessing from what I described above, we can apply different values at different, this is the matrix that has these values, so when I tried to test it on a different image:
+##### 5. So after figuring out what custom filter values are, we could work with, let's try another image with a blue background:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/ed044f7dcd53d61f68f111cac113a7518499a518-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
+![Camel Image](./5.png)
 
-##### 6. Playing with different values and scaling made me think of an interesting kind of distorted result, but I like it:
+##### 6. The Results after trying out different values. It's a bit different than the ones before since it's quite darker:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/1477ee053f23ea2e939a51fe3ac1bb5f3c72b018-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
-
-##### 7. So after figuring out what custom filter values we could work with, let's try another image with a deep blue background:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/7f57ecc194a7c99ccdc30a6c7b6e9dd1c1a880da-2712x4068.jpg?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
-
-##### 8. The Results after trying out different values. It's a bit different than the ones before since it's quite darker:
-
- <img src="https://cdn.sanity.io/images/nnrx9w3l/production/83b2f570a23a80bc207e1a3a3ce925eff96dcb3c-2874x1714.png?w=2000&fit=max&auto=format&dpr=2" width="700" height="500" />
+![Camel Image](./6.png)
 
 ---
 
