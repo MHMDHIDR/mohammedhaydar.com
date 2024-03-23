@@ -81,37 +81,29 @@ Filter Forge provides a platform for creating and applying custom filters. Users
 
 So Let's use Filter Forge, Here are Examples and steps on how to do it:
 
-##### 1- So let's take this cat image and add filters to it:
+##### 1- So let's take this duck image and add filters to it, firstly go to Filter Editor -> and the select "Create a new filter" and click on Open Filter Editor:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/2b9421e6341efc2fee8eda69f21a2645f52af1d6-5304x7952.jpg?w=2000&fit=max&auto=format" width="700" height="500" />
+![Image Filters Design | A Dive on Convolution](./7.png)
 
-##### 2- Then Let's add the filter on it for example:
+##### 2- After I have applied "Assembly RGB" filter on it:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/6fbfb72797cddd77e57e2fdc9bd3199eec295fe9-1885x1032.png?w=2000&fit=max&auto=format" width="700" height="500" />
+![Image Filters Design | A Dive on Convolution](./8.png)
 
 ##### 3- The Result:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/7b4baf20322e07cc029aa650826cf66eea0230c0-884x1325.jpg?w=2000&fit=max&auto=format" width="700" height="500" />
+![Image Filters Design | A Dive on Convolution](./9.png)
 
-##### 4- Now Let's try this different Image:
+##### 4- If we try this on another image (Super Car)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/1427bc0bdc143dd1134a7b2912468bc946f019dc-4032x3024.jpg?w=2000&fit=max&auto=format" width="700" height="500" />
+![Image Filters Design | A Dive on Convolution](./10.png)
 
-##### 5- So When we add the filters on:
+##### 5- And adding the smudge filter on it and with a little bit of modifying the percentage:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/04cee9274bb29f97f455b0e40e59aeaa1e4055ca-672x504.jpg?w=2000&fit=max&auto=format" width="700" height="500" />
+![Image Filters Design | A Dive on Convolution](./11.png)
 
-##### 6- If we try this on another image (Bicycle)
+##### 6- And then we get an interesting (If I may say kind of looks like a reflection) of that, so this is it:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/cc676861f367df5893b85b34d19bc283d003fa35-4440x2960.jpg?w=2000&fit=max&auto=format" width="700" height="500" />
-
-##### 7- And adding the rotation filter on it and with a little bit of modifying the percentage:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/c366a8541416c194dadd9a5c89cce5c13ec5afe9-1904x1003.png?w=2000&fit=max&auto=format" width="700" height="500" />
-
-##### 8- And then we get an interesting (If I may say kind of looks like a reflection) of that, so this is it:
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/caf1f833af7d5587ebb4798b2ef730a744ddefbe-740x493.jpg?w=2000&fit=max&auto=format" width="700" height="500" />
+![Image Filters Design | A Dive on Convolution](./12.png)
 
 ---
 
