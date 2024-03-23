@@ -66,8 +66,6 @@ Our task "An Image With Echo!" exemplified this concept. We began with a bitmap 
 
 ---
 
----
-
 1. Use the transform menu to add an echo.
 
 ![Use the transform menu to add an echo](./6.png)

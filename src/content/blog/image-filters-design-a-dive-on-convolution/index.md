@@ -105,6 +105,14 @@ So Let's use Filter Forge, Here are Examples and steps on how to do it:
 
 ![Image Filters Design | A Dive on Convolution](./12.png)
 
+###### 7- Trying out with another image (A Plane):
+
+![Image Filters Design | A Dive on Convolution](./13.png)
+
+###### 8- This time I added MUltiblend and Motion Blur filters I thought it would be interesting to see the result:
+
+![Image Filters Design | A Dive on Convolution](./14.png)
+
 ---
 
 ##### Why Not Just Use Photoshop?
