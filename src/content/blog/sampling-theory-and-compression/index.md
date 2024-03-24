@@ -49,13 +49,34 @@ There are various ways to compress data, and different methods are used for diff
 
 When we compress sound, we sometimes lose a little bit of detail in the music. It's like making a picture with fewer colors; it might not look as vibrant. However, our ears might not even notice these small changes.
 
-#### Here is an example of the image compressed
+#### Here is an example of how compression works:
 
-[My Article on **Getting To Grips With Data Exploring The Fusion Of Sound And Images**](/posts/getting-to-grips-with-data-exploring-the-fusion-of-sound-and-images)
+1. **Original Image**: A beautiful picture of a Super Car.
+   ![Original Image](./1.png)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/42cf347a4526c1a4343b16fab2db6625ff37e983-1366x686.png?w=2000&fit=max&auto=format&dpr=2" alt="compressed Image" height="500" width="800" />
+2. So going to Gimp and exporting the image with the lowest quality settings, just to see how it looks like, from the File menu, then Export As:
+
+![Export Image](./8.png)
+
+Then it asks us about choosing the quality settings, I am goint to go with the as low as 1% and then saving the file.
+
+![Export Image](./9.png)
 
 ---
+
+3. As you can see the impact of compression on the image quality is quite noticeable, the image is now very pixelated and the colors are not as vibrant as the original image.
+
+![Export Image](./10.png)
+
+---
+
+#### Another example of an image "I like peanuts", I am going to try peanuts images that has been compressed, we can see the original image and the compressed image side by side.
+
+![Export Image](./11.png)
+
+#### One more example of an image that has been compressed, we can see the original image and the compressed image side by side.
+
+![Export Image](./12.png)
 
 #### The Impact on Glitch Art
 
@@ -66,6 +87,63 @@ Artifacts introduced by compression can be a creative playground. Glitch art oft
 One noticeable effect of compression is the emergence of blockiness in images. Imagine an image as a mosaic of tiny squares, each representing a pixel. Compression, especially with lossy algorithms, tends to group pixels together into blocks. While this significantly reduces file size, it may result in a loss of fine details and a visible grid-like pattern on the image surface.
 
 ---
+
+#### Compression of a sound file, firstly I opened the original sound file in Adobe Audition and I Normalized it to make it louder.
+
+2. **Original Sound**: A piece of sound file.
+   ![Original Sound](./2.png)
+
+The original sound file is as follows:
+
+<audio style="width: 100%;" controls>
+  <source src="/blogs/sampling-theory-and-compression/1.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+The sound file after I applied Normalization is as follows:
+
+<audio style="width: 100%;" controls>
+  <source src="/blogs/sampling-theory-and-compression/2.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+---
+
+#### Checking out the file details, the size of the normalized sound file is small, we can see it's about 800 KB.
+
+![Normalized Sound](./3.png)
+
+We can open the file in Adobe Audition so that we can compress it. We can do this by going to the File menu, then Save As, and then selecting the format we want to save the file in, and selecting the highest quality settings.
+
+![Compressed Sound](./4.png)
+
+Then we need to accept the warning that it might lose some quality, and then we can save the file.
+
+![Compressed Sound 2](./5.png)
+
+---
+
+#### So going back again and saving the file as much lower quality.
+
+![Compressed Sound 3](./6.png)
+
+This is the file details of the compressed sound file with the lowest quality settings, we can see that the file size is much smaller, it's around 12 KB which significantly smaller compared to the original file which was around 800
+
+![Compressed Sound 3](./7.png)
+
+So this is how the sound file with the heighest quality settings sounds like:
+
+<audio style="width: 100%;" controls>
+  <source src="/blogs/sampling-theory-and-compression/audio-high.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+And this is how the sound file with the lowest quality settings sounds like:
+
+<audio style="width: 100%;" controls>
+  <source src="/blogs/sampling-theory-and-compression/audio-low.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
 
 **Conclusion**
 

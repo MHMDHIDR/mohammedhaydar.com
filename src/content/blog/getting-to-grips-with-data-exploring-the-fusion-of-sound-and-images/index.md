@@ -74,35 +74,43 @@ Our task "An Image With Echo!" exemplified this concept. We began with a bitmap 
 
 ---
 
-8. Save the file as image-echo.raw and we’ll ignore any warnings.
+8. Save the file as silly-cat-face.pcm, we will be able to change it to .raw file, and then we’ll open it in Photoshop as 8-bit greyscale and put the height and width that we recorded in when requested.
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/0f0aae0e459ac9dfc8306e44189fcdf13f125053-2772x1642.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![Use the transform menu to add an echo](./8.png)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/be019d5a76d89ed5accb766149ce7c0819dabd66-1142x1219.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
-
----
-
-9. Open the file in Photoshop program as 8-bit greyscale and put the height and width that we recorded in when requested.
-
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/f20e2cf390b20560619ab126418049ad8f27cea3-2772x1642.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![Use the transform menu to add an echo](./9.png)
 
 ---
 
-10. Can we see the echo?
+1. Open the file in Photoshop program as 8-bit greyscale and put the height and width that we recorded in when requested, it's giving me the dimensions as 625x600 pixels, but I know that the image is 750x600 pixels because I recorded it, and it has 1 channel, and it's a grayscale image.
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/15b04b0a0cf9d5842a03d8e9a5b11a95d332d5a4-2772x1642.png?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+![Use the transform menu to add an echo](./10.png)
+
+---
+
+1.  Can we see the echo?
+
+![Use the transform menu to add an echo](./11.png)
 
 ### Here are some other examples I have experimented with:
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/1aa56e273c5f6410270fafbb816919987fb79cae-3264x1836.jpg?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+#### Airplane Image (Before and After)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/5ad5c432d0c69210f863750a731ed13537b71a1b-3264x1836.jpg?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+1. Before adding the echo
+   ![Use the transform menu to add an echo](./12.png)
+
+2. After adding the echo
+   ![Use the transform menu to add an echo](./13.png)
 
 ---
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/16ac133b116e1806781895f8c902494a80faab35-5943x3344.jpg?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+#### A Tiger Image (Before and After)
 
-<img src="https://cdn.sanity.io/images/nnrx9w3l/production/ed56024bd578940e1eecf60456c6583b80b6e694-5943x3344.jpg?w=2000&fit=max&auto=format&dpr=2" alt="imgURLLINKHERE" width="800" height="750">
+1. Before adding the echo
+   ![Use the transform menu to add an echo](./14.png)
+
+2. After adding the echo
+   ![Use the transform menu to add an echo](./15.png)
 
 ## Reversing the Process
 
@@ -110,7 +118,11 @@ Interestingly, we also explored the reverse process, investigating how sound cou
 
 ## Conclusion
 
-Our journey to understand media data, the interplay between sound and images, and the hidden facets of files has been a path of discovery. By stepping into the world of media editors and embracing experimentation, we've uncovered the power of data and the profound connections between different forms of media. Our experiments and discussions have illuminated the rich possibilities of data manipulation.
+1. We have explored the fusion of sound and images data and how it connects these two media types, the quesion is, can we use this technique to create music from images? The answer is yes, we can see pattern in images, when we hear a note this means that the image has a pattern, and we can use this pattern to create music from images.
+
+2. We can also use it in Marketing, for example, we can use it to create a music from a logo, and use it in the marketing campaign (Data fountains) as an example, for example when the fountain height changes this shows us a current value of the data, like the forex data. We can for example use the color of the fountain to show the trend of the forex data, if the color is red this means that the trend is going down, and if the color is green this means that the trend is going up, and if the color is blue this means that the trend is stable.
+
+3. We have also learned how to manipulate images and sounds in different ways, and how to reverse the process, and how to work with raw data.
 
 **References**
 
