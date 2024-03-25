@@ -82,7 +82,7 @@ const Portfolio = ({
           <FsLightbox
             toggler={imageGalleryOpen}
             sources={imagegallery.map(
-              image => `/assets//images/portfolios/${image}`
+              image => `/assets/images/portfolios/${image}`
             )}
           />
         </Portal>

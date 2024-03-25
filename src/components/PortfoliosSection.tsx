@@ -15,7 +15,7 @@ const PortfoliosSection = () => {
 
   useEffect(() => {
     if (projectsData) {
-      const slicedProjects = projectsData.slice(0, pageNumber * 5);
+      const slicedProjects = projectsData.slice(0, pageNumber * 6);
       setVisibleProjects(slicedProjects);
       setAllProjectsLoaded(slicedProjects.length === projectsData.length);
     }
