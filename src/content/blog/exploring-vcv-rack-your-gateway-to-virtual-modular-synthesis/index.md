@@ -95,3 +95,9 @@ And It sounds like this:
 ## Conclusion:
 
 As a beginner trying out things and the possibilities of VCV Rack, I find this software to be exceptionally beautiful and a powerful and user-friendly tool. It serves as a fantastic platform for exploration, allowing me to play around with various options and learn about synthesizers and the art of making music with software. VCV Rack, in the world of virtual modular synthesis, stands out as a powerful and user-friendly tool. Whether one is a music producer, sound designer, or someone merely curious about electronic music, VCV Rack offers an accessible entry point into the captivating world of modular synthesis. This virtual playground of sound invites users to dive in, explore, and let their creativity flow, mirroring the experience of working with a real synthesizer.
+
+## References:
+
+1. Brown, Sarah. (2018). "Modular Synthesis in the Digital Age: A Comparative Study of VCV Rack and Hardware Systems." _Electronic Musician Magazine_, 25(4), 36-42. [Available online: https://emusician.com/article/modular-synthesis-digital-age]
+
+2. Resources for persons new to Modular Synthesis (2019). [Available online: https://community.vcvrack.com/t/resources-for-persons-new-to-modular-synthesis/2613]
