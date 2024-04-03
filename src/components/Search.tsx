@@ -92,8 +92,7 @@ export default function SearchBar({ searchList }: Props) {
           name="search"
           value={inputVal}
           onChange={handleChange}
-          autoComplete="off"
-          // autoFocus
+          autoFocus
           ref={inputRef}
         />
       </label>

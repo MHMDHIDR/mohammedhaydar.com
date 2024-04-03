@@ -60,7 +60,7 @@ Use free software. There are tutorials too, so no worries about where to start.
 - 2D Rotozoom Distortion
 - 3D Effect Raytracing
 
-This is what my Image looks like:
+So by just dragging the effects mentioned above, and use them in my "Composition", This is what it came out looking like:
 
 ![Discovering Visual Creativity](./3.png)
 
