@@ -2,7 +2,7 @@
 author: Mohammed Haydar
 pubDatetime: 2024-04-04T20:33:04.866Z
 title: CST3130 Project Coursework M00570972
-slug: CST3130 Project Coursework M00570972
+slug: cst3130-project-coursework-m00570972
 featured: false
 draft: false
 tags:
@@ -16,7 +16,7 @@ description: CST3130 Project Coursework M00570972
 ## Visual Demonstration (Project Video)
 
 <video width="600" height="400" style="width: 800px" controls>
-  <source src="/blogs/CST3130-Project-Coursework-M00570972/CST3130-Project-Coursework-M00570972.mp4" type="video/mp4">
+  <source src="/blogs/cst3130-project-coursework-m00570972/cst3130-project-coursework-m00570972.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
