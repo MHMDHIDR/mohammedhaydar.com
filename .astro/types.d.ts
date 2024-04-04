@@ -126,6 +126,13 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"blog": {
+"CST3130-Project-Coursework-M00570972/index.md": {
+	id: "CST3130-Project-Coursework-M00570972/index.md";
+  slug: "CST3130 Project Coursework M00570972";
+  body: string;
+  collection: "blog";
+  data: InferEntrySchema<"blog">
+} & { render(): Render[".md"] };
 "evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview/index.md": {
 	id: "evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview/index.md";
   slug: "evolution-of-electronic-music-and-audio-synthesis-a-comprehensive-overview";
