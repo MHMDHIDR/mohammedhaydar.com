@@ -33,7 +33,7 @@ This project involves turning a wand into a gesture controller, similar to Harry
 
 ## Arduino Code Explanation:
 
-In the Arduino code, I utilize analog sensors connected to pins A0 and A1 to gather data. Two pins, 2 and 3, are configured as outputs for controlling external devices, likely LEDs in this scenario. The setup() function initializes serial communication at a baud rate of 9600. Within the loop() function, sensor readings are obtained from A0 and A1, and then from A2 (which is currently commented out). These values are printed over the serial connection.
+In the Arduino code, I utilize analog sensors connected to pins A0 and A1 to gather data. Two pins, 2 and 3, are configured as outputs for controlling external devices, likely LEDs in this scenario. The setup() function initializes serial communication at a baud rate of 9600. Within the loop() function, sensor readings are obtained from A0 and A1. These values are printed over the serial connection.
 
 ```cpp
 int AnalogPin0 = A0; // Declare variable for analog pin 0
