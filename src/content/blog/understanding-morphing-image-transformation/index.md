@@ -41,7 +41,7 @@ Tweening, a similar effect in animation using vector graphics, shares some princ
 
 3. After Morphing James Bond into the Duck the result is:
 
-<video width="550" height="340" style="width: 400px" controls>
+<video width="550" height="340" style="width: 700px" controls>
   <source src="/blogs/understanding-morphing-image-transformation/1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -66,7 +66,7 @@ And morphing it with the image of this cat:
 
 7.  I tried morphing it with my Batman image and got this result:
 
-<video width="550" height="340" style="width: 400px" controls>
+<video width="550" height="340" style="width: 700px" controls>
   <source src="/blogs/understanding-morphing-image-transformation/2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

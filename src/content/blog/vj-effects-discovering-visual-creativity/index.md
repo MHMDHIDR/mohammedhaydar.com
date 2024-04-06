@@ -69,7 +69,7 @@ So by just dragging the effects mentioned above, and use them in my "Composition
 
 4. After Rendering it as a video this is what it looks like:
 
-<video width="550" height="340" style="width: 400px" controls>
+<video width="550" height="340" style="width: 700px" controls>
   <source src="/blogs/vj-effects-discovering-visual-creativity/1.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
@@ -80,7 +80,7 @@ So by just dragging the effects mentioned above, and use them in my "Composition
 
 6. Here is the Rendered out put video after including the sound:
 
-<video width="550" height="340" style="width: 400px" controls>
+<video width="550" height="340" style="width: 700px" controls>
   <source src="/blogs/vj-effects-discovering-visual-creativity/2.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

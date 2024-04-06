@@ -51,7 +51,7 @@ And I patched them together to give me this type of Rack
 
 And it sounded like this :
 
-<video width="850" height="440" style="width: 400px" controls>
+<video width="850" height="440" style="width: 700px" controls>
   <source src="/blogs/exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis/1.mp4" type="video/mp4">
   Your browser does not support this video.
 </video>
@@ -66,7 +66,7 @@ But as I increase the amplifier, I noticed that the levels darken because the en
 
 When I press the key it triggers the attack decay and sustain stage and when and when I release the key it triggers the release stage and it sounds like this :
 
-<video width="850" height="440" style="width: 400px" controls>
+<video width="850" height="440" style="width: 700px" controls>
   <source src="/blogs/exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis/2.mp4" type="video/mp4">
   Your browser does not support this video.
 </video>
@@ -85,12 +85,23 @@ And It sounds like this:
 
 <br />
 
-<video width="850" height="440" style="width: 400px" controls>
+<video width="850" height="440" style="width: 700px" controls>
   <source src="/blogs/exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis/3.mp4" type="video/mp4">
   Your browser does not support this video.
 </video>
 
 <br /><br />
+
+Here is another one I created using a sequencer:
+
+![Exploring VCV Rack | Your Gateway to Virtual Modular Synthesis](./5.png)
+
+And it sounds like this:
+
+<video width="850" height="440" style="width: 700px" controls>
+  <source src="/blogs/exploring-vcv-rack-your-gateway-to-virtual-modular-synthesis/4.mp4" type="video/mp4">
+  Your browser does not support this video.
+</video>
 
 ## Conclusion:
 
