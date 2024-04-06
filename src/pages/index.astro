@@ -26,6 +26,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
+      <SectionHeading watermark="Intro">
+        Welcome to my Personal Space!
+        <span class="inline-block animate-bounce">🚀</span>
+        <span class="sr-only">Mohammed Haydar's Personal Space</span>
+      </SectionHeading>
       <h1>Mohammed Haydar</h1>
       <a
         target="_blank"
@@ -45,7 +50,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       </a>
 
       <div class="flex flex-col items-center md:flex-row">
-        <p class="text-justify leading-10 pr-5 order-2 md:order-1">
+        <p class="order-2 pr-5 text-justify leading-10 md:order-1">
           I'm a friendly and collaborative
           <strong class="underline-hover">
             <TypeWriter />
@@ -56,7 +61,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           src="/assets/hero.png"
           alt="Mohammed Haydar Hero"
           width="250"
-          class="w-40 h-40 md:h-72 md:w-72 order-1"
+          class="order-1 h-40 w-40 md:h-72 md:w-72"
         />
       </div>
       <p>
@@ -101,17 +106,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <div class="pt-10 container mx-auto">
+    <div class="container mx-auto pt-10">
       <SectionHeading watermark="Projects">My Projects</SectionHeading>
       <PortfoliosSection client:only />
     </div>
 
-    <div class="pt-10 container mx-auto">
+    <div class="container mx-auto pt-10">
       <SectionHeading watermark="Resume">My Resume</SectionHeading>
       <a
         href={`https://drive.google.com/file/d/1s8kDoSgboYZWhAzYwdY0Mb759cJqsAeC/view`}
         target="_blank"
-        class="flex w-fit mx-auto mb-16 btn text-white hover:text-blue-900"
+        class="btn mx-auto mb-16 flex w-fit text-white hover:text-blue-900"
       >
         <span class="underline-hover">View Resume</span>
       </a>
