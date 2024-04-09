@@ -44,7 +44,7 @@ The advent of FM synthesis, pioneered by John Channing, is detailed, highlightin
 
 **4.2 Sampling and Computer Music**
 
-The Mellotron's use of tape loops and the Akai 1000's digital sampling capabilities are discussed, emphasizing their influence on music production. The article **[3]** then delves into the democratization of music-making through software like Fruity Loops and Garageband, enabling musicians to create music on laptops.
+The article **[3]** talks about how the Mellotron utilizes tape loops and the digital sampling features of the Akai 1000 highlighting their impact, on music production. It then explores how music making has become more accessible through software such, as Fruity Loops and Garageband allowing musicians to craft tunes using laptops.
 
 ## 5. The Resurgence of Analogue Synths
 
@@ -81,7 +81,7 @@ It covers customization options and explores the messages used to control a synt
 
 ---
 
-1. Moog + Oscukkator
+2. Moog + Oscukkator
 
 ![Evolution of Audio Synthesis](./Moog+Oscukkator.png)
 

@@ -114,7 +114,7 @@ Our task "An Image With Echo!" exemplified this concept. We began with a bitmap 
 
 ## Reversing the Process
 
-Interestingly, we also explored the reverse process, investigating how sound could be manipulated in an image editor. We delved into what happens when sound is blurred or sharpened and how a simple image translates into a sound waveform. This exploration shed light on the fundamental operations of media editors.
+Interestingly, we also explored the reverse process, investigating how sound could be manipulated in an image editor. We are going to see what happens when sound is blurred or sharpened and how a simple image translates into a sound waveform. This exploration shed light on the fundamental operations of media editors.
 
 ## Conclusion
 
