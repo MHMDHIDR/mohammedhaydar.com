@@ -78,6 +78,10 @@ The Result after adding the Water Level to the Rendered Image is amazing, it add
 
 ![A rendered Image with the Water Level](9.png)
 
+So I played around with the settings and I was able to generate a different image, I changed the water level, and Made "Ice on Top of the mountain", and the result was amazing, for example:
+
+![A rendered Image with the Water Level](10.png)
+
 ---
 
 ## The Mystery of Perlin Noise and Fractals
