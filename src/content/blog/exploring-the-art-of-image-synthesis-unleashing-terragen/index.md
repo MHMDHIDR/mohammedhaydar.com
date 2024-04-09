@@ -82,6 +82,10 @@ So I played around with the settings and I was able to generate a different imag
 
 ![A rendered Image with the Water Level](10.png)
 
+And finally, I was able to generate a different image, I changed the colors so this is a grass looking like (a green land), and is this:
+
+![A rendered Image with the Water Level](11.png)
+
 ---
 
 ## The Mystery of Perlin Noise and Fractals
