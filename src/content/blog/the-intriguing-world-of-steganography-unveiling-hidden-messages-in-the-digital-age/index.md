@@ -73,7 +73,10 @@ Robust steganography aims to ensure that hidden messages remain intact, even in 
 
 **Results:-**
 
-I would characterize this as a <u>**Fragile**</u> steganography method because of its simplicity, minimal usage of inducing bugs or errors, and overall simplicity. In contrast, robust methods have the will lead to corruption in the file.
+I would characterize this as a <u>**Fragile**</u> steganography method because of its simplicity, minimal usage of inducing bugs or errors, and overall simplicity. In contrast, robust methods have the will lead to the loss of the hidden message if the image is compressed or altered in any way.
+
+---
+
 The link to the file with the hidden message: (Password to unlock is 123)
 
 https://drive.google.com/file/d/1Js3N4-niinSs0Tku2VeE4JZWBq6ABx1y/view?usp=sharing
