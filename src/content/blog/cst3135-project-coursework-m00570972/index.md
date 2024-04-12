@@ -31,6 +31,10 @@ This project involves turning a wand into a gesture controller, similar to Harry
   Example: **GY-61 sensor detecting movement Arduino**
   <a href="https://www.centiot.com/electronic-components/sensors/alttitude-gyro-accelerator-magnetometer-tilt-sensor-module-gy-61-adxl335" title="GY-61 sensor detecting movement Arduino" target="_blank" >GY-61 sensor detecting movement Arduino</a>
 
+## Arduino Wiring Diagram:
+
+![Arduino Wiring Diagram](./arduino-wiring-diagram.png)
+
 ## Arduino Code Explanation:
 
 In the Arduino code, I utilize analog sensors connected to pins A0 and A1 to gather data. Two pins, 2 and 3, are configured as outputs for controlling external devices, likely LEDs in this scenario. The setup() function initializes serial communication at a baud rate of 9600. Within the loop() function, sensor readings are obtained from A0 and A1. These values are printed over the serial connection.
