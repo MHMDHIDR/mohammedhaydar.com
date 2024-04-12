@@ -85,11 +85,41 @@ So by just dragging the effects mentioned above, and use them in my "Composition
   Your browser does not support the video tag.
 </video>
 
-### Conclusion
+---
 
-#### Enjoy the Ride
+## Exploring Technical Aspects of Visual Jockeying
 
-VJ is about creating cool experiences. Start simple, and explore, remember, it's all about having fun and exploring your creativity!
+In this section, I talk about technical aspects of visual jockeying, including the features of sound for triggering effects, challenges of real-time video manipulation, and algorithms/processes for sound analysis.
+
+### 1. Features of Sound for Triggering Effects in VJ
+
+In visual jockey sound can make awesome visuals happen. Different sound features help sync visuals with audio, making and creating immersive experience for the crowd.
+
+<u>**Amplitude**</u>: Sound strength can control visual brightness and size. For instance, louder sounds can mean brighter colors or bigger shapes.
+
+<u>**Frequency**</u>: specific visual effects. High pitches can mean fast motion, while low pitches can mean slow movement.
+
+<u>**Rhythm**</u>: The rhythmic of the music sets the pace for visual effects. Beat detection tech helps match visuals with the music's tempo.
+
+### 2. Challenges of Real-Time Video Manipulation
+
+Changing videos in real-time in visual jockey has some tough parts. VJs need to fix these to give smooth and awesome shows.
+
+<u>**Processing Power**</u>: Performing complex and doing cool visual tricks live needs lots of computer power. VJs struggle with this, especially when using many effects at once.
+
+<u>**Latency**</u>: It is important to reduce delay for sound and visuals to be in sync. Delays can make the show feel off, so it's important to set up software and hardware well.
+
+<u>**Synchronization**</u>: ensuring the visuals and music go together is key. VJs find it hard to line up visuals with the music, especially in lively shows.
+
+### 3. Algorithms/Processes for Sound Analysis
+
+Sound analysis plays a crucial role in extracting meaningful data from audio sources to drive visual effects in VJ performances.
+
+<u>**FFT (Fast Fourier Transform)**</u>: FFT breaks down sound into its frequencies. VJs use it to find main frequencies and change visual stuff based on them. is used for frequency analysis, decomposing audio signals into their constituent frequencies. VJs leverage FFT to detect dominant frequencies and adjust visual parameters accordingly.
+
+<u>**Onset Detection**</u>: This spots sudden changes in the music, like drum hits. By finding these, VJs can match visuals to the music's rhythm.
+
+<u>**Audio Feature Extraction**</u>: VJs use different ways to study sound, like its tone and styles. These give good info for making sweet visual shows in VJ.
 
 ---
 
