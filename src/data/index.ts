@@ -219,10 +219,12 @@ export const projectsData: Project[] = [
       "From September 2021 to December 2022, I developed and maintained restaurant webapp, focusing on delivering a seamless user experience. By employing Next.js, I ensured smooth functionality and implemented an intuitive design to enhance usability and satisfaction for users.",
   },
   {
+    title: "eCcommerce Web Application",
+    subtitle: null,
+    _id: "bf84a665-d8fa-4eea-acf2-a71c58a9f55b",
     videogallery: null,
     url: "https://ecommerce-mhmdhidr.vercel.app",
     github: "https://github.com/MHMDHIDR/ecommerce",
-    _id: "bf84a665-d8fa-4eea-acf2-a71c58a9f55b",
     slug: null,
     coverimage: "e-commerce.jpg",
     filter: [
@@ -236,7 +238,5 @@ export const projectsData: Project[] = [
     description:
       "I developed an e-commerce platform, accessible at eCommerce app, using Express, React, and Tailwind CSS. By leveraging these technologies, I created a dynamic and visually appealing platform. The website offers a seamless shopping experience, incorporating intuitive navigation, responsive design, and stylish elements to enhance user engagement and satisfaction.",
     _createdAt: "2023-05-21T12:24:36Z",
-    title: "eCcommerce Web Application",
-    subtitle: null,
   },
 ];
