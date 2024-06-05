@@ -54,9 +54,7 @@ const PortfoliosSection = () => {
               exit={{ scale: 0 }}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              transition={{
-                duration: 0.4,
-              }}
+              transition={{ duration: 0.4 }}
               className="col-span-6 sm:col-span-3 lg:col-span-2"
               key={project._id}
             >

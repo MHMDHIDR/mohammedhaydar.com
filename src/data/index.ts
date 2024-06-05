@@ -100,7 +100,28 @@ export const projectsData: Project[] = [
     _id: "23412345-2f27-4446-8266-6056e60051fe",
     subtitle: null,
     url: "https://shmsagricultural.com",
-    github: "https://github.com/MHMDHIDR/shms-agricultural",
+    github: "",
+    filter: [
+      {
+        _ref: "24wfsf244-2118-40ae-806a-se3242421ssfs",
+        _type: "reference",
+        _key: "3b3e8ee8e2b2",
+      },
+    ],
+  },
+  {
+    _createdAt: "2024-03-21T12:22:48Z",
+    title: "Stay Makan Booking",
+    slug: null,
+    coverimage: "stay-makan.png",
+    imagegallery: ["stay-makan.png"],
+    videogallery: null,
+    description:
+      "Stay Makan Booking is a web application that allows users to book hotels, hostels, and guesthouses. The application is built using Next.js, Tailwind CSS, and PrismaORM. It features a user-friendly interface, and real-time booking updates. I collaborated with a team of developers to design and develop the application, ensuring a seamless user experience and efficient booking process.",
+    _id: "453633245-2f27-4446-8266-6056Rex0051fe",
+    subtitle: null,
+    url: "https://staymakan.mohammedhaydar.com",
+    github: "https://github.com/MHMDHIDR/staymakan",
     filter: [
       {
         _ref: "24wfsf244-2118-40ae-806a-se3242421ssfs",

@@ -23,13 +23,13 @@ const Portfolio = ({
   return (
     <div className="portfolio card hovercard group p-4 md:p-5">
       <div className="portfolio-top relative overflow-hidden">
-        <div className="portfolio-image fiximage blur-0 filter transition-all duration-500 group-hover:blur">
+        <div className="portfolio-image fiximage mx-auto flex h-72 w-72 items-center blur-0 filter transition-all duration-500 group-hover:blur">
           <img
-            src={`/assets//images/portfolios/${coverimage}`}
+            src={`/assets/images/portfolios/${coverimage}`}
             height={384}
             width={550}
             alt={title}
-            className="h-auto w-full"
+            className="mx-auto h-auto w-full"
           />
         </div>
         <div className="portfolio-hovercontent absolute left-0 top-0 z-20 flex h-full w-full -translate-x-full transform items-center justify-center gap-4 overflow-hidden bg-grey bg-opacity-80 transition-all duration-500 group-hover:translate-x-0">
