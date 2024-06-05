@@ -61,27 +61,27 @@ export const jobExperienceData: WorkEducationProps[] = [
 
 export const filteredProjectsData: ProjectFiltersProps[] = [
   {
-    _id: "62e87a0f-ffc5-488b-8870-87cccfda79d7",
+    _id: "type-php",
     title: "PHP",
     value: "PHP",
   },
   {
-    _id: "7506b030-8b86-4250-8f8a-54630a89d511",
+    _id: "type-expressjs",
     title: "ExpressJS",
     value: "ExpressJS",
   },
   {
-    _id: "d6de33f6-4435-4e04-8086-956579ded94f",
+    _id: "type-wordpress",
     title: "WordPress",
     value: "WordPress",
   },
   {
-    _id: "e7185d48-3fa0-43b0-abcd-f0ac820034a5",
+    _id: "type-bootstrap",
     title: "Bootstrap",
     value: "Bootstrap",
   },
   {
-    _id: "fa7bdbe5-2118-40ae-806a-99da85849ff7",
+    _id: "type-nextjs",
     title: "NextJS",
     value: "NextJS",
   },
@@ -103,7 +103,7 @@ export const projectsData: Project[] = [
     github: "",
     filter: [
       {
-        _ref: "24wfsf244-2118-40ae-806a-se3242421ssfs",
+        _ref: "type-nextjs",
         _type: "reference",
         _key: "3b3e8ee8e2b2",
       },
@@ -124,7 +124,7 @@ export const projectsData: Project[] = [
     github: "https://github.com/MHMDHIDR/staymakan",
     filter: [
       {
-        _ref: "24wfsf244-2118-40ae-806a-se3242421ssfs",
+        _ref: "type-nextjs",
         _type: "reference",
         _key: "3b3e8ee8e2b2",
       },
@@ -145,12 +145,12 @@ export const projectsData: Project[] = [
     github: "https://github.com/MHMDHIDR/saj-online",
     filter: [
       {
-        _key: "c793ef590fb3",
-        _ref: "62e87a0f-ffc5-488b-8870-87cccfda79d7",
+        _ref: "type-php",
         _type: "reference",
+        _key: "c793ef590fb3",
       },
       {
-        _ref: "e7185d48-3fa0-43b0-abcd-f0ac820034a5",
+        _ref: "type-bootstrap",
         _type: "reference",
         _key: "093af2c87343",
       },
@@ -163,7 +163,7 @@ export const projectsData: Project[] = [
     url: "https://dmcqtr.com",
     filter: [
       {
-        _ref: "d6de33f6-4435-4e04-8086-956579ded94f",
+        _ref: "type-wordpress",
         _type: "reference",
         _key: "e6e013f95b43",
       },
@@ -180,7 +180,7 @@ export const projectsData: Project[] = [
     videogallery: null,
     filter: [
       {
-        _ref: "d6de33f6-4435-4e04-8086-956579ded94f",
+        _ref: "type-wordpress",
         _type: "reference",
         _key: "ef9814b528fb",
       },
@@ -210,7 +210,7 @@ export const projectsData: Project[] = [
     coverimage: "mhmdhidr-restaurant-next.jpg",
     filter: [
       {
-        _ref: "fa7bdbe5-2118-40ae-806a-99da85849ff7",
+        _ref: "type-nextjs",
         _type: "reference",
         _key: "3b3e8ee8e2b2",
       },
@@ -225,14 +225,14 @@ export const projectsData: Project[] = [
     _id: "bf84a665-d8fa-4eea-acf2-a71c58a9f55b",
     slug: null,
     coverimage: "e-commerce.jpg",
-    imagegallery: ["e-commerce-lg.jpg"],
     filter: [
       {
-        _ref: "7506b030-8b86-4250-8f8a-54630a89d511",
+        _ref: "type-expressjs",
         _type: "reference",
         _key: "13bdb6d4b6b8",
       },
     ],
+    imagegallery: ["e-commerce-lg.jpg"],
     description:
       "I developed an e-commerce platform, accessible at eCommerce app, using Express, React, and Tailwind CSS. By leveraging these technologies, I created a dynamic and visually appealing platform. The website offers a seamless shopping experience, incorporating intuitive navigation, responsive design, and stylish elements to enhance user engagement and satisfaction.",
     _createdAt: "2023-05-21T12:24:36Z",
