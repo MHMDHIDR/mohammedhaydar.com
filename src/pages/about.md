@@ -14,7 +14,7 @@ I'm a friendly and collaborative
 Full-stack developer who loves sports and values a healthy lifestyle. I designed and crafted this based on [my personal blog](/posts).
 
 <div>
-  <img src="/assets/about-image.png" class="sm:w-1/2 mx-auto" alt="coding dev illustration">
+  <img src="/assets/about-image.png" class="mx-auto sm:w-1/2" alt="coding dev illustration">
 </div>
 
 ## Features

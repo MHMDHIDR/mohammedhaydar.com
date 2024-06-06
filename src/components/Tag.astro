@@ -19,7 +19,7 @@ const { tag, size = "sm" } = Astro.props;
     class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
   >
     <TagIcon
-      className="fill-none group-hover:rotate-45 transition-transform duration-300 w-5 h-5"
+      className="w-5 h-5 fill-none group-hover:rotate-45 transition-transform duration-300"
     />
     &nbsp;
     <span>{tag}</span>

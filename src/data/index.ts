@@ -177,6 +177,8 @@ export const projectsData: Project[] = [
     description: null,
   },
   {
+    _id: "6e6b2c10-e622-454d-8c51-e8da51b9bbce",
+    title: "INLINE Marketing Agency",
     videogallery: null,
     filter: [
       {
@@ -187,9 +189,7 @@ export const projectsData: Project[] = [
     ],
     description:
       "I designed a visually appealing and user-friendly website for INLINE, specializing in marketing solutions to empower businesses and enhance workflow. Collaborating closely with the marketing team, I developed a comprehensive content strategy featuring case studies, testimonials, and informative blog posts. Interactive features like forms and chatbots were implemented for seamless user engagement, and data visualization tools were built to showcase INLINE's analytics expertise, offering valuable insights to clients and prospects.",
-    _id: "6e6b2c10-e622-454d-8c51-e8da51b9bbce",
     _createdAt: "2023-05-21T12:22:03Z",
-    title: "INLINE Marketing Agency",
     slug: null,
     imagegallery: ["inline-lg.jpg"],
     subtitle: null,

@@ -9,7 +9,7 @@ const JobTimeline = () => {
   return (
     <div className="job-experience">
       <h4>
-        <Briefcase className="mr-2 inline-block text-primary" />
+        <Briefcase className="inline-block mr-2 text-primary" />
         Working Experience
       </h4>
       {jobExperienceData?.map((timeline: WorkEducationProps, index: number) => (

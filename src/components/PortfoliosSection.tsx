@@ -66,7 +66,7 @@ const PortfoliosSection = () => {
       {visibleProjects && !allProjectsLoaded && (
         <div className="mt-12 text-center">
           <button
-            className="btn btn-small text-white hover:text-blue-900"
+            className="text-white btn btn-small hover:text-blue-900"
             onClick={() => setPageNumber(prevNumber => prevNumber + 1)}
           >
             <span>Load More</span>

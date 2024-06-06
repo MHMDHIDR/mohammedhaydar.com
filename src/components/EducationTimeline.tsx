@@ -9,7 +9,7 @@ const EducationTimeline = () => {
   return (
     <div className="education-timeline">
       <h4>
-        <Book className="mr-2 inline-block text-primary" />
+        <Book className="inline-block mr-2 text-primary" />
         Educational Qualification
       </h4>
       {workEducationData?.map((timeline: WorkEducationProps, index: number) => (

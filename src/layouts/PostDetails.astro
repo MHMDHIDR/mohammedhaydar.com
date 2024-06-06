@@ -49,13 +49,13 @@ const layoutProps = {
 <Layout {...layoutProps}>
   <Header />
 
-  <!-- <div class="progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill">
-    <div class="progress-bar h-1 w-0 bg-skin-accent" id="myBar"></div>
+  <!-- <div class="fixed top-0 z-10 w-full h-1 progress-container bg-skin-fill">
+    <div class="w-0 h-1 progress-bar bg-skin-accent" id="myBar"></div>
   </div> -->
 
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
+  <div class="flex justify-start w-full max-w-3xl px-2 mx-auto">
     <button
-      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
+      class="flex mt-8 mb-2 focus-outline hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
     >
       <svg xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const layoutProps = {
       size="lg"
       className="my-2"
     />
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+    <article id="article" role="article" class="max-w-3xl mx-auto mt-8 prose">
       <Content />
     </article>
 
@@ -86,7 +86,7 @@ const layoutProps = {
     >
       <button
         id="back-to-top"
-        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
+        class="py-1 focus-outline whitespace-nowrap hover:opacity-75"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
           <path
@@ -118,11 +118,11 @@ const layoutProps = {
     // Create the main container div
     const progressContainer = document.createElement("div");
     progressContainer.className =
-      "progress-container fixed top-0 z-10 h-1 w-full bg-skin-fill";
+      "fixed top-0 z-10 w-full h-1 progress-container bg-skin-fill";
 
     // Create the progress bar div
     const progressBar = document.createElement("div");
-    progressBar.className = "progress-bar h-1 w-0 bg-skin-accent";
+    progressBar.className = "w-0 h-1 progress-bar bg-skin-accent";
     progressBar.id = "myBar";
 
     // Append the progress bar to the progress container
@@ -159,7 +159,7 @@ const layoutProps = {
       heading.classList.add("group");
       let link = document.createElement("a");
       link.innerText = "#";
-      link.className = "heading-link hidden group-hover:inline-block ml-2";
+      link.className = "hidden ml-2 heading-link group-hover:inline-block";
       link.href = "#" + heading.id;
       link.ariaHidden = "true";
       heading.appendChild(link);
@@ -179,7 +179,7 @@ const layoutProps = {
 
       let copyButton = document.createElement("button");
       copyButton.className =
-        "copy-code absolute right-3 -top-3 rounded bg-skin-card px-2 py-1 text-xs leading-4 text-skin-base font-medium";
+        "absolute px-2 py-1 text-xs font-medium rounded copy-code right-3 -top-3 bg-skin-card leading-4 text-skin-base";
       copyButton.innerHTML = copyButtonLabel;
       codeBlock.setAttribute("tabindex", "0");
       codeBlock.appendChild(copyButton);
