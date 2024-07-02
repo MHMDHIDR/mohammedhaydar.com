@@ -1,11 +1,11 @@
 <label
   aria-label="auto"
   aria-live="polite"
-  class="cursor-pointer relative h-[calc(var(--drkModeToggleSize)/3)] w-[calc(var(--drkModeToggleSize)/1.15)] ltr overflow-clip"
+  class="ltr relative h-[calc(var(--drkModeToggleSize)/3)] w-[calc(var(--drkModeToggleSize)/1.15)] cursor-pointer overflow-clip"
 >
   <input
     id="theme-toggler"
-    class="absolute w-6 h-6 opacity-0 pointer-events-none sm:w-12 sm:h-12 theme-toggler peer"
+    class="theme-toggler peer pointer-events-none absolute h-6 w-6 opacity-0 sm:h-12 sm:w-12"
     type="checkbox"
     aria-label="Dark Mode Toggler Checkbox"
     title="Dark Mode Toggler Checkbox"
@@ -13,13 +13,13 @@
 
   {/* Toggle pill */}
   <div
-    class="absolute w-full h-full border-2 border-gray-500 border-solid rounded-full shadow-lg transition-colors duration-300 dark:border-gray-200 peer-checked:bg-gray-700"
+    class="absolute h-full w-full rounded-full border-2 border-solid border-gray-500 shadow-lg transition-colors duration-300 peer-checked:bg-gray-700 dark:border-gray-200"
   >
   </div>
 
   {/* Lightmode sun */}
   <div
-    class="peer-checked:opacity-0 peer-checked:translate-x-12 peer-checked:translate-y-8 peer-checked:-rotate-0 absolute opacity-100 translate-x-[calc(var(--drkModeToggleSize)/10)] translate-y-[calc(var(--drkModeToggleSize)/22)] rotate-12 origin-[50%_50%] transition-all duration-300"
+    class="absolute origin-[50%_50%] translate-x-[calc(var(--drkModeToggleSize)/10)] translate-y-[calc(var(--drkModeToggleSize)/22)] rotate-12 opacity-100 transition-all duration-300 peer-checked:translate-x-12 peer-checked:translate-y-8 peer-checked:-rotate-0 peer-checked:opacity-0"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -54,13 +54,13 @@
 
   {/* Lightmode moon */}
   <div
-    class="peer-checked:bg-[#485367] peer-checked:shadow-white peer-checked:translate-x-[calc(var(--drkModeToggleSize)/20)] absolute h-[calc(var(--drkModeToggleSize)/4.5)] w-[calc(var(--drkModeToggleSize)/4.5)] rounded-full bg-yellow-100 translate-x-[calc(var(--drkModeToggleSize)/1.8)] translate-y-[calc(var(--drkModeToggleSize)/20)] shadow-[inset_0_0_0_0.13em] shadow-orange-300 transition-all duration-300"
+    class="absolute h-[calc(var(--drkModeToggleSize)/4.5)] w-[calc(var(--drkModeToggleSize)/4.5)] translate-x-[calc(var(--drkModeToggleSize)/1.8)] translate-y-[calc(var(--drkModeToggleSize)/20)] rounded-full bg-yellow-100 shadow-[inset_0_0_0_0.13em] shadow-orange-300 transition-all duration-300 peer-checked:translate-x-[calc(var(--drkModeToggleSize)/20)] peer-checked:bg-[#485367] peer-checked:shadow-white"
   >
   </div>
 
   {/* Darkmode moon */}
   <div
-    class="peer-checked:opacity-100 peer-checked:translate-x-[calc(var(--drkModeToggleSize)/1.9)] peer-checked:translate-y-[calc(var(--drkModeToggleSize)/15)] peer-checked:-rotate-[15deg] absolute opacity-0 translate-x-24 translate-y-2 rotate-0 origin-[50%_50%] transition-all duration-300"
+    class="absolute origin-[50%_50%] translate-x-24 translate-y-2 rotate-0 opacity-0 transition-all duration-300 peer-checked:translate-x-[calc(var(--drkModeToggleSize)/1.9)] peer-checked:translate-y-[calc(var(--drkModeToggleSize)/15)] peer-checked:-rotate-[15deg] peer-checked:opacity-100"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"

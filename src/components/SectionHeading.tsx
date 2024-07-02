@@ -12,7 +12,7 @@ export default function SectionHeading({
   className,
 }: SectionHeadingProps) {
   return (
-    <div className="section-heading relative overflow-hidden pb-14 text-center">
+    <div className="relative overflow-hidden text-center section-heading pb-14">
       <h2 className={`relative z-10 mb-2 uppercase ${className}`}>
         {children}
       </h2>
@@ -20,7 +20,7 @@ export default function SectionHeading({
         <span className="absolute left-0 top-0 inline-block h-full w-1.5 animate-lefttoright rounded-full bg-primary"></span>
       </span>
       {watermark ? (
-        <span className="pointer-events-none absolute -top-2 left-1/2 z-0 -translate-x-1/2 transform text-9xl font-bold uppercase opacity-5 dark:text-heading/50">
+        <span className="absolute z-0 font-bold uppercase pointer-events-none -top-2 left-1/2 -translate-x-1/2 transform text-9xl opacity-5 dark:text-heading/50">
           {watermark}
         </span>
       ) : null}

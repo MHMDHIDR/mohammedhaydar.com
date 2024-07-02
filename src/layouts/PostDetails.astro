@@ -53,9 +53,9 @@ const layoutProps = {
     <div class="w-0 h-1 progress-bar bg-skin-accent" id="myBar"></div>
   </div> -->
 
-  <div class="flex justify-start w-full max-w-3xl px-2 mx-auto">
+  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
-      class="flex mt-8 mb-2 focus-outline hover:opacity-75"
+      class="focus-outline mb-2 mt-8 flex hover:opacity-75"
       onclick="(() => (history.length === 1) ? window.location = '/' : history.back())()"
     >
       <svg xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const layoutProps = {
       size="lg"
       className="my-2"
     />
-    <article id="article" role="article" class="max-w-3xl mx-auto mt-8 prose">
+    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
 
@@ -86,7 +86,7 @@ const layoutProps = {
     >
       <button
         id="back-to-top"
-        class="py-1 focus-outline whitespace-nowrap hover:opacity-75"
+        class="focus-outline whitespace-nowrap py-1 hover:opacity-75"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90">
           <path

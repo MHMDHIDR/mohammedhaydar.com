@@ -1,7 +1,11 @@
 {
   "name": "mohammedhaydar.com",
   "description": "Mohammed Haydar Personal Portfolio Website Where I showcase My Porjects, Work Experiences, and More...",
-  "author": "Mohammed Haydar",
+  "author": {
+    "name": "Mohammed Haydar",
+    "email": "Mr.hamood277@gmail.com",
+    "url": "https://mohammedhaydar.com"
+  },
   "version": "4.2.0",
   "scripts": {
     "dev": "astro dev",
@@ -17,10 +21,10 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.9",
-    "@astrojs/rss": "^4.0.5",
+    "@astrojs/check": "0.7.0",
+    "@astrojs/rss": "4.0.7",
     "@resvg/resvg-js": "^2.6.0",
-    "astro": "^4.5.8",
+    "astro": "4.11.3",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.20",
     "fslightbox-react": "^1.7.6",
@@ -36,8 +40,8 @@
     "typescript": "^5.4.3"
   },
   "devDependencies": {
-    "@astrojs/react": "^3.1.0",
-    "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/react": "3.6.0",
+    "@astrojs/sitemap": "3.1.6",
     "@astrojs/tailwind": "^5.1.0",
     "@divriots/jampack": "^0.23.3",
     "@tailwindcss/typography": "^0.5.10",

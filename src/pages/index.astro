@@ -61,7 +61,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           src="/assets/hero.png"
           alt="Mohammed Haydar Hero"
           width="250"
-          class="order-1 w-40 h-40 md:h-72 md:w-72"
+          class="order-1 h-40 w-40 md:h-72 md:w-72"
         />
       </div>
       <p>
@@ -106,17 +106,17 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       )
     }
 
-    <div class="container pt-10 mx-auto">
+    <div class="container mx-auto pt-10">
       <SectionHeading watermark="Projects">My Projects</SectionHeading>
       <PortfoliosSection client:only />
     </div>
 
-    <div class="container pt-10 mx-auto">
+    <div class="container mx-auto pt-10">
       <SectionHeading watermark="Resume">My Resume</SectionHeading>
       <a
         href={`https://drive.google.com/file/d/1s8kDoSgboYZWhAzYwdY0Mb759cJqsAeC/view`}
         target="_blank"
-        class="flex mx-auto mb-16 text-white btn w-fit hover:text-blue-900"
+        class="btn mx-auto mb-16 flex w-fit text-white hover:text-blue-900"
       >
         <span class="underline-hover">View Resume</span>
       </a>

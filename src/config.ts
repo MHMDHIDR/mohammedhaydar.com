@@ -40,7 +40,7 @@ export const SOCIALS: SocialObjects = [
     name: "Mail",
     href: "mailto:mr.hamood277@gmail.com",
     linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
+    active: true,
   },
   {
     name: "Twitter",
@@ -48,10 +48,11 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `${SITE.title} on Twitter`,
     active: true,
   },
+  ,
   {
     name: "CodePen",
     href: "https://codepen.io/mhmdhidr",
     linkTitle: `${SITE.title} on CodePen`,
-    active: true,
+    active: false,
   },
 ];
