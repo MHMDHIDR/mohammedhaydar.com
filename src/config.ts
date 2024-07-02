@@ -48,7 +48,6 @@ export const SOCIALS: SocialObjects = [
     linkTitle: `${SITE.title} on Twitter`,
     active: true,
   },
-  ,
   {
     name: "CodePen",
     href: "https://codepen.io/mhmdhidr",
