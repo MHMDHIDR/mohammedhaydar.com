@@ -41,7 +41,7 @@ const socialImageURL = new URL(
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel='shortcut icon' href='/favicon.ico' type='image/x-icon' />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
 
@@ -52,20 +52,20 @@ const socialImageURL = new URL(
     <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta
-      name='keywords'
-      content='Mohammed, Haydar, Personal, Portfolio, Website, Where I showcase My Porjects, Work Experiences, Webapp'
+      name="keywords"
+      content="Mohammed, Haydar, Personal, Portfolio, Website, Where I showcase My Porjects, Work Experiences, Webapp"
     />
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:image" content={socialImageURL} />
-    <meta property='og:image:width' content='192' />
-    <meta property='og:image:height' content='128' />
-    <meta property='og:type' content='website' />
-    <meta property='og:site_name' content='Mohammed Haydar' />
-    <meta property='og:locale' content='en_GB' />
-    <meta property='og:locale:alternate' content='ar_AR' />
+    <meta property="og:image:width" content="192" />
+    <meta property="og:image:height" content="128" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mohammed Haydar" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:locale:alternate" content="ar_AR" />
     <!-- Article Published/Modified time -->
     {
       pubDatetime && (
@@ -89,8 +89,8 @@ const socialImageURL = new URL(
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={socialImageURL} />
-    <meta name='github:site' content='@MHMDHIDR' />
-    <meta name='github:creator' content='@MHMDHIDR' />
+    <meta name="github:site" content="@MHMDHIDR" />
+    <meta name="github:creator" content="@MHMDHIDR" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -98,11 +98,11 @@ const socialImageURL = new URL(
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
       rel="stylesheet"
     />
-    <meta name='author' content='mr.hamood277@gmail.com' />
-    <meta name='theme-color' content='#2376EB' />
-    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-    <link rel='manifest' href='/manifest.json' />
-    <link rel='apple-touch-icon' href='/icon-192x128.png' />
+    <meta name="author" content="mr.hamood277@gmail.com" />
+    <meta name="theme-color" content="#2376EB" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/icon-192x128.png" />
     {/* Open Graph Data */}
     <meta name="theme-color" content="" />
 
@@ -118,6 +118,11 @@ const socialImageURL = new URL(
     <ViewTransitions />
 
     <script is:inline src="/toggle-theme.js"></script>
+    <script
+      defer
+      is:inline
+      src="https://analytics.technodevlabs.com/script.js"
+      data-website-id="b042b2c9-027e-4928-9199-50663eca6abc"></script>
   </head>
   <body>
     <slot />
