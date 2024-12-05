@@ -21,21 +21,21 @@ const Portfolio = ({
   const [imageGalleryOpen, setImageGalleryOpen] = useState(false);
 
   return (
-    <div className="p-4 portfolio card hovercard group md:p-5">
-      <div className="relative overflow-hidden portfolio-top">
-        <div className="flex items-center mx-auto portfolio-image fiximage h-72 w-72 blur-0 filter transition-all duration-500 group-hover:blur">
+    <div className="portfolio card hovercard group p-4 md:p-5">
+      <div className="portfolio-top relative overflow-hidden">
+        <div className="portfolio-image fiximage mx-auto flex h-72 w-72 items-center blur-0 filter transition-all duration-500 group-hover:blur">
           <img
             src={`/assets/images/portfolios/${coverimage}`}
             height={384}
             width={550}
             alt={title}
-            className="w-full h-auto mx-auto"
+            className="mx-auto h-auto w-full"
           />
         </div>
-        <div className="absolute top-0 left-0 z-20 flex items-center justify-center w-full h-full overflow-hidden portfolio-hovercontent -translate-x-full transform gap-4 bg-grey bg-opacity-80 transition-all duration-500 group-hover:translate-x-0">
+        <div className="portfolio-hovercontent absolute left-0 top-0 z-20 flex h-full w-full -translate-x-full transform items-center justify-center gap-4 overflow-hidden bg-grey bg-opacity-80 transition-all duration-500 group-hover:translate-x-0">
           {imagegallery && imagegallery.length > 0 && (
             <button
-              className="inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey"
+              className="inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0 text-center text-lg text-grey"
               aria-label="Image Link"
               onClick={() => setImageGalleryOpen(true)}
             >
@@ -44,7 +44,7 @@ const Portfolio = ({
           )}
           {videogallery && videogallery.length > 0 && (
             <button
-              className="inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey"
+              className="inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0 text-center text-lg text-grey"
               aria-label="Video Link"
               onClick={() => setVideoGalleryOpen(true)}
             >
@@ -55,7 +55,7 @@ const Portfolio = ({
             <a
               href={url}
               target="_blank"
-              className="inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey"
+              className="inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0 text-center text-lg text-grey"
               aria-label="External Link"
             >
               <ExternalLink />
@@ -65,7 +65,7 @@ const Portfolio = ({
             <a
               href={github}
               target="_blank"
-              className="inline-flex items-center justify-center w-10 h-10 min-h-0 p-0 text-lg text-center rounded-full bg-primary text-grey"
+              className="inline-flex h-10 min-h-0 w-10 items-center justify-center rounded-full bg-primary p-0 text-center text-lg text-grey"
               aria-label="Github Link"
             >
               <Github />
@@ -73,8 +73,8 @@ const Portfolio = ({
           )}
         </div>
       </div>
-      <div className="mt-4 text-center portfolio-content">
-        <h5 className="mb-0">{title}</h5>
+      <div className="portfolio-content mt-4 text-center">
+        <h4 className="mb-0">{title}</h4>
         <p>{subtitle}</p>
       </div>
       {imagegallery && (

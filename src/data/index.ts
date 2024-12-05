@@ -3,7 +3,8 @@ import type { Project, ProjectFiltersProps, WorkEducationProps } from "types";
 export const workEducationData: WorkEducationProps[] = [
   {
     id: 1,
-    title: "Bachelor's in Information Technology",
+    title:
+      "Bachelor of Science with First Class Honours in Information Technology",
     year: "2023 - 2024",
     meta: "Middlesex University London",
     text: "Middlesex University is a renowned institution celebrated for its academic excellence and commitment to innovation. It provides a dynamic learning environment for students from diverse backgrounds.\nI have undertaken a variety of courses at Middlesex University, including Advanced Web Development with Big Data, Digital Media Engineering, Web-Based Mobile App Development, and the Undergraduate Individual Project. These courses collectively contribute to my academic foundation, enhancing my capabilities in the field of computer science and technology.",
