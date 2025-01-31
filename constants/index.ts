@@ -77,3 +77,5 @@ export const SUPPORTED_IMAGE_TYPES = [
 ]
 export const SUPPORTED_VIDEO_TYPES = ['video/mp4', 'video/quicktime', 'video/mpeg']
 export const SUPPORTED_AUDIO_TYPES = ['audio/mpeg', 'audio/wav', 'audio/mp3']
+
+export const ADMIN_EMAIL = 'info@mohammedhaydar.com'
