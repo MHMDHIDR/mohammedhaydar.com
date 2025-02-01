@@ -10,7 +10,7 @@ import Title from '@/components/Title'
 export default function ServicesPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
-  const handleMouseMove = (e: { clientX: any; clientY: any }) => {
+  const handleMouseMove = (e: { clientX: number; clientY: number }) => {
     setMousePosition({ x: e.clientX, y: e.clientY })
   }
 
