@@ -18,9 +18,8 @@ import SuccessMsg from './SuccessMsg'
 import { sendContactEmail } from '@/lib/email'
 import { isValidPhoneNumber } from 'libphonenumber-js'
 import { z } from 'zod'
-
-// Define services enum
-const services = ['Web Development', 'Design', 'Consulting', 'Other'] as const
+import { services } from '@/app/services/services'
+import { useSearchParams } from 'next/navigation'
 
 // Create Zod schema for contact form
 const contactFormSchema = z.object({
@@ -43,12 +42,10 @@ const contactFormSchema = z.object({
     .string()
     .min(10, 'Message must be at least 10 characters')
     .max(1000, 'Message cannot exceed 1000 characters'),
-  service: z.enum(services, {
-    errorMap: () => ({ message: 'Please select a valid service' }),
-  }),
+  service: z.string().min(2, 'Please select a valid service'),
 })
 
-const ContactForm = () => {
+export default function ContactForm() {
   const { toast } = useToast()
   const [status, setStatus] = useState('')
   const [success, setSuccess] = useState(false)
@@ -69,6 +66,8 @@ const ContactForm = () => {
     message: '',
     service: '',
   })
+  const searchParams = useSearchParams()
+  const serviceParams = searchParams.get('service')
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -249,7 +248,19 @@ const ContactForm = () => {
             {errors.message && (
               <p className='text-red-500 text-xs pt-2'>{errors.message}</p>
             )}
-            <Select onValueChange={handleSelectChange} disabled={loading}>
+            <Select
+              onValueChange={handleSelectChange}
+              disabled={loading}
+              defaultValue={
+                serviceParams // Check if serviceParams exists in services array
+                  ? services.find(
+                      service => service.title === serviceParams?.replace('-', ' ')
+                    )
+                    ? serviceParams?.replace('-', ' ')
+                    : 'Other'
+                  : ''
+              }
+            >
               <SelectTrigger>
                 <SelectValue placeholder='Select a service' />
               </SelectTrigger>
@@ -257,10 +268,11 @@ const ContactForm = () => {
                 <SelectGroup>
                   <SelectLabel>Select a service</SelectLabel>
                   {services.map(service => (
-                    <SelectItem key={service} value={service}>
-                      {service}
+                    <SelectItem key={service.title} value={service.title}>
+                      {service.title}
                     </SelectItem>
                   ))}
+                  <SelectItem value={'Other'}>Other</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
@@ -280,5 +292,3 @@ const ContactForm = () => {
     </div>
   )
 }
-
-export default ContactForm
