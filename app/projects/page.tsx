@@ -22,13 +22,15 @@ import { ArrowUpRight, Github } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { projects } from './projects'
 import { Badge } from '@/components/ui/badge'
+import { cn } from '@/lib/utils'
 
 export default function Project() {
   return (
     <div className='py-8'>
       <PageLayout>
         <Carousel opts={{ align: 'start', loop: true }} className='w-full'>
-          <CarouselContent>
+          <CarouselNav className='top-0' />
+          <CarouselContent className='my-10'>
             {projects?.map((project, index) => (
               <CarouselItem key={index}>
                 <Card className='bg-bodyColor border-lightSky/20'>
@@ -125,12 +127,18 @@ export default function Project() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className='absolute right-10 -bottom-8'>
-            <CarouselPrevious className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect' />
-            <CarouselNext className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect' />
-          </div>
+          <CarouselNav className='bottom-0' />
         </Carousel>
       </PageLayout>
+    </div>
+  )
+}
+
+function CarouselNav({ className }: { className: string }) {
+  return (
+    <div className={cn('absolute right-12', className)}>
+      <CarouselPrevious className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect' />
+      <CarouselNext className='rounded-md bg-transparent border border-lightSky/20 hover:bg-hoverColor/20 hover:text-white hover:border-hoverColor p-5 hoverEffect' />
     </div>
   )
 }
