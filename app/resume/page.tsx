@@ -1,40 +1,27 @@
 'use client'
 
 import PageLayout from '@/components/PageLayout'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { Calendar, Code2, GraduationCap, User } from 'lucide-react'
-import { motion } from 'motion/react'
 import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import {
+  BriefcaseBusiness,
+  Calendar,
+  Code2,
+  Download,
+  GraduationCap,
+  User,
+} from 'lucide-react'
+import { motion } from 'motion/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 
 const tabMenu = [
-  // { title: 'Experience', value: 'experience', icon: Briefcase },
   { title: 'Education', value: 'education', icon: GraduationCap },
   { title: 'Skills', value: 'skills', icon: Code2 },
   { title: 'About me', value: 'about', icon: User },
+  { title: 'View CV', value: 'cv', icon: BriefcaseBusiness },
 ]
 const tabContent = {
-  // experience: {
-  //   title: 'Professional Experience',
-  //   items: [
-  //     {
-  //       role: 'Senior Frontend Developer',
-  //       company: 'Tech Solutions Inc.',
-  //       period: '2021 - Present',
-  //       description:
-  //         'Led the development of multiple React-based web applications, improving performance by 40%. Mentored junior developers and implemented best practices for code quality.',
-  //       highlights: ['React', 'Next.js', 'TypeScript', 'Team Leadership'],
-  //     },
-  //     {
-  //       role: 'Full Stack Developer',
-  //       company: 'Digital Innovations Ltd',
-  //       period: '2018 - 2021',
-  //       description:
-  //         'Developed and maintained full-stack applications using modern JavaScript frameworks. Collaborated with cross-functional teams to deliver high-quality solutions.',
-  //       highlights: ['Node.js', 'React', 'MongoDB', 'AWS'],
-  //     },
-  //   ],
-  // },
   education: {
     title: 'Educational Background',
     items: [
@@ -95,8 +82,22 @@ export default function ResumePage() {
   const searchParams = useSearchParams()
   const currentTab = searchParams.get('tab') || 'education'
 
-  const handleTabChange = (value: string) => {
+  function handleTabChange(value: string) {
     router.push(`/resume?tab=${value}`)
+  }
+
+  async function saveFile() {
+    const fileName = 'cv.pdf'
+    const response = await fetch(`/${fileName}`)
+    const blob = await response.blob()
+    const url = window.URL.createObjectURL(blob)
+
+    const fileURLToPath = document.createElement('a')
+    fileURLToPath.href = url
+    fileURLToPath.download = fileName
+    fileURLToPath.click()
+
+    window.URL.revokeObjectURL(url)
   }
 
   return (
@@ -107,7 +108,7 @@ export default function ResumePage() {
           onValueChange={handleTabChange}
           className='w-full flex flex-col md:flex-row gap-6 md:gap-10'
         >
-          <TabsList className='flex md:flex-col h-full bg-transparent md:w-64 gap-4'>
+          <TabsList className='flex-col h-full bg-transparent md:w-64 gap-4'>
             {tabMenu?.map(item => (
               <TabsTrigger
                 key={item?.value}
@@ -122,50 +123,11 @@ export default function ResumePage() {
             ))}
           </TabsList>
           <div className='flex-1 min-h-[400px]'>
-            {/* <TabsContent value='experience'>
-              <motion.h2
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className='text-2xl font-bold mb-6 text-lightSky'
-              >
-                {tabContent.experience.title}
-              </motion.h2>
-              <div className='space-y-6'>
-                {tabContent?.experience?.items.map((item, index) => (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    key={index}
-                    className='border rounded-lg border-lightSky/20 p-6'
-                  >
-                    <div className='flex items-start justify-between mb-4'>
-                      <div>
-                        <h3 className='text-lg font-semibold'>{item?.role}</h3>
-                        <p className=' text-muted-foreground'>{item?.company}</p>
-                      </div>
-                      <div className='flex items-center text-muted-foreground'>
-                        <Calendar className='h-4 w-4 mr-2' />
-                        {item?.period}
-                      </div>
-                    </div>
-                    <p className='mb-4 text-white'>{item?.description}</p>
-                    <div className='flex flex-wrap gap-2'>
-                      {item.highlights.map((highlight, i) => (
-                        <Badge key={i} variant='secondary'>
-                          {highlight}
-                        </Badge>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </TabsContent> */}
             <TabsContent value='education'>
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className='text-2xl font-bold mb-6 text-lightSky'
+                className='text-xl font-bold mb-6 text-lightSky'
               >
                 {tabContent.education.title}
               </motion.h2>
@@ -204,7 +166,7 @@ export default function ResumePage() {
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className='text-2xl font-bold mb-6 text-lightSky'
+                className='text-xl font-bold mb-6 text-lightSky'
               >
                 {tabContent.skills.title}
               </motion.h2>
@@ -239,7 +201,7 @@ export default function ResumePage() {
               <motion.h2
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className='text-2xl font-bold mb-6 text-lightSky'
+                className='text-xl font-bold mb-6 text-lightSky'
               >
                 {tabContent.about.title}
               </motion.h2>
@@ -276,6 +238,34 @@ export default function ResumePage() {
                     </div>
                   </div>
                 </motion.div>
+              </div>
+            </TabsContent>
+            <TabsContent value='cv'>
+              <Button
+                className='text-xl font-bold px-0 mb-3 text-lightSky/85 hover:text-lightSky'
+                variant={'link'}
+                onClick={saveFile}
+              >
+                <Download className='w-4 h-4 mr-2' /> Download CV
+              </Button>
+              <div className='border rounded-lg border-lightSky/20 w-full max-w-full overflow-clip'>
+                <object
+                  data='/cv.pdf#zoom=100&view=Fit'
+                  type='application/pdf'
+                  className='w-full h-[80vh] min-h-[500px] max-h-[800px] bg-white'
+                >
+                  <p>
+                    It appears you don't have a PDF plugin for this browser. You can
+                    <Button
+                      variant={'link'}
+                      onClick={saveFile}
+                      className='text-lightSky/85 hover:text-lightSky px-1'
+                    >
+                      download the PDF
+                    </Button>
+                    instead.
+                  </p>
+                </object>
               </div>
             </TabsContent>
           </div>
