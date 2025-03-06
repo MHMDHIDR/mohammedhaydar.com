@@ -55,7 +55,7 @@ export default function Home() {
       </Container>
 
       <Container className='py-10'>
-        <h2 className='md:text-2xl text-sm font-bold text-white mb-6 border-primary/20 border-8 rounded-sm select-none p-3 border-double w-fit mx-auto'>
+        <h2 className='md:text-2xl text-sm font-bold text-white mb-10 md:mb-6 border-primary/20 border-8 rounded-sm select-none p-3 border-double w-fit mx-auto'>
           Featured Projects
         </h2>
         <Carousel opts={{ align: 'start', loop: true }} className='w-full'>
@@ -157,7 +157,7 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselNav className='bottom-0' />
+          <CarouselNav className='bottom-10' />
         </Carousel>
       </Container>
     </div>
