@@ -34,7 +34,7 @@ const tabContent = {
       },
       {
         degree: 'Bachelor of Science in Information Technology',
-        institution: 'State University',
+        institution: 'Middlesex University London',
         period: '2023 - 2024',
         description:
           'Specialized in developing a high-quality web applications and mobile platforms.',
