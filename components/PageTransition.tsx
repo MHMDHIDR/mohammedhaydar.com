@@ -1,6 +1,6 @@
-"use client"
-import { AnimatePresence, motion } from "motion/react"
-import { usePathname } from "next/navigation"
+'use client'
+import { AnimatePresence, motion } from 'motion/react'
+import { usePathname } from 'next/navigation'
 
 interface Props {
   children: React.ReactNode
@@ -15,9 +15,9 @@ const PageTransition = ({ children }: Props) => {
           initial={{ opacity: 1 }}
           animate={{
             opacity: 0,
-            transition: { delay: 1, duration: 0.4, ease: "easeInOut" }
+            transition: { delay: 1, duration: 0.4, ease: 'easeInOut' },
           }}
-          className="h-screen w-screen fixed bg-bodyColor top-0 pointer-events-none"
+          className='h-screen w-screen fixed bg-bodyColor top-0 pointer-events-none'
         />
         {children}
       </div>
