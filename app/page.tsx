@@ -36,7 +36,11 @@ export default function Home() {
       </Container>
 
       <Container>
-        <ProjectsCarousel title='Featured Projects' orientation='horizontal' />
+        <ProjectsCarousel
+          title='Featured Projects'
+          orientation='horizontal'
+          className='pt-0'
+        />
       </Container>
     </div>
   )
