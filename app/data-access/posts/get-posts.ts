@@ -1,8 +1,8 @@
-"use server"
+'use server'
 
-import { pagination, PaginationResult } from "@/lib/pagination"
-import { db } from "@/prisma"
-import { posts } from "@prisma/client"
+import { pagination, PaginationResult } from '@/lib/pagination'
+import { db } from '@/prisma'
+import { posts } from '@prisma/client'
 
 export type GetPostsResponse = {
   posts: Array<posts>
@@ -39,7 +39,7 @@ export async function getBlogPosts(params?: {
     where: whereClause,
     take: paginationData.pageSize,
     skip: paginationData.offset,
-    orderBy: { publishedAt: "desc" }
+    orderBy: { publishedAt: 'desc' },
   })
 
   return { posts: paginatedPosts, count: totalItems, pagination: paginationData }

@@ -7,6 +7,8 @@ import { services } from './services'
 import PageLayout from '@/components/PageLayout'
 import Title from '@/components/Title'
 
+export const dynamic = 'force-static'
+
 export default function ServicesPage() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 

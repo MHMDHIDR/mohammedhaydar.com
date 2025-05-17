@@ -1,5 +1,22 @@
 export const projects = [
   {
+    title: 'John Al-Shiekh – IELTS Speaking Practice with Instant Feedback',
+    category: 'Full Stack',
+    description:
+      "Enhance your IELTS speaking skills with John Al-Shiekh's AI-powered platform. Engage in realistic mock interviews and receive instant, detailed feedback to boost your performance.",
+    stack: [
+      'Next.js',
+      'TRPc',
+      'TailwindCSS',
+      'Zustand',
+      'Stripe',
+      'PayPal',
+      'PostgreSQL',
+    ],
+    image: 'https://www.john-al-shiekh.live/logo.svg',
+    liveUrl: 'https://www.john-al-shiekh.live',
+  },
+  {
     title: 'Multi Vendor Restaurants Management App',
     category: 'Full Stack',
     description:

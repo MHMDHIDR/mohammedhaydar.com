@@ -77,6 +77,9 @@ const tabContent = {
     languages: ['English (Proffessional)', 'Arabic (Native)'],
   },
 }
+
+export const dynamic = 'force-static'
+
 export default function ResumePage() {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -101,7 +104,7 @@ export default function ResumePage() {
   }
 
   return (
-    <div className='flex flex-col justify-center py-10'>
+    <div className='flex flex-col justify-center py-10 min-h-screen max-sm:my-0 -my-24 '>
       <PageLayout>
         <Tabs
           value={currentTab}

@@ -1,3 +1,7 @@
+import { projects as allProjects } from '@/app/projects/projects'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
 import {
   Carousel,
   CarouselContent,
@@ -6,8 +10,6 @@ import {
   CarouselPrevious,
   CarouselProps,
 } from '@/components/ui/carousel'
-import { Card, CardContent } from '@/components/ui/card'
-import Image from 'next/image'
 import { Separator } from '@/components/ui/separator'
 import {
   Tooltip,
@@ -15,12 +17,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-import Link from 'next/link'
-import { ArrowUpRight, Github } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
-import { projects as allProjects } from '@/app/projects/projects'
+import { ArrowUpRight, Github } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 type Project = (typeof allProjects)[0]
 
@@ -106,27 +106,28 @@ export default function ProjectsCarousel({
                                 <p>View Live Project</p>
                               </TooltipContent>
                             </Tooltip>
-                          </TooltipProvider>
-                          <TooltipProvider>
-                            <Tooltip>
-                              <Link href={project.githubUrl} target='_blank'>
-                                <TooltipTrigger asChild>
-                                  <Button
-                                    variant='outline'
-                                    size='icon'
-                                    className='bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect'
-                                  >
-                                    <Github />
-                                    <span className='sr-only'>
-                                      View Github Repository
-                                    </span>
-                                  </Button>
-                                </TooltipTrigger>
-                              </Link>
-                              <TooltipContent className='bg-white text-black font-semibold'>
-                                <p>View Github Repository</p>
-                              </TooltipContent>
-                            </Tooltip>
+
+                            {project.githubUrl && (
+                              <Tooltip>
+                                <Link href={project.githubUrl} target='_blank'>
+                                  <TooltipTrigger asChild>
+                                    <Button
+                                      variant='outline'
+                                      size='icon'
+                                      className='bg-lightSky/5 text-white/80 border border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect'
+                                    >
+                                      <Github />
+                                      <span className='sr-only'>
+                                        View Github Repository
+                                      </span>
+                                    </Button>
+                                  </TooltipTrigger>
+                                </Link>
+                                <TooltipContent className='bg-white text-black font-semibold'>
+                                  <p>View Github Repository</p>
+                                </TooltipContent>
+                              </Tooltip>
+                            )}
                           </TooltipProvider>
                         </div>
                       </div>

@@ -1,6 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  reactStrictMode: true,
+  experimental: {
+    serverActions: { bodySizeLimit: '10mb' },
+  },
   images: {
     remotePatterns: [
       {
@@ -12,7 +16,6 @@ const nextConfig: NextConfig = {
       { hostname: 'dev.mohammedhaydar.com', protocol: 'https', port: '' },
     ],
   },
-  experimental: { serverActions: { bodySizeLimit: '10mb' } },
 }
 
 export default nextConfig
