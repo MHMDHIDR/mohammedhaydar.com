@@ -68,14 +68,4 @@ export const projects = [
     liveUrl: 'https://www.shmsagricultural.com',
     githubUrl: 'https://github.com/MHMDHIDR/shms-agricultural',
   },
-  {
-    title: 'Academic Journal for Research and Science',
-    category: 'Full Stack',
-    description:
-      'Sudan Academic Journal for Research and Science is a platform that provides access to a wide range of academic resources, including articles, research papers, and other scholarly content. The platform is designed to help researchers and students access the latest research findings and resources in their field.',
-    stack: ['PHP', 'Bootstrap', 'jQuery', 'CSS', 'MySQL'],
-    image: 'https://dev.mohammedhaydar.com/assets/images/portfolios/saj.jpg',
-    liveUrl: 'https://sudanacademicjournalresearch.online',
-    githubUrl: 'https://github.com/MHMDHIDR/saj-online',
-  },
 ]
