@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: 'John Al-Shiekh – IELTS Speaking Practice with Instant Feedback',
+    title: 'John Al-Shiekh – English Speaking Practice with Instant Feedback',
     category: 'Full Stack',
     description:
-      "Enhance your IELTS speaking skills with John Al-Shiekh's AI-powered platform. Engage in realistic mock interviews and receive instant, detailed feedback to boost your performance.",
+      "Enhance your English speaking skills with John Al-Shiekh's AI-powered platform. Engage in realistic mock interviews and receive instant, detailed feedback to boost your performance.",
     stack: [
       'Next.js',
       'TRPc',
@@ -36,6 +36,17 @@ export const projects = [
     githubUrl: 'https://github.com/MHMDHIDR/restaurant-next',
   },
   {
+    title: 'Shms Agricultural',
+    category: 'Full Stack',
+    description:
+      'Shms Agricultural | Empowering Sudanese Farmers and Investors Built with the latest technologies, including Next.js and TypeScript, Shms Agricultural provides an innovative platform to support Sudanese farmers and investors in achieving sustainable agricultural growth. Our platform is designed to offer fast, reliable, and scalable solutions, leveraging the most advanced web development tools available today.',
+    stack: ['Next.js', 'TailwindCSS', 'Auth.js', 'Shadcn', 'MongoDB'],
+    image:
+      'https://technodevlabs.s3.eu-west-2.amazonaws.com/24b8130b-8413-44d4-905b-eb7676503a97/feeae89617f00a6e-Screenshot%202024-10-18%20at%2012.50.14%E2%80%AFAM.webp',
+    liveUrl: 'https://www.shmsagricultural.com',
+    githubUrl: 'https://github.com/MHMDHIDR/shms-agricultural',
+  },
+  {
     title: 'CRM System',
     category: 'Full Stack',
     description:
@@ -56,16 +67,5 @@ export const projects = [
       'https://technodevlabs.s3.eu-west-2.amazonaws.com/0c48ac8e-84b6-4dc5-8c69-fe6bbc2ffdf4/32b0c0f17957bd4b-logo-sm.webp',
     liveUrl: 'https://staymakan.technodevlabs.com',
     githubUrl: 'https://github.com/MHMDHIDR/staymakan',
-  },
-  {
-    title: 'Shms Agricultural',
-    category: 'Full Stack',
-    description:
-      'Shms Agricultural | Empowering Sudanese Farmers and Investors Built with the latest technologies, including Next.js and TypeScript, Shms Agricultural provides an innovative platform to support Sudanese farmers and investors in achieving sustainable agricultural growth. Our platform is designed to offer fast, reliable, and scalable solutions, leveraging the most advanced web development tools available today.',
-    stack: ['Next.js', 'TailwindCSS', 'Auth.js', 'Shadcn', 'MongoDB'],
-    image:
-      'https://technodevlabs.s3.eu-west-2.amazonaws.com/24b8130b-8413-44d4-905b-eb7676503a97/feeae89617f00a6e-Screenshot%202024-10-18%20at%2012.50.14%E2%80%AFAM.webp',
-    liveUrl: 'https://www.shmsagricultural.com',
-    githubUrl: 'https://github.com/MHMDHIDR/shms-agricultural',
   },
 ]
