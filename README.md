@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### Hello Matey 👋 I'm Mohammed Hayder.
 
-## Getting Started
+### Software Engineer
 
-First, run the development server:
+- 👨‍💻 Currently mostly into webapps and websites. I Build most stuff using the [create-t3-app](https://www.github.com/nexxeln/create-t3-app) Stack.
+- 🌍 Based in UK 🇬🇧+44
+- 🤓 "Best way to learn is to keep shipping" - [MohammedHaydar](https://www.linkedin.com/in/mohammedhaydar)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### MY Stats
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<div style="display: flex;">
+  <img src="https://github-readme-stats.vercel.app/api?username=MHMDHIDR&show_icons=true&hide=&count_private=true&title_color=2563eb&text_color=2563eb&icon_color=0891b2&bg_color=dbd4e5&hide_border=true&show_icons=true" alt="Mohammed Hayder's GitHub stats" height="230" />
+</div>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Tech I'm Passionate About
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<div style="display: flex;">
+  <a href="https://www.typescriptlang.org"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="48" height="48" alt="Typescript" /></a>
+  <a href="https://www.reactjs.org"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="48" height="48" alt="React" /></a>
+  <a href="https://www.nextjs.org"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg" width="48" height="48" alt="NextJs" /></a>
+  <a href="https://trpc.io"><img src="https://avatars.githubusercontent.com/u/78011399?s=200&v=4" width="48" height="48" alt="tRPC"/></a>
+  <a href="https://www.tailwindcss.com"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="48" height="48" alt="TailwindCSS" /></a>
+  <a href="https://prisma.io"><img src="https://www.prisma.io/images/favicon-32x32.png" width="48" height="48" alt="Prisma" /></a>
+  <a href="https://orm.drizzle.team"><img src="https://orm.drizzle.team/svg/drizzle.svg" width="48" height="48" alt="Drizzle ORM" /></a>
+  <a href="https://planetscale.com"><img src="https://avatars.githubusercontent.com/u/35612527?s=200&v=4" width="48" height="48" alt="PlanetScale" /></a>
+</div>
