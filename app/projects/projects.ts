@@ -1,3 +1,13 @@
+type projectsType = {
+  title: string
+  category: string
+  description: string
+  stack: string[]
+  image: string
+  liveUrl: string
+  githubUrl: string
+}[]
+
 export const projects = [
   {
     title: 'John Al-Shiekh – English Speaking Practice with Instant Feedback',
@@ -15,6 +25,7 @@ export const projects = [
     ],
     image: 'https://www.john-al-shiekh.live/logo.svg',
     liveUrl: 'https://www.john-al-shiekh.live',
+    githubUrl: 'https://github.com/MHMDHIDR/john-al-sheikh',
   },
   {
     title: 'Multi Vendor Restaurants Management App',
@@ -68,4 +79,4 @@ export const projects = [
     liveUrl: 'https://staymakan.technodevlabs.com',
     githubUrl: 'https://github.com/MHMDHIDR/staymakan',
   },
-]
+] satisfies projectsType
