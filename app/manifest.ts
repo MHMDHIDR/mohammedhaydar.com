@@ -2,10 +2,10 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Mohammed Ibrahim | Full Stack Developer',
-    short_name: 'Mohammed Ibrahim',
+    name: 'Mohammed Haydar | Full Stack Engineer',
+    short_name: 'Mohammed Haydar',
     description:
-      "I'm a full stack developer based in Coventry, UK. I build web applications with React, Next.js, and Node.js.",
+      "I'm a full stack engineer based in Coventry, UK. I build web applications with React, Next.js, and Node.js.",
     start_url: '/',
     display: 'standalone',
     background_color: '#ffffff',

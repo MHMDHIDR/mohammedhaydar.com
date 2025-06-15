@@ -16,10 +16,10 @@ export default function Home() {
       <Container className='py-10 grid grid-cols-1 md:grid-cols-2 gap-10'>
         <div className='flex flex-col items-center md:items-start gap-5 md:gap-7 text-center md:text-start'>
           <div>
-            <h3 className='font-semibold tracking-wider mb-1'>Full Stack Developer</h3>
+            <h3 className='font-semibold tracking-wider mb-1'>Full Stack Engineer</h3>
             <h2 className='text-3xl md:text-5xl mb-2 text-white'>Hi, I&apos;m</h2>
             <h1 className='text-primary text-5xl md:text-7xl tracking-normal'>
-              Mohammed <span className='text-white'>Ibrahim</span>
+              Mohammed <span className='text-white'>Haydar</span>
             </h1>
           </div>
           <div className='w-full h-[170px] md:h-[140px] relative'>

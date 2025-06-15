@@ -10,9 +10,9 @@ import { Suspense } from 'react'
 import { SessionProvider } from 'next-auth/react'
 
 export const metadata: Metadata = {
-  title: 'Mohammed Ibrahim | A Full Stack Developer',
+  title: 'Mohammed Haydar | A Full Stack Engineer',
   description:
-    "I'm a full stack developer based in Coventry, UK. I build web applications with React, Next.js, and Node.js.",
+    "I'm a full stack engineer based in Coventry, UK. I build web applications with React, Next.js, and Node.js.",
   icons: {
     icon: [{ url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' }],
     apple: [
