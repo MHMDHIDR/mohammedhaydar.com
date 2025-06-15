@@ -38,6 +38,13 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        <script
+          defer
+          src='https://analytics.technodevlabs.com/script.js'
+          data-website-id='b042b2c9-027e-4928-9199-50663eca6abc'
+        ></script>
+      </head>
       <body className={`${raleway.variable} antialiased text-white/80`}>
         <SessionProvider>
           <Header />
