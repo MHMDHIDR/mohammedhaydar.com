@@ -6,6 +6,7 @@ import { Toaster } from '@/components/ui/toaster'
 import Footer from '@/components/Footer'
 import { SessionProvider } from 'next-auth/react'
 import { ThemeProvider } from '@/components/theme-provider'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Mohammed Haydar | A Full Stack Engineer',
@@ -53,7 +54,7 @@ export default async function RootLayout({
           disableTransitionOnChange
           enableSystem
         >
-          {children}
+          <Suspense>{children}</Suspense>
         </ThemeProvider>
         <Toaster />
         <Footer />
