@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import hero from '@/images/hero.png'
 import Image from 'next/image'
 import { motion } from 'motion/react'
 
@@ -55,12 +54,12 @@ const Photo = () => {
         >
           <div className='w-[250px] h-[250px] lg:w-[400px] lg:h-[420px] mix-blend-lighten overflow-hidden rounded-full'>
             <Image
-              src={hero}
+              src={'/hero.webp'}
               alt='heroImage'
               width={400}
               height={400}
               quality={100}
-              className='object-cover w-full h-full'
+              className='object-cover w-auto h-auto'
               priority
             />
           </div>

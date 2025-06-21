@@ -41,14 +41,14 @@ export default function ServicesPage() {
               >
                 <div className='flex items-center justify-between mb-4'>
                   <div className='flex items-center gap-4'>
-                    <span className='text-5xl font-extrabold text-white/20 group-hover:text-white/10'>
+                    <span className='text-5xl font-extrabold text-white/90 group-hover:text-white/10'>
                       {index + 1}
                     </span>
                     <h2 className='text-lg text-white'>{service.title}</h2>
                   </div>
                   <ArrowUp className='rotate-45 text-lightSky/70' />
                 </div>
-                <p className='text-white/70'>{service.description}</p>
+                <p className='text-white'>{service.description}</p>
               </Link>
             ))}
           </div>

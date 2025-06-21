@@ -1,3 +1,4 @@
+import ThemeToggle from '@/app/components/theme-toggle'
 import { SOCIALS } from '@/constants'
 import Link from 'next/link'
 
@@ -8,7 +9,7 @@ export default function Footer() {
     <footer className='mt-10 w-full'>
       <hr className='border-t my-3' />
       <div className='flex items-center p-4 mx-auto'>
-        <div className='inline-flex flex-1 gap-x-2'>
+        <div className='inline-flex items-center flex-1 gap-x-2'>
           {SOCIALS.filter(social => social.active).map(social => (
             <Link
               key={social.href}
@@ -22,6 +23,7 @@ export default function Footer() {
               <span className='sr-only'>{social.linkTitle}</span>
             </Link>
           ))}
+          <ThemeToggle />
         </div>
         <div className='flex items-center gap-x-2'>
           <span>Copyright © {currentYear}</span>

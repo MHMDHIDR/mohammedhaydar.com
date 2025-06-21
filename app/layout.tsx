@@ -2,12 +2,10 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 import Header from '@/components/Header'
-import PageTransition from '@/components/PageTransition'
-import StairTransition from '@/components/StairTransition'
 import { Toaster } from '@/components/ui/toaster'
 import Footer from '@/components/Footer'
-import { Suspense } from 'react'
 import { SessionProvider } from 'next-auth/react'
+import { ThemeProvider } from '@/components/theme-provider'
 
 export const metadata: Metadata = {
   title: 'Mohammed Haydar | A Full Stack Engineer',
@@ -37,7 +35,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang='en' suppressHydrationWarning>
       <head>
         <script
           defer
@@ -49,10 +47,14 @@ export default async function RootLayout({
         <SessionProvider>
           <Header />
         </SessionProvider>
-        <StairTransition />
-        <PageTransition>
-          <Suspense>{children}</Suspense>
-        </PageTransition>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          disableTransitionOnChange
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
         <Toaster />
         <Footer />
       </body>
