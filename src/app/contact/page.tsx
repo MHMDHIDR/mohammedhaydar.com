@@ -1,7 +1,7 @@
 import ContactForm from "@/components/ContactForm";
 import Container from "@/components/Container";
 import PageLayout from "@/components/PageLayout";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import Link from "next/link";
 
 const infoData = [
@@ -22,8 +22,9 @@ export default function ContactPage() {
             Get In Touch
           </h1>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-600 md:text-xl dark:text-gray-300">
-            Ready to bring your ideas to life? Let's collaborate and create
-            something amazing together.
+            {
+              "Ready to bring your ideas to life? Let's collaborate and create something amazing together."
+            }
           </p>
         </div>
 
@@ -42,16 +43,17 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div className="mb-8">
                 <h2 className="mb-4 text-2xl font-bold text-gray-900 md:text-3xl dark:text-white">
-                  Let's Connect
+                  {"Let's Connect"}
                 </h2>
                 <p className="leading-relaxed text-gray-600 dark:text-gray-300">
-                  Feel free to reach out through any of these channels. I'm
-                  always excited to discuss new projects and opportunities.
+                  {
+                    "Feel free to reach out through any of these channels. I'm always excited to discuss new projects and opportunities."
+                  }
                 </p>
               </div>
 
               <div className="space-y-6">
-                {infoData?.map((item, index) => (
+                {infoData?.map((item) => (
                   <div
                     key={item?.title}
                     className="group relative overflow-hidden rounded-xl border border-gray-200/50 bg-white/60 p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-gray-300/70 hover:bg-white/80 hover:shadow-lg dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 dark:hover:bg-white/10"

@@ -150,7 +150,7 @@ export default function ContactForm() {
       } else {
         toast({
           title: "Error: Unable to send message",
-          description: response.error || "Please try again later.",
+          description: response.error ?? "Please try again later.",
           variant: "destructive",
         });
       }
@@ -166,11 +166,12 @@ export default function ContactForm() {
     <div className="space-y-8">
       <div className="space-y-4">
         <h2 className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-3xl font-bold text-transparent md:text-4xl">
-          Let's work together
+          {"Let's work together"}
         </h2>
         <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
-          I'm looking forward to working with you! Share your project details
-          and I'll get back to you within 24 hours.
+          {
+            "I'm looking forward to working with you! Share your project details and I'll get back to you within 24 hours."
+          }
         </p>
       </div>
 

@@ -4,7 +4,7 @@ import { auth } from "@/server/auth";
 import { db } from "@/prisma";
 import { AuthError } from "next-auth";
 import { slugify } from "@/lib/slugify";
-import { posts } from "@prisma/client";
+import { type posts } from "@prisma/client";
 
 export async function updatePostContent(
   postId: posts["id"],

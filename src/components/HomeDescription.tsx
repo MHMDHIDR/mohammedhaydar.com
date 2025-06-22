@@ -6,7 +6,7 @@ const HomeDescription = () => {
   const [hasLoaded, setHasLoaded] = useState(false);
   const description =
     "Full Stack Engineer with 6+ years in React.js, Next.js, and modern web tech, building fast, reliable applications with clean code and strong teamwork.";
-  const { displayedText, isComplete } = useTypeWriter(description, 30);
+  const { displayedText } = useTypeWriter(description, 30);
 
   useEffect(() => {
     setHasLoaded(true);

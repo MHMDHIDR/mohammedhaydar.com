@@ -1,135 +1,149 @@
-"use client"
+"use client";
 
-import { Input } from "@/components/ui/input"
-import { useState, useRef } from "react"
-import { EditorContent, useEditor } from "@tiptap/react"
-import { StarterKit } from "@tiptap/starter-kit"
-import { Image as TipTapImage } from "@tiptap/extension-image"
-import { EditorMenu } from "@/components/Editor"
-import { Button } from "@/components/ui/button"
-import { createPost } from "./actions"
-import { useRouter } from "next/navigation"
-import { uploadToS3 } from "@/lib/s3-upload"
-import Image from "next/image"
-import { updatePostContent } from "../actions"
-import { MAX_FILE_SIZE } from "@/constants"
+import { Input } from "@/components/ui/input";
+import { useState, useRef } from "react";
+import { EditorContent, useEditor } from "@tiptap/react";
+import { StarterKit } from "@tiptap/starter-kit";
+import { Image as TipTapImage } from "@tiptap/extension-image";
+import { EditorMenu } from "@/components/Editor";
+import { Button } from "@/components/ui/button";
+import { createPost } from "./actions";
+import { useRouter } from "next/navigation";
+import { uploadToS3 } from "@/lib/s3-upload";
+import Image from "next/image";
+import { updatePostContent } from "../actions";
+import { MAX_FILE_SIZE } from "@/constants";
 
 export default function NewBlogPost() {
-  const { push } = useRouter()
-  const [title, setTitle] = useState("")
-  const [content, setContent] = useState("")
-  const [published, setPublished] = useState(false)
+  const router = useRouter();
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [published, setPublished] = useState(false);
   const [uploadedMedia, setUploadedMedia] = useState<
     {
-      file: File
-      preview: string
-      type: string
+      file: File;
+      preview: string;
+      type: string;
     }[]
-  >([])
+  >([]);
 
-  const fileInputRef = useRef<HTMLInputElement>(null)
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const editor = useEditor({
-    extensions: [StarterKit, TipTapImage.configure({ inline: true, allowBase64: true })],
+    extensions: [
+      StarterKit,
+      TipTapImage.configure({ inline: true, allowBase64: true }),
+    ],
     content: "",
     editorProps: {
-      attributes: { class: "min-h-72 max-h-72 p-3 overflow-y-auto leading-loose" }
+      attributes: {
+        class: "min-h-72 max-h-72 p-3 overflow-y-auto leading-loose",
+      },
     },
     onUpdate: ({ editor }) => setContent(editor.getHTML()),
-    immediatelyRender: false
-  })
+    immediatelyRender: false,
+  });
 
   async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
-    const files = e.target.files
-    if (!files) return
+    const files = e.target.files;
+    if (!files) return;
 
     const newMediaPreviews = await Promise.all(
-      Array.from(files).map(async file => {
+      Array.from(files).map(async (file) => {
         try {
           // Validate file size before processing
           if (file.size > MAX_FILE_SIZE) {
-            alert(`File ${file.name} exceeds ${MAX_FILE_SIZE / 1024 / 1024} MB limit`)
-            return null
+            alert(
+              `File ${file.name} exceeds ${MAX_FILE_SIZE / 1024 / 1024} MB limit`,
+            );
+            return null;
           }
 
-          const fileType = file.type.split("/")[0]
-          let preview = ""
+          const fileType = file.type.split("/")[0]!;
+          let preview = "";
 
           if (fileType === "image") {
-            preview = URL.createObjectURL(file)
+            preview = URL.createObjectURL(file);
           } else if (fileType === "video") {
-            preview = URL.createObjectURL(file)
+            preview = URL.createObjectURL(file);
           } else if (fileType === "audio") {
-            preview = "/audio-play.svg"
+            preview = "/audio-play.svg";
           }
 
           return {
             file,
             preview,
-            type: fileType
-          }
+            type: fileType,
+          };
         } catch (error) {
-          console.error("Error processing file:", error)
-          return null
+          console.error("Error processing file:", error);
+          return null;
         }
-      })
-    )
+      }),
+    );
 
     // Filter out any null entries (failed uploads)
-    const validMediaPreviews = newMediaPreviews.filter(media => media !== null)
+    const validMediaPreviews = newMediaPreviews.filter(
+      (media) => media !== null,
+    );
 
-    setUploadedMedia(prev => [...prev, ...validMediaPreviews])
+    setUploadedMedia((prev) => [...prev, ...validMediaPreviews]);
 
     // Add files to editor based on type
-    validMediaPreviews.forEach(media => {
-      if (!media) return
+    validMediaPreviews.forEach((media) => {
+      if (!media) return;
 
       if (media.type === "image") {
         editor?.commands.setImage({
-          src: media.preview
-        })
+          src: media.preview,
+        });
       } else if (media.type === "video") {
         editor?.commands.setContent(
-          editor.getHTML() + `<video src="${media.preview}" controls></video>`
-        )
+          editor.getHTML() + `<video src="${media.preview}" controls></video>`,
+        );
       } else if (media.type === "audio") {
         editor?.commands.setContent(
-          editor.getHTML() + `<audio src="${media.preview}" controls></audio>`
-        )
+          editor.getHTML() + `<audio src="${media.preview}" controls></audio>`,
+        );
       }
-    })
+    });
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
     try {
-      const newPostId = await createPost()
+      const newPostId = await createPost();
 
       const mediaUrls = await Promise.all(
-        uploadedMedia.map(async media => {
-          const uploadResult = await uploadToS3(media.file, newPostId)
-          return uploadResult
-        })
-      )
+        uploadedMedia.map(async (media) => {
+          const uploadResult = await uploadToS3(media.file, newPostId);
+          return uploadResult;
+        }),
+      );
 
-      const formData = new FormData()
-      formData.append("title", title)
-      formData.append("content", content)
-      formData.append("published", published ? "true" : "false")
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("content", content);
+      formData.append("published", published ? "true" : "false");
 
-      let updatedContent = content
+      let updatedContent = content;
       uploadedMedia.forEach((media, index) => {
-        updatedContent = updatedContent.replace(media.preview, mediaUrls[index].url)
-      })
+        if (!mediaUrls[index]) return;
+        // Replace the media preview URL with the S3 URL in the content
+        updatedContent = updatedContent.replace(
+          media.preview,
+          mediaUrls[index].url,
+        );
+      });
 
-      await updatePostContent(newPostId, title, updatedContent)
+      await updatePostContent(newPostId, title, updatedContent);
 
-      push(`/dashboard/blogs/${newPostId}`)
+      router.push(`/dashboard/blogs/${newPostId}`);
     } catch (error) {
-      console.error("Error creating post", error)
+      console.error("Error creating post", error);
     }
-  }
+  };
 
   return !editor ? null : (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -140,7 +154,7 @@ export default function NewBlogPost() {
             type="text"
             value={title}
             id="title"
-            onChange={e => setTitle(e.target.value)}
+            onChange={(e) => setTitle(e.target.value)}
             required
           />
         </label>
@@ -166,7 +180,7 @@ export default function NewBlogPost() {
             Upload Media
           </Button>
           <EditorContent
-            className="border border-white/10 focus:border-primary"
+            className="focus:border-primary border border-white/10"
             editor={editor}
             id="content"
             required
@@ -184,9 +198,9 @@ export default function NewBlogPost() {
                 alt={`Preview ${index}`}
                 width={80}
                 height={80}
-                className="w-20 h-20 object-cover rounded-md"
+                className="h-20 w-20 rounded-md object-cover"
               />
-            )
+            );
           } else if (media.type === "video") {
             return (
               <video
@@ -194,20 +208,20 @@ export default function NewBlogPost() {
                 src={media.preview}
                 width={80}
                 height={80}
-                className="w-20 h-20 object-cover rounded-md"
+                className="h-20 w-20 rounded-md object-cover"
               />
-            )
+            );
           } else if (media.type === "audio") {
             return (
               <div
                 key={index}
-                className="w-20 h-20 bg-gray-200 rounded-md flex items-center justify-center"
+                className="flex h-20 w-20 items-center justify-center rounded-md bg-gray-200"
               >
                 🎵 Audio
               </div>
-            )
+            );
           }
-          return null
+          return null;
         })}
       </div>
 
@@ -215,16 +229,16 @@ export default function NewBlogPost() {
         <label htmlFor="published">
           Published:
           <input
-            className="w-5 h-5 ml-4 align-middle"
+            className="ml-4 h-5 w-5 align-middle"
             type="checkbox"
             checked={published}
             id="published"
-            onChange={e => setPublished(e.target.checked)}
+            onChange={(e) => setPublished(e.target.checked)}
           />
         </label>
       </div>
 
       <Button type="submit">Add Post</Button>
     </form>
-  )
+  );
 }

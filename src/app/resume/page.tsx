@@ -90,7 +90,7 @@ export const dynamic = "force-static";
 export default function ResumePage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const currentTab = searchParams.get("tab") || "education";
+  const currentTab = searchParams.get("tab") ?? "education";
 
   function handleTabChange(value: string) {
     router.push(`/resume?tab=${value}`);
@@ -273,8 +273,8 @@ export default function ResumePage() {
                   className="h-[80vh] max-h-[800px] min-h-[500px] w-full bg-white"
                 >
                   <p>
-                    It appears you don't have a PDF plugin for this browser. You
-                    can
+                    It appears you don not have a PDF plugin for this browser.
+                    You can
                     <Button
                       variant={"link"}
                       onClick={saveFile}

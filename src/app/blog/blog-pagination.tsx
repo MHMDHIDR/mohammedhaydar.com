@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Pagination,
@@ -8,20 +8,20 @@ import {
   PaginationLink,
   PaginationNext,
   PaginationPrevious,
-} from '@/components/ui/pagination'
-import { PaginationResult } from '@/lib/pagination'
-import { generatePaginationItems } from '@/lib/generate-pagination-items'
-import React from 'react'
+} from "@/components/ui/pagination";
+import { type PaginationResult } from "@/lib/pagination";
+import { generatePaginationItems } from "@/lib/generate-pagination-items";
+import React from "react";
 
 export default function BlogPagination({
   paginationInfo,
 }: {
-  paginationInfo: PaginationResult
+  paginationInfo: PaginationResult | undefined;
 }) {
   return (
     paginationInfo &&
     paginationInfo.totalPages > 1 && (
-      <div className='mt-10 select-none'>
+      <div className="mt-10 select-none">
         <Pagination>
           <PaginationContent>
             <PaginationItem>
@@ -33,16 +33,16 @@ export default function BlogPagination({
                 }
                 aria-disabled={!paginationInfo.hasPreviousPage}
                 disabled={!paginationInfo.hasPreviousPage}
-                label={''}
+                label={""}
               />
             </PaginationItem>
 
             {generatePaginationItems(
               paginationInfo.currentPage,
-              paginationInfo.totalPages
+              paginationInfo.totalPages,
             ).map((item, index) => (
               <PaginationItem key={`${item}-${index}`}>
-                {item === 'ellipsis-start' || item === 'ellipsis-end' ? (
+                {item === "ellipsis-start" || item === "ellipsis-end" ? (
                   <PaginationEllipsis />
                 ) : (
                   <PaginationLink
@@ -50,7 +50,7 @@ export default function BlogPagination({
                     isActive={item === paginationInfo.currentPage}
                     aria-disabled={item === paginationInfo.currentPage}
                     disabled={item === paginationInfo.currentPage}
-                    className='bg-transparent border-none hover:bg-transparent'
+                    className="border-none bg-transparent hover:bg-transparent"
                   >
                     {item}
                   </PaginationLink>
@@ -67,12 +67,12 @@ export default function BlogPagination({
                 }
                 aria-disabled={!paginationInfo.hasNextPage}
                 disabled={!paginationInfo.hasNextPage}
-                label={''}
+                label={""}
               />
             </PaginationItem>
           </PaginationContent>
         </Pagination>
       </div>
     )
-  )
+  );
 }

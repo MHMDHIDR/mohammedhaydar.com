@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { formatDate } from "@/lib/format-date";
 import { baseUrl } from "@/app/sitemap";
 import type { Metadata } from "next";
-import { getPostBySlug } from "@/app/data-access/posts/get-post-bySlug";
 import { BlogLayout } from "@/app/components/blog-layout";
 import GoBackbtn from "@/app/components/go-back-btn";
 import { auth } from "@/server/auth";
@@ -10,6 +9,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { getBlogPosts } from "@/app/data-access/posts/get-posts";
 import { SyntaxHighlighter } from "@/app/components/syntax-highlighter";
+import { api } from "@/trpc/server";
 
 export async function generateStaticParams() {
   const { posts } = await getBlogPosts();
@@ -22,7 +22,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getPostBySlug({ slug });
+  const post = await api.posts.getPostBySlug({ slug });
   if (!post) return {};
 
   const { title, publishedAt } = post;
@@ -55,7 +55,7 @@ export default async function BlogPost({
 }) {
   const session = await auth();
   const { slug } = await params;
-  const post = await getPostBySlug({ slug });
+  const post = await api.posts.getPostBySlug({ slug });
 
   if (!post) {
     notFound();

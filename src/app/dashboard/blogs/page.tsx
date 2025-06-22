@@ -1,4 +1,4 @@
-import { BlogPostCard } from "@/components/Card"
+import { BlogPostCard } from "@/components/Card";
 import {
   Pagination,
   PaginationContent,
@@ -6,32 +6,32 @@ import {
   PaginationItem,
   PaginationLink,
   PaginationNext,
-  PaginationPrevious
-} from "@/components/ui/pagination"
-import { SITE } from "@/constants"
-import { getBlogPosts } from "@/app/data-access/posts/get-posts"
-import { generatePaginationItems } from "@/lib/generate-pagination-items"
-import NoItems from "@/components/NoItems"
-import AddBlogButton from "@/app/components/add-blog-btn"
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import { SITE } from "@/constants";
+import { getBlogPosts } from "@/app/data-access/posts/get-posts";
+import { generatePaginationItems } from "@/lib/generate-pagination-items";
+import NoItems from "@/components/NoItems";
+import AddBlogButton from "@/app/components/add-blog-btn";
 
 export default async function Blogs({
-  searchParams
+  searchParams,
 }: {
-  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const params = await searchParams
-  const urlSearchParams = new URLSearchParams()
-  urlSearchParams.set("page", String(params?.page ?? 1))
-  urlSearchParams.set("limit", String(params?.limit ?? SITE.postPerPage))
+  const params = await searchParams;
+  const urlSearchParams = new URLSearchParams();
+  urlSearchParams.set("page", String(params?.page ?? 1));
+  urlSearchParams.set("limit", String(params?.limit ?? SITE.postPerPage));
 
   const {
     posts: blogPosts,
     pagination: paginationInfo,
-    count
+    count,
   } = await getBlogPosts({
     isPublished: true,
-    searchParams: urlSearchParams
-  })
+    searchParams: urlSearchParams,
+  });
 
   return !count ? (
     <NoItems>
@@ -45,12 +45,14 @@ export default async function Blogs({
       <AddBlogButton />
       {blogPosts
         .sort((a, b) => {
-          if (new Date(String(a.publishedAt)) > new Date(String(b.publishedAt))) {
-            return -1
+          if (
+            new Date(String(a.publishedAt)) > new Date(String(b.publishedAt))
+          ) {
+            return -1;
           }
-          return 1
+          return 1;
         })
-        .map(post => (
+        .map((post) => (
           <BlogPostCard
             key={post.id}
             id={post.id}
@@ -81,7 +83,7 @@ export default async function Blogs({
               {/* Page numbers */}
               {generatePaginationItems(
                 paginationInfo.currentPage,
-                paginationInfo.totalPages
+                paginationInfo.totalPages,
               ).map((item, index) => (
                 <PaginationItem key={`${item}-${index}`}>
                   {item === "ellipsis-start" || item === "ellipsis-end" ? (
@@ -92,7 +94,7 @@ export default async function Blogs({
                       isActive={item === paginationInfo.currentPage}
                       aria-disabled={item === paginationInfo.currentPage}
                       disabled={item === paginationInfo.currentPage}
-                      className="bg-transparent border-none hover:bg-transparent"
+                      className="border-none bg-transparent hover:bg-transparent"
                     >
                       {item}
                     </PaginationLink>
@@ -118,5 +120,5 @@ export default async function Blogs({
         </div>
       )}
     </>
-  )
+  );
 }

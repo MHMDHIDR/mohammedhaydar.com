@@ -72,7 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           className="bg-lightSky/10 border-hoverColor/10 hover:border-hoverColor hover:bg-hoverColor hoverEffect rounded-md border px-4 py-2 text-sm hover:text-black"
           onClick={onClose}
         >
-          Let's Talk
+          {"Let's Talk"}
         </Link>
         {user && (
           <>
