@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Mohammed Haydar | A Full Stack Engineer",
@@ -52,7 +53,9 @@ export default function RootLayout({
           <SessionProvider>
             <Header />
           </SessionProvider>
-          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <TRPCReactProvider>
+            <Suspense>{children}</Suspense>
+          </TRPCReactProvider>
           <Toaster />
           <Footer />
         </ThemeProvider>
