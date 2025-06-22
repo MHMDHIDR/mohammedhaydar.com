@@ -19,8 +19,8 @@ export default function Header() {
   const pathname = usePathname() || "";
 
   return (
-    <header className="border-primary/20 bg-accent/15 dark:bg-accent/90 dark:text-primary sticky top-0 z-40 w-full border-b shadow-xs backdrop-blur-md">
-      <Container className="flex items-center justify-between py-5">
+    <header className="dark:text-primary sticky top-0 z-50 min-w-full border-b">
+      <Container className="bg-accent/15 dark:bg-accent/90 flex min-w-full items-center justify-between py-2 backdrop-blur-md sm:py-4">
         <Logo />
         <div className="hidden items-center gap-7 text-sm font-medium tracking-wide uppercase md:inline-flex">
           {navbarData?.map((item) => (

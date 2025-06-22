@@ -16,7 +16,7 @@ const infoData = [
 export default function ContactPage() {
   return (
     <PageLayout>
-      <Container className="py-12 md:py-20">
+      <Container className="px-0 pt-4 md:py-20">
         <div className="mb-16 text-center">
           <h1 className="mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
             Get In Touch
@@ -91,7 +91,7 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              <div className="mt-12 rounded-xl border border-gray-200/50 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 p-6 backdrop-blur-sm dark:border-white/10">
+              <div className="mt-12 rounded-xl border border-gray-200/50 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 p-6 backdrop-blur-sm max-sm:mb-20 dark:border-white/10">
                 <h3 className="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                   Quick Response Guaranteed
                 </h3>

@@ -74,7 +74,7 @@ const tabContent = {
   },
   about: {
     title: "About Me",
-    bio: "Passionate Software Engineer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-friendly design and accessibility.",
+    bio: "Passionate Full Stack Engineer with over 5 years of experience in building modern web applications. Committed to writing clean, maintainable code and staying current with emerging technologies. Strong advocate for user-friendly design and accessibility.",
     interests: [
       "Open Source Contributing",
       "Tech Blogging",
@@ -148,7 +148,7 @@ export default function ResumePage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     key={index}
-                    className="border-lightSky/20 rounded-lg border p-6"
+                    className="border-lightSky/20 rounded-lg border p-1.5 sm:p-4"
                   >
                     <div className="mb-4 flex items-start justify-between">
                       <div>
@@ -160,8 +160,10 @@ export default function ResumePage() {
                         </p>
                       </div>
                       <div className="text-muted-foreground flex items-center">
-                        <Calendar className="mr-2 h-4 w-4" />
-                        {item?.period}
+                        <Calendar className="mr-2 size-4" />
+                        <span className="whitespace-nowrap max-sm:text-xs">
+                          {item?.period}
+                        </span>
                       </div>
                     </div>
                     <p className="text-accent dark:text-accent-foreground mb-4">
@@ -186,14 +188,14 @@ export default function ResumePage() {
               >
                 {tabContent.skills.title}
               </motion.h2>
-              <div className="space-y-6">
+              <div className="space-y-6 max-sm:mb-10">
                 {tabContent?.skills?.categories.map((item, index) => (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     key={index}
-                    className="border-lightSky/20 rounded-lg border p-6"
+                    className="border-lightSky/20 rounded-lg border p-1.5 sm:p-4"
                   >
                     <div className="mb-4 flex items-start justify-between">
                       <div>
@@ -228,7 +230,7 @@ export default function ResumePage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0 * 0.1 }}
-                  className="border-lightSky/20 rounded-lg border p-6"
+                  className="border-lightSky/20 rounded-lg border p-1.5 sm:p-4"
                 >
                   <span className="text-accent dark:text-accent-foreground mb-6 text-lg">
                     {tabContent.about.bio}

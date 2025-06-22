@@ -5,7 +5,7 @@ import Photo from "@/components/Photo";
 import ProjectsCarousel from "@/components/ProjectsCarousel";
 import SocialLinks from "@/components/SocialLinks";
 import { Button } from "@/components/ui/button";
-import { Package } from "lucide-react";
+import { File, Package } from "lucide-react";
 import Link from "next/link";
 
 export const dynamic = "force-static";
@@ -18,7 +18,7 @@ export default async function Home() {
         <Container className="grid grid-cols-1 gap-10 py-10 md:grid-cols-2">
           <div className="flex flex-col items-center gap-5 text-center md:items-start md:gap-7 md:text-start">
             <div>
-              <h3 className="text-accent dark:text-accent-foreground mb-1 font-semibold tracking-wider">
+              <h3 className="text-primary mb-1 font-semibold tracking-wider">
                 Full Stack Engineer
               </h3>
               <h2 className="text-accent dark:text-accent-foreground mb-2 text-3xl md:text-5xl">
@@ -36,18 +36,25 @@ export default async function Home() {
                 <HomeDescription />
               </div>
             </div>
-            <Link href="/projects" className="my-3">
-              <Button className="border-primary/50 hover:bg-primary hoverEffect h-11 rounded-full border bg-transparent hover:text-white">
-                <Package /> My Projects
-              </Button>
-            </Link>
+            <div className="flex gap-x-1">
+              <Link href="/projects" className="my-3">
+                <Button className="border-primary/50 hover:bg-primary hoverEffect h-8 rounded-full border bg-transparent hover:text-white md:h-11">
+                  <Package /> My Projects
+                </Button>
+              </Link>
+              <Link href="/resume" className="my-3">
+                <Button className="border-primary/50 hover:bg-primary hoverEffect h-8 rounded-full border bg-transparent hover:text-white md:h-11">
+                  <File /> My Resume
+                </Button>
+              </Link>
+            </div>
             <SocialLinks />
           </div>
 
           <Photo />
         </Container>
 
-        <Container>
+        <Container className="mb-10">
           <ProjectsCarousel
             title="Featured Projects"
             orientation="horizontal"
