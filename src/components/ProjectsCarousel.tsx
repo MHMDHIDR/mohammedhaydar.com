@@ -38,9 +38,9 @@ export default function ProjectsCarousel({
   orientation = "horizontal",
 }: ProjectsCarouselProps) {
   return (
-    <div className={cn("", className)}>
+    <div className={cn("space-y-4", className)}>
       {title && (
-        <h2 className="border-primary/20 mx-auto mb-10 w-fit rounded-sm border-8 border-double p-3 text-sm font-bold text-white select-none md:mb-6 md:text-2xl">
+        <h2 className="border-primary/20 text-accent dark:text-accent-foreground mx-auto mb-10 w-fit rounded-sm border-8 border-double p-3 text-sm font-bold select-none md:mb-6 md:text-2xl">
           {title}
         </h2>
       )}
@@ -52,8 +52,8 @@ export default function ProjectsCarousel({
         >
           <div className="flex justify-end">
             <div className="flex gap-3">
-              <CarouselPrevious className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect relative rounded-md border bg-transparent p-5 hover:text-white" />
-              <CarouselNext className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect relative rounded-md border bg-transparent p-5 hover:text-white" />
+              <CarouselPrevious className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect bg-accent-forground text-accent dark:text-accent-foreground relative rounded-md border p-4.5" />
+              <CarouselNext className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect bg-accent-forground text-accent dark:text-accent-foreground relative rounded-md border p-4.5" />
             </div>
           </div>
           <CarouselContent className="items-center lg:my-4">
@@ -67,13 +67,15 @@ export default function ProjectsCarousel({
                           <h2 className="text-outline text-3xl leading-none font-extrabold text-transparent select-none md:text-6xl">
                             {index + 1}
                           </h2>
-                          <h3 className="group-hover:text-primary hoverEffect text-xl leading-none font-bold text-white md:text-3xl">
+                          <h3 className="group-hover:text-primary hoverEffect text-accent dark:text-accent-foreground text-xl leading-none font-bold md:text-3xl">
                             <Link href={project.liveUrl} target="_blank">
                               {project.title}
                             </Link>
                           </h3>
-                          <Badge>{project.category}</Badge>
-                          <p className="text-sm leading-6 text-white/60 md:text-base md:leading-normal">
+                          <Badge className="text-accent dark:text-accent-foreground">
+                            {project.category}
+                          </Badge>
+                          <p className="text-accent/60 dark:text-accent-foreground/60 text-sm leading-6 md:text-base md:leading-normal">
                             {project.description}
                           </p>
                           <ul className="flex flex-wrap items-center gap-2 md:gap-4">
@@ -96,7 +98,7 @@ export default function ProjectsCarousel({
                                     <Button
                                       variant="outline"
                                       size="icon"
-                                      className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect border text-white/80"
+                                      className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect text-accent dark:text-accent-foreground border"
                                     >
                                       <ArrowUpRight />
                                       <span className="sr-only">
@@ -105,7 +107,7 @@ export default function ProjectsCarousel({
                                     </Button>
                                   </TooltipTrigger>
                                 </Link>
-                                <TooltipContent className="bg-white font-semibold text-black">
+                                <TooltipContent className="dark:bg-accent dark:text-accent-foreground bg-accent-foreground text-accent font-semibold">
                                   <p>View Live Project</p>
                                 </TooltipContent>
                               </Tooltip>
@@ -120,7 +122,7 @@ export default function ProjectsCarousel({
                                       <Button
                                         variant="outline"
                                         size="icon"
-                                        className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect border text-white/80"
+                                        className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect text-accent dark:text-accent-foreground border"
                                       >
                                         <Github />
                                         <span className="sr-only">
@@ -129,7 +131,7 @@ export default function ProjectsCarousel({
                                       </Button>
                                     </TooltipTrigger>
                                   </Link>
-                                  <TooltipContent className="bg-white font-semibold text-black">
+                                  <TooltipContent className="dark:bg-accent dark:text-accent-foreground bg-accent-foreground text-accent font-semibold">
                                     <p>View Github Repository</p>
                                   </TooltipContent>
                                 </Tooltip>
@@ -161,14 +163,17 @@ export default function ProjectsCarousel({
           </CarouselContent>
           <div className="flex justify-end">
             <div className="flex gap-3">
-              <CarouselPrevious className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect relative rounded-md border bg-transparent p-5 hover:text-white" />
-              <CarouselNext className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect relative rounded-md border bg-transparent p-5 hover:text-white" />
+              <CarouselPrevious className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect bg-accent-forground text-accent dark:text-accent-foreground relative rounded-md border p-4.5" />
+              <CarouselNext className="border-lightSky/20 hover:bg-hoverColor/20 hover:border-hoverColor hoverEffect bg-accent-forground text-accent dark:text-accent-foreground relative rounded-md border p-4.5" />
             </div>
           </div>
         </Carousel>
       ) : (
         projects?.map((project, index) => (
-          <Card className="bg-bodyColor border-lightSky/20" key={index}>
+          <Card
+            className="bg-bodyColor border-lightSky/20 last:mb-10"
+            key={index}
+          >
             <CardContent className="p-6">
               <div className="group flex flex-col md:flex-row md:items-center md:space-x-8">
                 <div className="order-2 mb-8 w-full md:order-1 md:mb-0 md:w-1/2">
@@ -176,13 +181,15 @@ export default function ProjectsCarousel({
                     <h2 className="text-outline text-3xl leading-none font-extrabold text-transparent select-none md:text-6xl">
                       {index + 1}
                     </h2>
-                    <h3 className="group-hover:text-primary hoverEffect text-xl leading-none font-bold text-white md:text-3xl">
+                    <h3 className="group-hover:text-primary hoverEffect text-accent dark:text-accent-foreground text-xl leading-none font-bold md:text-3xl">
                       <Link href={project.liveUrl} target="_blank">
                         {project.title}
                       </Link>
                     </h3>
-                    <Badge>{project.category}</Badge>
-                    <p className="text-sm leading-6 text-white/60 md:text-base md:leading-normal">
+                    <Badge className="text-accent dark:text-accent-foreground">
+                      {project.category}
+                    </Badge>
+                    <p className="text-accent/60 dark:text-accent-foreground/60 text-sm leading-6 md:text-base md:leading-normal">
                       {project.description}
                     </p>
                     <ul className="flex flex-wrap items-center gap-2 md:gap-4">
@@ -205,7 +212,7 @@ export default function ProjectsCarousel({
                               <Button
                                 variant="outline"
                                 size="icon"
-                                className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect border text-white/80"
+                                className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect text-accent dark:text-accent-foreground border"
                               >
                                 <ArrowUpRight />
                                 <span className="sr-only">
@@ -214,7 +221,7 @@ export default function ProjectsCarousel({
                               </Button>
                             </TooltipTrigger>
                           </Link>
-                          <TooltipContent className="bg-white font-semibold text-black">
+                          <TooltipContent className="dark:bg-accent dark:text-accent-foreground bg-accent-foreground text-accent font-semibold">
                             <p>View Live Project</p>
                           </TooltipContent>
                         </Tooltip>
@@ -226,7 +233,7 @@ export default function ProjectsCarousel({
                                 <Button
                                   variant="outline"
                                   size="icon"
-                                  className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect border text-white/80"
+                                  className="bg-lightSky/5 border-lightSky/20 hover:bg-lightSky/20 hover:border-lightSky hover:text-hoverColor hoverEffect text-accent dark:text-accent-foreground border"
                                 >
                                   <Github />
                                   <span className="sr-only">
@@ -235,7 +242,7 @@ export default function ProjectsCarousel({
                                 </Button>
                               </TooltipTrigger>
                             </Link>
-                            <TooltipContent className="bg-white font-semibold text-black">
+                            <TooltipContent className="dark:bg-accent dark:text-accent-foreground bg-accent-foreground text-accent font-semibold">
                               <p>View Github Repository</p>
                             </TooltipContent>
                           </Tooltip>

@@ -5,7 +5,11 @@ export default function Project() {
   return (
     <div className="py-8">
       <PageLayout>
-        <ProjectsCarousel orientation="vertical" className="py-2" />
+        <ProjectsCarousel
+          title="All Projects"
+          orientation="vertical"
+          className="py-2"
+        />
       </PageLayout>
     </div>
   );

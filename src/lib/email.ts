@@ -1,7 +1,8 @@
-'use server'
+"use server";
 
-import { Resend } from 'resend'
-import { ADMIN_EMAIL } from '@/constants'
+import { Resend } from "resend";
+import { ADMIN_EMAIL } from "@/constants";
+import { env } from "@/env";
 
 export async function sendContactEmail({
   name,
@@ -11,18 +12,18 @@ export async function sendContactEmail({
   message,
   service,
 }: {
-  name: string
-  email: string
-  phone?: string
-  subject?: string
-  message: string
-  service?: string
+  name: string;
+  email: string;
+  phone?: string;
+  subject?: string;
+  message: string;
+  service?: string;
 }) {
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
+    const resend = new Resend(env.RESEND_API_KEY);
     const { data, error } = await resend.emails.send({
       from: `${name} <${ADMIN_EMAIL}>`,
-      to: 'Mr.hamood277@gmail.com',
+      to: "Mr.hamood277@gmail.com",
       subject: `Requesting ${service} from <${email}>`,
       html: `
       ${`<p><strong>Subject:</strong> ${subject}</p>`}
@@ -30,17 +31,18 @@ export async function sendContactEmail({
       ${`<p><strong>Message:</strong><br />${message}</p>`}
       ${`<small><strong>Email:</strong> ${email}</small>`}
       `,
-    })
+    });
 
     if (error) {
-      return { success: false, error: error.message }
+      return { success: false, error: error.message };
     }
 
-    return { success: true, data }
+    return { success: true, data };
   } catch (error) {
     return {
       success: false,
-      error: error instanceof Error ? error.message : 'An unknown error occurred',
-    }
+      error:
+        error instanceof Error ? error.message : "An unknown error occurred",
+    };
   }
 }

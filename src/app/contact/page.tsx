@@ -16,7 +16,7 @@ const infoData = [
 export default function ContactPage() {
   return (
     <PageLayout>
-      <Container className="px-0 pt-4 md:py-20">
+      <Container className="px-0 pt-4 md:pt-10 md:pb-20">
         <div className="mb-16 text-center">
           <h1 className="mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-4xl font-bold text-transparent md:text-6xl">
             Get In Touch

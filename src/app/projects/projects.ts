@@ -15,12 +15,13 @@ export const projects = [
     description:
       "Enhance your English speaking skills with John Al-Shiekh's AI-powered platform. Engage in realistic mock interviews and receive instant, detailed feedback to boost your performance.",
     stack: [
+      "OpenAI",
+      "Vapi AI",
       "Next.js",
       "TRPc",
       "TailwindCSS",
       "Zustand",
       "Stripe",
-      "PayPal",
       "PostgreSQL",
     ],
     image: "https://www.john-al-shiekh.live/logo.svg",
