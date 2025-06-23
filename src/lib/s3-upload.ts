@@ -59,7 +59,7 @@ export async function uploadToS3(file: File, postId: string) {
   }
 
   const uploadParams = {
-    Bucket: env.AWS_S3_BUCKET_NAME!,
+    Bucket: env.AWS_S3_BUCKET_NAME,
     Key: filename,
     Body: processedBuffer,
     ContentType: file.type,
