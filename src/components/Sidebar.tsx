@@ -17,14 +17,14 @@ type SidebarProps = {
   side?: "left" | "right";
 };
 
-const Sidebar: React.FC<SidebarProps> = ({
+export default function Sidebar({
   isOpen = false,
   onClose,
   pathname,
   navbarData,
   user,
   side = "right",
-}) => {
+}: SidebarProps) {
   const sidebarRef = useOutsideClick<HTMLDivElement>(onClose);
 
   return (
@@ -107,6 +107,4 @@ const Sidebar: React.FC<SidebarProps> = ({
       </div>
     </>
   );
-};
-
-export default Sidebar;
+}

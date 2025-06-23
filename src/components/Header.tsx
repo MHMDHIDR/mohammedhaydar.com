@@ -19,7 +19,7 @@ export default function Header() {
   const pathname = usePathname() || "";
 
   return (
-    <header className="dark:text-primary sticky top-0 z-50 min-w-full border-b">
+    <header className="text-primary sticky top-0 z-50 min-w-full border-b">
       <Container className="bg-accent/15 dark:bg-accent/90 flex min-w-full items-center justify-between py-2 backdrop-blur-md sm:py-4">
         <Logo />
         <div className="hidden items-center gap-7 text-sm font-medium tracking-wide uppercase md:inline-flex">

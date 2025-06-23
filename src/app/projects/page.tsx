@@ -1,14 +1,12 @@
-'use client'
-
-import PageLayout from '@/components/PageLayout'
-import ProjectsCarousel from '@/components/ProjectsCarousel'
+import PageLayout from "@/components/PageLayout";
+import ProjectsCarousel from "@/components/ProjectsCarousel";
 
 export default function Project() {
   return (
-    <div className='py-8'>
+    <div className="py-8">
       <PageLayout>
-        <ProjectsCarousel orientation='vertical' />
+        <ProjectsCarousel orientation="vertical" className="py-2" />
       </PageLayout>
     </div>
-  )
+  );
 }

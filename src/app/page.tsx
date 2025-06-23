@@ -58,7 +58,7 @@ export default async function Home() {
           <ProjectsCarousel
             title="Featured Projects"
             orientation="horizontal"
-            className="pt-0"
+            className="py-10"
           />
         </Container>
       </div>
