@@ -26,7 +26,7 @@ const Photo = () => {
         },
         opacity: {
           duration: 0.4,
-          delay: 2 + index * 0.4,
+          delay: 0.4 + index * 0.1,
         },
       },
     }),
@@ -37,7 +37,7 @@ const Photo = () => {
         initial={{ opacity: 0 }}
         animate={{
           opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
+          transition: { delay: 0.2, duration: 0.3, ease: "easeIn" },
         }}
         className="relative"
       >
@@ -45,7 +45,7 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
+            transition: { delay: 0.4, duration: 0.4, ease: "easeInOut" },
           }}
           className="absolute top-1/2 left-1/2 z-10 -translate-x-1/2 -translate-y-1/2 transform"
         >
@@ -55,7 +55,7 @@ const Photo = () => {
               alt="heroImage"
               width={400}
               height={400}
-              quality={100}
+              quality={85}
               className="h-full w-full rounded-full object-cover"
               draggable={false}
               priority
