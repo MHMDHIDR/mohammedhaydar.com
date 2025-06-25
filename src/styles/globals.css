@@ -10,6 +10,24 @@ pre[class*="language-"] {
   border-radius: 0.5em;
 }
 
+@media (min-width: 640px) {
+  pre[class*="language-"] {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  pre[class*="language-"] {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1024px) {
+  pre[class*="language-"] {
+    max-width: 1000px;
+  }
+}
+
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
@@ -40,12 +58,12 @@ pre[class*="language-"] {
   user-select: none;
 }
 
-.line-numbers-rows>span {
+.line-numbers-rows > span {
   display: block;
   counter-increment: linenumber;
 }
 
-.line-numbers-rows>span:before {
+.line-numbers-rows > span:before {
   content: counter(linenumber);
   color: #999;
   display: block;
@@ -162,7 +180,8 @@ html {
   font-style: italic;
 }
 
-.prose p {}
+.prose p {
+}
 
 .prose a {
   text-decoration: underline;
@@ -185,7 +204,8 @@ html {
   opacity: 0.7;
 }
 
-.prose strong {}
+.prose strong {
+}
 
 .prose code {
   border-radius: var(--radius);
@@ -200,7 +220,8 @@ html {
 }
 
 .prose ol,
-.prose ul {}
+.prose ul {
+}
 
 .prose ul {
   overflow-x: clip;
@@ -210,7 +231,8 @@ html {
   color: var(--color-primary);
 }
 
-.prose table {}
+.prose table {
+}
 
 .prose th,
 .prose td {
@@ -253,7 +275,7 @@ html {
   outline: 2px solid var(--color-ring);
 }
 
-.prose h2#table-of-contents+p {
+.prose h2#table-of-contents + p {
   display: none;
 }
 
@@ -327,6 +349,6 @@ blockquote {
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply cursor-pointer bg-primary/50;
+    @apply bg-primary/50 cursor-pointer;
   }
 }
