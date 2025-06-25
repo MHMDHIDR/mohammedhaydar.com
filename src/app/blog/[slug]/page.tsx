@@ -10,11 +10,7 @@ import { Button } from "@/components/ui/button";
 import { getBlogPosts } from "@/app/data-access/posts/get-posts";
 import { SyntaxHighlighter } from "@/app/components/syntax-highlighter";
 import { api } from "@/trpc/server";
-
-export async function generateStaticParams() {
-  const { posts } = await getBlogPosts();
-  return posts.map((post) => ({ slug: post.slug }));
-}
+import { SITE } from "@/constants";
 
 export async function generateMetadata({
   params,
@@ -26,27 +22,36 @@ export async function generateMetadata({
   if (!post) return {};
 
   const { title, publishedAt } = post;
+  const openGraphTitle = `${title} | ${SITE.title}`;
 
   return {
-    title,
+    title: openGraphTitle,
     description: title,
     openGraph: {
-      title,
+      title: openGraphTitle,
       description: title,
       type: "article",
       publishedTime: String(new Date(publishedAt!.toISOString())),
       url: `${baseUrl}/blog/${post.slug}`,
+      siteName: SITE.title,
+      images: [SITE.socialBanner],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: title,
+      images: [SITE.socialBanner],
     },
   };
 }
 
 export const dynamic = "force-static";
 export const revalidate = 86400;
+
+export async function generateStaticParams() {
+  const { posts } = await getBlogPosts();
+  return posts.map((post) => ({ slug: post.slug }));
+}
 
 export default async function BlogPost({
   params,
@@ -63,8 +68,10 @@ export default async function BlogPost({
 
   return (
     <>
-      <div className="mx-auto flex w-full max-w-4xl justify-between px-4 py-16">
+      <div className="mx-auto flex w-full max-w-4xl px-4 py-5">
         <GoBackbtn />
+      </div>
+      <div className="mx-auto flex w-full max-w-4xl justify-between px-4 py-0 md:py-7">
         {session && (
           <Link
             href={`/dashboard/blogs/${post.id}`}

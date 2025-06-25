@@ -3,20 +3,27 @@ import { BlogPostCard } from "@/components/Card";
 import { SITE } from "@/constants";
 import { getBlogPosts } from "@/app/data-access/posts/get-posts";
 import BlogPagination from "./blog-pagination";
+import { generateMetadata } from "@/app/seo";
 
-export const metadata = {
-  title: "Blog | Mohammed Haydar",
+export const metadata = generateMetadata({
+  title: "Blog",
   description:
     "Behold, my treasure of wisdom and wonder my collection of articles! 🚀📚",
-};
+});
 
 export const dynamic = "auto";
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  // Pre-render the first 10 pages
-  return Array.from({ length: 10 }, (_, i) => ({
-    searchParams: { page: String(i + 1), limit: String(SITE.postPerPage) },
+  const { count } = await getBlogPosts();
+  const totalPages = Math.ceil(count / SITE.postPerPage);
+
+  // Pre-render all pages
+  return Array.from({ length: totalPages }, (_, i) => ({
+    searchParams: {
+      page: String(i + 1),
+      limit: String(SITE.postPerPage),
+    },
   }));
 }
 
