@@ -26,13 +26,23 @@ import PreCopyHandler from "@/app/blog/[slug]/copy-handler";
 
 export function SyntaxHighlighter({ content }: { content: string }) {
   useEffect(() => {
+    const viewWidth = window.outerWidth;
+
     if (typeof window !== "undefined") {
+      const article = document.getElementById("article");
+
       // Process code blocks to ensure they have proper language classes
       const tempDiv = document.createElement("div");
       tempDiv.innerHTML = content;
 
       // Find all pre > code elements
       const codeBlocks = tempDiv.querySelectorAll("pre > code");
+      const preBlocks = tempDiv.querySelectorAll("pre");
+
+      preBlocks.forEach((preBlock) => {
+        preBlock.style.maxWidth = `${viewWidth}px`;
+      });
+
       codeBlocks.forEach((codeBlock) => {
         // Get language from class (e.g., "language-javascript")
         const classes = [...codeBlock.classList];
@@ -58,7 +68,6 @@ export function SyntaxHighlighter({ content }: { content: string }) {
       const processedContent = tempDiv.innerHTML;
 
       // Update the article content
-      const article = document.getElementById("article");
       if (article) {
         article.innerHTML = processedContent;
         // Re-run Prism on the updated content
@@ -73,7 +82,7 @@ export function SyntaxHighlighter({ content }: { content: string }) {
       <article
         id="article"
         role="article"
-        className="prose mx-auto mt-8 min-w-full"
+        className="prose mx-auto mt-8 max-w-sm min-w-full overflow-x-clip break-all sm:max-w-md md:max-w-lg lg:max-w-xl"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </>

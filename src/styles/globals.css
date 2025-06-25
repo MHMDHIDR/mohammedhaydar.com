@@ -10,24 +10,6 @@ pre[class*="language-"] {
   border-radius: 0.5em;
 }
 
-@media (min-width: 640px) {
-  pre[class*="language-"] {
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 768px) {
-  pre[class*="language-"] {
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 1024px) {
-  pre[class*="language-"] {
-    max-width: 1000px;
-  }
-}
-
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
