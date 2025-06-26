@@ -63,7 +63,7 @@ export default function Sidebar({
         </div>
         <nav className="mt-2 flex flex-col gap-7 px-5 text-sm font-medium tracking-wide uppercase">
           <span className="flex items-center gap-x-2">
-            <Logo /> Mohammed Ibrahim
+            <Logo /> Mohammed Haydar
           </span>
           {navbarData.map((item) => (
             <Link

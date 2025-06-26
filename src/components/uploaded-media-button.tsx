@@ -394,7 +394,7 @@ export function UploadedMediaButton({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="text-black">
+        <Button variant="outline">
           View Saved Media ({savedMedia.length})
         </Button>
       </DialogTrigger>

@@ -52,12 +52,12 @@ export default function Header() {
               >
                 Dashboard
               </Link>
-              <button
+              <Button
                 onClick={async () => await signOut({ redirectTo: "/" })}
                 className="hoverEffect rounded-md bg-red-500 px-4 py-2 text-sm hover:bg-red-700"
               >
                 Sign out
-              </button>
+              </Button>
             </>
           )}
         </div>

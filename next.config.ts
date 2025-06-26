@@ -15,6 +15,8 @@ const nextConfig: NextConfig = {
       },
       { hostname: "s3.eu-west-2.amazonaws.com", protocol: "https", port: "" },
       { hostname: "dev.mohammedhaydar.com", protocol: "https", port: "" },
+      { hostname: "lh3.googleusercontent.com", protocol: "https", port: "" },
+      { hostname: "image-generator.ryrob.com", protocol: "https", port: "" },
     ],
   },
 };

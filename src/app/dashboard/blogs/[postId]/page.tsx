@@ -94,6 +94,7 @@ const Audio = Node.create({
 export default function EditBlogPost() {
   const { postId } = useParams<{ postId: string }>() as { postId: string };
   const router = useRouter();
+  const { data: post } = api.posts.getPostById.useQuery({ postId });
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -137,35 +138,31 @@ export default function EditBlogPost() {
   });
 
   useEffect(() => {
-    const fetchPost = () => {
-      const { data: post } = api.posts.getPostById.useQuery({ postId });
-      if (!post) return;
+    if (!post) return;
 
-      setTitle(post.title);
-      setContent(post.content);
-      setPublished(post.published);
+    setTitle(post.title);
+    setContent(post.content);
+    setPublished(post.published);
 
-      if (editor) {
-        editor.commands.setContent(post.content);
+    if (editor) {
+      editor.commands.setContent(post.content);
 
-        // Extract and set saved media from content
-        const mediaMatches = post.content.match(/src="([^"]*)"/g);
-        if (mediaMatches) {
-          const mediaFiles = mediaMatches.map((src: string) => {
-            const url = src.replace('src="', "").replace('"', "");
-            const type = getMediaType(url);
-            return {
-              preview: url,
-              type: type,
-              isNew: false,
-            };
-          });
-          setUploadedMedia(mediaFiles);
-        }
+      // Extract and set saved media from content
+      const mediaMatches = post.content.match(/src="([^"]*)"/g);
+      if (mediaMatches) {
+        const mediaFiles = mediaMatches.map((src: string) => {
+          const url = src.replace('src="', "").replace('"', "");
+          const type = getMediaType(url);
+          return {
+            preview: url,
+            type: type,
+            isNew: false,
+          };
+        });
+        setUploadedMedia(mediaFiles);
       }
-    };
-    fetchPost();
-  }, [postId, editor]);
+    }
+  }, [editor, post]);
 
   // Helper function to determine media type
   const getMediaType = (url: string): string => {
@@ -298,7 +295,10 @@ export default function EditBlogPost() {
     }
   };
 
-  return !editor ? null : (
+  // If post is not loaded yet, show nothing
+  if (!post || !editor) return null;
+
+  return (
     <>
       <AddBlogButton />
       <form onSubmit={handleEditButton} className="mt-4 space-y-4">

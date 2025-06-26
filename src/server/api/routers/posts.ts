@@ -8,6 +8,9 @@ export const postsRouter = createTRPCRouter({
     .query(async ({ input }) => {
       const fetchedPost = await db.posts.findFirst({
         where: { id: input.postId },
+        include: {
+          author: true,
+        },
       });
 
       return fetchedPost;
@@ -18,6 +21,9 @@ export const postsRouter = createTRPCRouter({
     .query(async ({ input }) => {
       const fetchedPost = await db.posts.findFirst({
         where: { slug: input.slug },
+        include: {
+          author: true,
+        },
       });
 
       return fetchedPost;

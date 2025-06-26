@@ -16,6 +16,9 @@ model posts {
     author      User      @relation(fields: [authorId], references: [id])
     authorId    String
     publishedAt DateTime? @default(now())
+
+    @@index([authorId])
+    @@map("posts")
 }
 
 model Account {
