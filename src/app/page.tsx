@@ -38,12 +38,12 @@ export default async function Home() {
             </div>
             <div className="flex gap-x-1">
               <Link href="/projects" className="my-3">
-                <Button className="border-primary/50 hover:bg-primary hoverEffect h-8 rounded-full border bg-transparent hover:text-white md:h-11">
+                <Button className="border-primary/50 bg-primary hoverEffect h-8 rounded-full border hover:text-white md:h-11">
                   <Package /> My Projects
                 </Button>
               </Link>
               <Link href="/resume" className="my-3">
-                <Button className="border-primary/50 hover:bg-primary hoverEffect h-8 rounded-full border bg-transparent hover:text-white md:h-11">
+                <Button className="border-primary/50 bg-primary/10 hoverEffect text-primary h-8 rounded-full border hover:text-white md:h-11">
                   <File /> My Resume
                 </Button>
               </Link>

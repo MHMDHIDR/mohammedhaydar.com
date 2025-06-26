@@ -26,20 +26,20 @@ const tabContent = {
     title: "Educational Background",
     items: [
       {
-        degree: "Master of Computer Science",
-        institution: "University of Warwick",
-        period: "2025 - 2026",
-        description:
-          "Specializing in Software Engineering and Artificial Intelligence",
-        achievements: ["4.0 GPA", "Research Publication"],
-      },
-      {
         degree: "Bachelor of Science in Information Technology",
         institution: "Middlesex University London",
         period: "2023 - 2024",
         description:
           "Specialized in developing a high-quality web applications and mobile platforms.",
         achievements: ["First Class Honours"],
+      },
+      {
+        degree: "Advanced Diploma in System Engineering",
+        institution: "Aptech Computer Education",
+        period: "2014 - 2017",
+        description:
+          "Built a strong foundation in system engineering, including hardware, software, and networking.",
+        achievements: ["Distinction in System Engineering"],
       },
     ],
   },
