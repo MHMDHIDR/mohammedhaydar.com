@@ -55,7 +55,7 @@ export async function generateMetadata({
 }
 
 export const dynamic = "force-static";
-export const revalidate = 86400;
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const { posts } = await getBlogPosts();
@@ -73,6 +73,11 @@ export default async function BlogPost({
 
   if (!post) {
     notFound();
+  }
+
+  // Modify the content to add draggable to images = false
+  function modifyContent(content: string) {
+    return content.replace(/<img/g, '<img draggable="false"');
   }
 
   return (
@@ -171,7 +176,7 @@ export default async function BlogPost({
           </span>
         </div>
 
-        <SyntaxHighlighter content={post.content} />
+        <SyntaxHighlighter content={modifyContent(post.content)} />
 
         <div className="mt-8 text-center">
           <h3 className="mb-4 text-lg font-semibold select-none">

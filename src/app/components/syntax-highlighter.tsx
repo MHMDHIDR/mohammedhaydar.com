@@ -82,7 +82,7 @@ export function SyntaxHighlighter({ content }: { content: string }) {
       <article
         id="article"
         role="article"
-        className="prose mx-auto mt-8 max-w-sm min-w-full overflow-x-clip break-all sm:max-w-md md:max-w-lg lg:max-w-xl"
+        className="prose mx-auto mt-8 max-w-sm min-w-full overflow-x-clip text-justify break-normal sm:max-w-md md:max-w-lg lg:max-w-xl"
         dangerouslySetInnerHTML={{ __html: content }}
       />
     </>

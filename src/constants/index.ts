@@ -2,6 +2,7 @@ import {
   IconBrandCodepen,
   IconBrandGithub,
   IconBrandGmail,
+  IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandX,
 } from "@tabler/icons-react";
@@ -60,6 +61,12 @@ export const SOCIALS = [
     linkTitle: `${SITE.title} on Twitter`,
     active: true,
     icon: IconBrandX,
+  },
+  {
+    href: "https://www.instagram.com/mohammed_haydar_ibrahim",
+    linkTitle: `${SITE.title} on Instagram`,
+    active: true,
+    icon: IconBrandInstagram,
   },
   {
     href: "https://codepen.io/mhmdhidr",
