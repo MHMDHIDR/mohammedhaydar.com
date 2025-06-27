@@ -33,6 +33,20 @@ export async function generateMetadata({
   const { title, publishedAt } = post;
   const openGraphTitle = `${title} | ${SITE.title}`;
 
+  // A function to content to extract open graph images
+  function extractOpenGraphImages(content: string) {
+    const imgRegex = /<img[^>]+src="([^">]+)"/g;
+    return Array.from(content.matchAll(imgRegex), (match) => match[1]);
+  }
+
+  const extractedImages = extractOpenGraphImages(post.content);
+  const openGraphImages =
+    extractedImages.length > 0
+      ? extractedImages
+          .filter((img): img is string => !!img)
+          .map((img) => ({ url: img }))
+      : [{ url: SITE.socialBanner }];
+
   return {
     title: openGraphTitle,
     description: title,
@@ -43,13 +57,13 @@ export async function generateMetadata({
       publishedTime: String(new Date(publishedAt!.toISOString())),
       url: `${baseUrl}/blog/${post.slug}`,
       siteName: SITE.title,
-      images: [SITE.socialBanner],
+      images: openGraphImages,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description: title,
-      images: [SITE.socialBanner],
+      images: openGraphImages,
     },
   };
 }
