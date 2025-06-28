@@ -69,7 +69,7 @@ export async function generateMetadata({
 }
 
 export const dynamic = "force-static";
-export const revalidate = 3600;
+export const revalidate = 60;
 
 export async function generateStaticParams() {
   const { posts } = await getBlogPosts();
