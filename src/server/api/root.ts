@@ -1,5 +1,7 @@
 import { createCallerFactory, createTRPCRouter } from "@/server/api/trpc";
 import { postsRouter } from "./routers/posts";
+import { S3Router } from "./routers/s3";
+import { optimizeImageRouter } from "./routers/optimize-image";
 
 /**
  * This is the primary router for your server.
@@ -8,6 +10,8 @@ import { postsRouter } from "./routers/posts";
  */
 export const appRouter = createTRPCRouter({
   posts: postsRouter,
+  s3: S3Router,
+  optimizeImage: optimizeImageRouter,
 });
 
 // export type definition of API
