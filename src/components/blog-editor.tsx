@@ -27,6 +27,7 @@ interface BlogEditorProps {
   submitButtonText?: string;
   postId?: string;
   isSubmitting?: boolean;
+  isPublished?: boolean;
 }
 
 export function BlogEditor({
@@ -36,9 +37,10 @@ export function BlogEditor({
   submitButtonText = "Submit",
   postId,
   isSubmitting = false,
+  isPublished = false,
 }: BlogEditorProps) {
   const [title, setTitle] = useState(initialTitle);
-  const [published, setPublished] = useState(false);
+  const [published, setPublished] = useState(isPublished);
 
   const editor = useEditor({
     extensions: [
@@ -208,7 +210,7 @@ export function BlogEditor({
             type="checkbox"
             checked={published}
             onChange={(e) => setPublished(e.target.checked)}
-            className="h-4 w-4"
+            className="size-4"
           />
           <span>Published</span>
         </label>

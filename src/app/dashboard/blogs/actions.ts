@@ -10,6 +10,7 @@ export async function updatePostContent(
   postId: posts["id"],
   title: posts["title"],
   content: posts["content"],
+  published: posts["published"],
 ) {
   const session = await auth();
   const user = session?.user;
@@ -21,7 +22,7 @@ export async function updatePostContent(
   try {
     const updatedPost = await db.posts.update({
       where: { id: postId, authorId: user.id },
-      data: { content, title, slug: slugify(title), published: true },
+      data: { content, title, slug: slugify(title), published },
     });
     return updatedPost;
   } catch (error) {

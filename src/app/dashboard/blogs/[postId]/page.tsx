@@ -29,7 +29,7 @@ export default function EditBlogPost() {
 
       // Update post
       const editedPostId = await editPost(formData, postId);
-      await updatePostContent(editedPostId, title, content);
+      await updatePostContent(editedPostId, title, content, published);
 
       router.push(`/dashboard/blogs/${editedPostId}`);
     } catch (error) {
@@ -54,6 +54,7 @@ export default function EditBlogPost() {
         onSubmit={handleSubmit}
         submitButtonText="Update Post"
         postId={postId}
+        isPublished={post.published}
       />
     </div>
   );

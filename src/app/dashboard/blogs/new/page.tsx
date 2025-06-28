@@ -17,7 +17,7 @@ export default function NewBlogPost() {
   }) => {
     try {
       const newPostId = await createPost();
-      await updatePostContent(newPostId, title, content);
+      await updatePostContent(newPostId, title, content, true);
       router.push(`/dashboard/blogs/${newPostId}`);
     } catch (error) {
       console.error("Error creating post", error);
