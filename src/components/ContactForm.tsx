@@ -28,6 +28,7 @@ import {
   MessageSquare,
   Briefcase,
 } from "lucide-react";
+import { PhoneInput } from "./phone-input";
 
 // Create Zod schema for contact form
 const contactFormSchema = z.object({
@@ -39,9 +40,12 @@ const contactFormSchema = z.object({
     .string()
     .email("Invalid email address")
     .max(255, "Email cannot exceed 255 characters"),
-  phone: z.string().refine(isValidPhoneNumber, {
-    message: "Please provide a valid phone number",
-  }),
+  phone: z
+    .string()
+    .refine(isValidPhoneNumber, {
+      message: "Please provide a valid phone number",
+    })
+    .or(z.literal("")),
   subject: z
     .string()
     .min(2, "Subject must be at least 2 characters")
@@ -88,6 +92,17 @@ export default function ContactForm() {
     setErrors((prevErrors) => ({
       ...prevErrors,
       [name]: "",
+    }));
+  };
+
+  const handlePhoneChange = (value: string) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      phone: value || "",
+    }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      phone: "",
     }));
   };
 
@@ -245,7 +260,7 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-1">
             <div className="space-y-2">
               <label
                 htmlFor="phone"
@@ -254,19 +269,14 @@ export default function ContactForm() {
                 <Phone className="h-4 w-4" />
                 Phone Number
               </label>
-              <Input
-                type="text"
+              <PhoneInput
                 id="phone"
                 name="phone"
                 placeholder="Enter your phone number"
                 value={formData.phone}
-                onChange={handleChange}
+                onChange={handlePhoneChange}
                 disabled={loading}
-                className={`h-12 rounded-xl border-gray-300/50 bg-white/50 backdrop-blur-sm transition-all duration-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 disabled:bg-gray-100/50 dark:border-gray-600/50 dark:bg-gray-800/50 dark:disabled:bg-gray-800/30 ${
-                  errors.phone
-                    ? "border-red-500 focus:border-red-500 focus:ring-red-500/20"
-                    : ""
-                }`}
+                className={errors.phone ? "min-h-full! border-red-500" : ""}
               />
               {errors.phone && (
                 <p className="mt-1 flex items-center gap-1 text-xs text-red-500">
@@ -275,7 +285,8 @@ export default function ContactForm() {
                 </p>
               )}
             </div>
-
+          </div>
+          <div className="grid grid-cols-1">
             <div className="space-y-2">
               <label
                 htmlFor="subject"
@@ -307,7 +318,6 @@ export default function ContactForm() {
               )}
             </div>
           </div>
-
           <div className="space-y-2">
             <label className="flex items-center gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
               <Briefcase className="h-4 w-4" />
