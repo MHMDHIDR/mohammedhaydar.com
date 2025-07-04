@@ -35,7 +35,7 @@ export const projects = [
       "Eco Curiosity Lab is a modern, extensible web application designed to foster curiosity and knowledge about the animal kingdom. Our mission is to create a vibrant community of enthusiasts, researchers, and learners who share a passion for discovering and cataloging species from around the world. The platform is built to be both beautiful and highly functional, with a focus on performance, accessibility, and extensibility.",
     stack: ["React.js", "TailwindCSS", "Zustand", "Shadcn/UI", "TypeScript"],
     image: "/projects/eco-curiosity-lab.png",
-    liveUrl: "https://eco-curiosity-lab.vercel.app/",
+    liveUrl: "https://www.ecocuriositylab.me",
     githubUrl: "https://github.com/MHMDHIDR/eco-curiosity-lab",
   },
   {
