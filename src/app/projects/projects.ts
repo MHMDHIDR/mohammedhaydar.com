@@ -24,7 +24,7 @@ export const projects = [
       "Stripe",
       "PostgreSQL",
     ],
-    image: "https://www.john-al-shiekh.live/logo.svg",
+    image: "/projects/john-al-shiekh.svg",
     liveUrl: "https://www.john-al-shiekh.live",
     githubUrl: "https://github.com/MHMDHIDR/john-al-sheikh",
   },
@@ -34,7 +34,7 @@ export const projects = [
     description:
       "Eco Curiosity Lab is a modern, extensible web application designed to foster curiosity and knowledge about the animal kingdom. Our mission is to create a vibrant community of enthusiasts, researchers, and learners who share a passion for discovering and cataloging species from around the world. The platform is built to be both beautiful and highly functional, with a focus on performance, accessibility, and extensibility.",
     stack: ["React.js", "TailwindCSS", "Zustand", "Shadcn/UI", "TypeScript"],
-    image: "https://eco-curiosity-lab.vercel.app/screenshot.png",
+    image: "/projects/eco-curiosity-lab.png",
     liveUrl: "https://eco-curiosity-lab.vercel.app/",
     githubUrl: "https://github.com/MHMDHIDR/eco-curiosity-lab",
   },
@@ -52,8 +52,7 @@ export const projects = [
       "PayPal",
       "PostgreSQL",
     ],
-    image:
-      "https://technodevlabs.s3.eu-west-2.amazonaws.com/8337285b-161d-4f68-aaa6-33ba285e8f5a/4c1250832b4058d5-Screenshot%202025-01-08%20at%202.28.27%E2%80%AFAM.webp",
+    image: "/projects/restaurant.webp",
     liveUrl: "https://restaurant.technodevlabs.com",
     githubUrl: "https://github.com/MHMDHIDR/restaurant-next",
   },
@@ -63,8 +62,7 @@ export const projects = [
     description:
       "Shms Agricultural | Empowering Sudanese Farmers and Investors Built with the latest technologies, including Next.js and TypeScript, Shms Agricultural provides an innovative platform to support Sudanese farmers and investors in achieving sustainable agricultural growth. Our platform is designed to offer fast, reliable, and scalable solutions, leveraging the most advanced web development tools available today.",
     stack: ["Next.js", "TailwindCSS", "Auth.js", "Shadcn", "MongoDB"],
-    image:
-      "https://technodevlabs.s3.eu-west-2.amazonaws.com/24b8130b-8413-44d4-905b-eb7676503a97/feeae89617f00a6e-Screenshot%202024-10-18%20at%2012.50.14%E2%80%AFAM.webp",
+    image: "/projects/shmsagricultural.webp",
     liveUrl: "https://www.shmsagricultural.com",
     githubUrl: "https://github.com/MHMDHIDR/shms-agricultural",
   },
@@ -81,8 +79,7 @@ export const projects = [
       "PostgreSQL",
       "Drizzle-ORM",
     ],
-    image:
-      "https://technodevlabs.s3.eu-west-2.amazonaws.com/a35f3b6a-ab6a-4d28-adb3-1a8ba1ee1173/77484fef20729bdf-Screenshot%202024-11-15%20at%203.23.21%E2%80%AFAM.webp",
+    image: "/projects/crm.webp",
     liveUrl: "https://crm.technodevlabs.com",
     githubUrl: "https://github.com/MHMDHIDR/crm",
   },
@@ -92,8 +89,7 @@ export const projects = [
     description:
       "StayMakan is your go-to platform for finding and booking the perfect homestay or holiday retreat anywhere, anytime. Whether you're planning a relaxing weekend getaway or an adventurous holiday, we’ve got a wide selection of comfortable and affordable accommodations to make your stay memorable.",
     stack: ["Next.js", "Auth.js", "Google Calender", "Radix UI", "MongoDB"],
-    image:
-      "https://technodevlabs.s3.eu-west-2.amazonaws.com/0c48ac8e-84b6-4dc5-8c69-fe6bbc2ffdf4/32b0c0f17957bd4b-logo-sm.webp",
+    image: "/projects/StayMakan.webp",
     liveUrl: "https://staymakan.technodevlabs.com",
     githubUrl: "https://github.com/MHMDHIDR/staymakan",
   },

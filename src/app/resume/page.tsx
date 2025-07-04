@@ -13,6 +13,7 @@ import {
   User,
 } from "lucide-react";
 import { motion } from "motion/react";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 
 const tabMenu = [
@@ -29,6 +30,7 @@ const tabContent = {
         degree: "Bachelor of Science in Information Technology",
         institution: "Middlesex University London",
         period: "2023 - 2024",
+        brand: "middlesex",
         description:
           "Specialized in developing a high-quality web applications and mobile platforms.",
         achievements: ["First Class Honours"],
@@ -37,6 +39,7 @@ const tabContent = {
         degree: "Advanced Diploma in System Engineering",
         institution: "Aptech Computer Education",
         period: "2014 - 2017",
+        brand: "aptech",
         description:
           "Built a strong foundation in system engineering, including hardware, software, and networking.",
         achievements: ["Distinction in System Engineering"],
@@ -123,12 +126,13 @@ export default function ResumePage() {
               <TabsTrigger
                 key={item?.value}
                 value={item?.value}
-                className="hover:bg-lightSky/50 text-accent dark:text-accent-foreground w-full py-2.5 text-xs sm:text-sm"
+                className="group text-accent dark:text-accent-foreground relative w-full rounded-2xl border border-gray-200/50 bg-white/60 py-3 text-xs font-semibold shadow-sm backdrop-blur-md transition-all duration-300 hover:border-gray-300/70 hover:bg-white/70 hover:text-blue-600 sm:text-sm dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 dark:hover:bg-white/10 dark:hover:text-blue-300"
               >
                 <div className="flex items-center gap-1.5 md:w-[50%] md:gap-3">
                   <item.icon className="h-4 w-4 md:h-5 md:w-5" />
                   {item?.title}
                 </div>
+                <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               </TabsTrigger>
             ))}
           </TabsList>
@@ -141,40 +145,61 @@ export default function ResumePage() {
               >
                 {tabContent.education.title}
               </motion.h2>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 {tabContent?.education?.items.map((item, index) => (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     key={index}
-                    className="border-lightSky/20 rounded-lg border p-1.5 sm:p-4"
+                    className="group relative block overflow-hidden rounded-2xl border border-gray-200/50 bg-white/60 p-8 shadow-sm backdrop-blur-md transition-all duration-500 hover:border-gray-300/70 hover:bg-white/70 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 dark:hover:bg-white/10"
                   >
-                    <div className="mb-4 flex items-start justify-between">
+                    <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="relative z-10 flex">
+                      <div className="mr-6 flex items-center justify-center">
+                        <div className="mb-6 flex size-36 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-100/60 via-white/80 to-purple-100/60 shadow-sm sm:h-38 sm:w-38">
+                          <Image
+                            src={`/education/${tabContent.education.items[index]?.brand}.svg`}
+                            alt={
+                              tabContent.education.items[index]?.description ||
+                              "Education Logo"
+                            }
+                            width={144}
+                            height={144}
+                            className="object-contain"
+                            loading="eager"
+                            priority
+                          />
+                        </div>
+                      </div>
                       <div>
-                        <h3 className="text-lg font-semibold">
-                          {item?.degree}
-                        </h3>
-                        <p className="text-muted-foreground">
-                          {item?.institution}
+                        <div className="mb-4 flex items-start justify-between">
+                          <div>
+                            <h3 className="text-lg font-semibold">
+                              {item?.degree}
+                            </h3>
+                            <p className="text-muted-foreground">
+                              {item?.institution}
+                            </p>
+                          </div>
+                          <div className="text-muted-foreground flex items-center">
+                            <Calendar className="mr-2 size-4" />
+                            <span className="whitespace-nowrap max-sm:text-xs">
+                              {item?.period}
+                            </span>
+                          </div>
+                        </div>
+                        <p className="text-accent dark:text-accent-foreground mb-4">
+                          {item?.description}
                         </p>
+                        <div className="flex flex-wrap gap-2">
+                          {item.achievements.map((achievement, i) => (
+                            <Badge key={i} variant="secondary">
+                              {achievement}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
-                      <div className="text-muted-foreground flex items-center">
-                        <Calendar className="mr-2 size-4" />
-                        <span className="whitespace-nowrap max-sm:text-xs">
-                          {item?.period}
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-accent dark:text-accent-foreground mb-4">
-                      {item?.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {item.achievements.map((achievement, i) => (
-                        <Badge key={i} variant="secondary">
-                          {achievement}
-                        </Badge>
-                      ))}
                     </div>
                   </motion.div>
                 ))}
@@ -188,16 +213,17 @@ export default function ResumePage() {
               >
                 {tabContent.skills.title}
               </motion.h2>
-              <div className="space-y-6 max-sm:mb-10">
+              <div className="space-y-8 max-sm:mb-10">
                 {tabContent?.skills?.categories.map((item, index) => (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                     key={index}
-                    className="border-lightSky/20 rounded-lg border p-1.5 sm:p-4"
+                    className="group relative block overflow-hidden rounded-2xl border border-gray-200/50 bg-white/60 p-8 shadow-sm backdrop-blur-md transition-all duration-500 hover:border-gray-300/70 hover:bg-white/70 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 dark:hover:bg-white/10"
                   >
-                    <div className="mb-4 flex items-start justify-between">
+                    <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="relative z-10 mb-4 flex items-start justify-between">
                       <div>
                         <h3 className="text-lg font-semibold">{item?.name}</h3>
                         <p className="text-accent dark:text-accent-foreground">
@@ -205,8 +231,7 @@ export default function ResumePage() {
                         </p>
                       </div>
                     </div>
-
-                    <div className="flex flex-wrap gap-2">
+                    <div className="relative z-10 flex flex-wrap gap-2">
                       {item.skills.map((skill, i) => (
                         <Badge key={i} variant="secondary">
                           {skill}
@@ -225,17 +250,18 @@ export default function ResumePage() {
               >
                 {tabContent.about.title}
               </motion.h2>
-              <div className="space-y-6">
+              <div className="space-y-8">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0 * 0.1 }}
-                  className="border-lightSky/20 rounded-lg border p-1.5 sm:p-4"
+                  className="group relative block overflow-hidden rounded-2xl border border-gray-200/50 bg-white/60 p-8 shadow-sm backdrop-blur-md transition-all duration-500 hover:border-gray-300/70 hover:bg-white/70 dark:border-white/10 dark:bg-white/5 dark:hover:border-white/20 dark:hover:bg-white/10"
                 >
-                  <span className="text-accent dark:text-accent-foreground mb-6 text-lg">
+                  <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                  <span className="text-accent dark:text-accent-foreground relative z-10 mb-6 text-lg">
                     {tabContent.about.bio}
                   </span>
-                  <div className="space-y-4">
+                  <div className="relative z-10 space-y-4">
                     <div>
                       <h3 className="mb-2 text-lg font-semibold">Interests</h3>
                       <div className="flex flex-wrap gap-2">
