@@ -29,6 +29,17 @@ export const projects = [
     githubUrl: "https://github.com/MHMDHIDR/john-al-sheikh",
   },
   {
+    title: "Eco Curiosity Lab",
+    category: "Frontend",
+    description:
+      "Eco Curiosity Lab is a modern, extensible web application designed to foster curiosity and knowledge about the animal kingdom. Our mission is to create a vibrant community of enthusiasts, researchers, and learners who share a passion for discovering and cataloging species from around the world. The platform is built to be both beautiful and highly functional, with a focus on performance, accessibility, and extensibility.",
+    stack: ["React.js", "TailwindCSS", "Zustand", "Shadcn/UI", "TypeScript"],
+    image:
+      "https://raw.githubusercontent.com/MHMDHIDR/eco-curiosity-lab/main/public/screenshot.png",
+    liveUrl: "https://eco-curiosity-lab.vercel.app/",
+    githubUrl: "https://github.com/MHMDHIDR/eco-curiosity-lab",
+  },
+  {
     title: "Multi Vendor Restaurants Management App",
     category: "Full Stack",
     description:
