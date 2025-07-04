@@ -161,7 +161,7 @@ export default function ResumePage() {
                           <Image
                             src={`/education/${tabContent.education.items[index]?.brand}.svg`}
                             alt={
-                              tabContent.education.items[index]?.description ||
+                              tabContent.education.items[index]?.description ??
                               "Education Logo"
                             }
                             width={144}
