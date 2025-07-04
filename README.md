@@ -1,18 +1,31 @@
-### Hello Matey 👋 I'm Mohammed Hayder.
+# Mohammed Haydar | Senior Software Engineer
 
-### Software Engineer
+### Hello Matey 👋
 
 - 👨‍💻 Currently mostly into webapps and websites. I Build most stuff using the [create-t3-app](https://www.github.com/nexxeln/create-t3-app) Stack.
 - 🌍 Based in UK 🇬🇧+44
 - 🤓 "Best way to learn is to keep shipping" - [MohammedHaydar](https://www.linkedin.com/in/mohammedhaydar)
 
-### MY Stats
+### Stats 📊
+
+[![Mohammed Haydar stats](https://github-readme-stats.vercel.app/api?username=MHMDHIDR&layout=compact&show_icons=true&theme=algolia)](https://github.com/MHMDHIDR/github-readme-stats)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MHMDHIDR&layout=compact&theme=algolia)](https://github.com/MHMDHIDR/github-readme-stats)
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=MHMDHIDR&layout=compact&theme=algolia)](https://git.io/streak-stats)
+
+---
+
+### Currently Exploring 🤓
 
 <div style="display: flex;">
-  <img src="https://github-readme-stats.vercel.app/api?username=MHMDHIDR&show_icons=true&hide=&count_private=true&title_color=2563eb&text_color=2563eb&icon_color=0891b2&bg_color=dbd4e5&hide_border=true&show_icons=true" alt="Mohammed Hayder's GitHub stats" height="230" />
+  <a href="https://dotnet.microsoft.com/en-us/languages/csharp"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/csharp-colored.svg" width="48" height="48" alt="C#" /></a>
+  <a href="https://www.rust-lang.org"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/rust-colored.svg" width="48" height="48" alt="Rust" /></a>
 </div>
 
-### Tech I'm Passionate About
+---
+
+### My LOVE ♥️
 
 <div style="display: flex;">
   <a href="https://www.typescriptlang.org"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg" width="48" height="48" alt="Typescript" /></a>
