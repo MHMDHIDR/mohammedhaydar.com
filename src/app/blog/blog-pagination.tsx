@@ -15,8 +15,12 @@ import React from "react";
 
 export default function BlogPagination({
   paginationInfo,
+  currentPage,
+  currentLimit,
 }: {
   paginationInfo: PaginationResult | undefined;
+  currentPage: number;
+  currentLimit: number;
 }) {
   return (
     paginationInfo &&
@@ -28,7 +32,7 @@ export default function BlogPagination({
               <PaginationPrevious
                 href={
                   paginationInfo.hasPreviousPage
-                    ? `/blog?page=${paginationInfo.previousPage}&limit=${paginationInfo.pageSize}`
+                    ? `/blog/page/${paginationInfo.previousPage}/limit/${currentLimit}`
                     : undefined
                 }
                 aria-disabled={!paginationInfo.hasPreviousPage}
@@ -46,7 +50,7 @@ export default function BlogPagination({
                   <PaginationEllipsis />
                 ) : (
                   <PaginationLink
-                    href={`/blog?page=${item}&limit=${paginationInfo.pageSize}`}
+                    href={`/blog/page/${item}/limit/${currentLimit}`}
                     isActive={item === paginationInfo.currentPage}
                     aria-disabled={item === paginationInfo.currentPage}
                     disabled={item === paginationInfo.currentPage}
@@ -62,7 +66,7 @@ export default function BlogPagination({
               <PaginationNext
                 href={
                   paginationInfo.hasNextPage
-                    ? `/blog?page=${paginationInfo.nextPage}&limit=${paginationInfo.pageSize}`
+                    ? `/blog/page/${paginationInfo.nextPage}/limit/${currentLimit}`
                     : undefined
                 }
                 aria-disabled={!paginationInfo.hasNextPage}

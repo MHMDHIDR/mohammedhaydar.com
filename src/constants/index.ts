@@ -7,12 +7,21 @@ import {
   IconBrandX,
 } from "@tabler/icons-react";
 
+export const SITE = {
+  website: "https://mohammedhaydar.com",
+  author: "Mohammed Haydar | mohammedhaydar.com",
+  desc: "Mohammed Haydar Personal Portfolio Website Where I showcase My Projects, Work Experiences, and More...",
+  title: "Mohammed Haydar",
+  socialBanner: `/twitter-card.png`,
+  postPerPage: 5,
+};
+
 export const navbarData = [
   { title: "Home", href: "/" },
   { title: "Services", href: "/services" },
   { title: "Resume", href: "/resume" },
   { title: "Projects", href: "/projects" },
-  { title: "Blog", href: "/blog" },
+  { title: "Blog", href: `/blog/page/1/limit/${SITE.postPerPage}` },
 ];
 
 export const dashboardNavbarData = [
@@ -27,15 +36,6 @@ export const statsData = [
   { num: 8, title: "Technologies mastered" },
   { num: 500, title: "Code commits" },
 ];
-
-export const SITE = {
-  website: "https://mohammedhaydar.com",
-  author: "Mohammed Haydar | mohammedhaydar.com",
-  desc: "Mohammed Haydar Personal Portfolio Website Where I showcase My Projects, Work Experiences, and More...",
-  title: "Mohammed Haydar",
-  socialBanner: `/twitter-card.png`,
-  postPerPage: 5,
-};
 
 export const SOCIALS = [
   {
