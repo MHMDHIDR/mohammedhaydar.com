@@ -63,11 +63,7 @@ export default async function BlogPage({
           />
         ))}
       </ul>
-      <BlogPagination
-        paginationInfo={paginationInfo}
-        currentPage={page}
-        currentLimit={limit}
-      />
+      <BlogPagination paginationInfo={paginationInfo} currentLimit={limit} />
     </BlogLayout>
   );
 }

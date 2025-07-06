@@ -15,11 +15,9 @@ import React from "react";
 
 export default function BlogPagination({
   paginationInfo,
-  currentPage,
   currentLimit,
 }: {
   paginationInfo: PaginationResult | undefined;
-  currentPage: number;
   currentLimit: number;
 }) {
   return (
