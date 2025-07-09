@@ -13,7 +13,7 @@ export const metadata = generateMetadata({
 });
 
 export const dynamic = "force-static";
-export const revalidate = 86400;
+export const revalidate = 600; // 10 minutes
 
 export async function generateStaticParams() {
   // Pre-render first 20 pages for limits 5, 10, 20
