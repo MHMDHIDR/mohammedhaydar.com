@@ -104,7 +104,7 @@ export function SecondaryHeading({
           y: hovered ? [0, 30, -30, 30, -30, 0] : 0,
         }}
         className={cn(
-          "relative z-20 inline-block text-neutral-900 transition duration-200 group-hover/cover:text-white dark:text-white",
+          "relative z-20 inline-block text-balance text-blue-900 transition duration-200 group-hover/cover:text-white dark:text-white",
           className,
         )}
         exit={{ filter: "none", scale: 1, x: 0, y: 0 }}

@@ -110,20 +110,20 @@ export default async function BlogPost({
         )}
       </div>
       <BlogLayout pageTitle={post.title}>
-        <div className="mt-2 mb-8 flex items-center justify-between text-sm">
+        <div className="my-2 flex items-center justify-between text-sm md:mb-8">
           <div className="flex items-center gap-x-2">
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <div className="border-primary/30 hover:bg-primary/10 hover:border-primary hoverEffect flex items-center gap-x-2 rounded-full border p-2.5 text-blue-500 dark:text-blue-400">
+                  <div className="border-primary/30 hover:bg-primary/10 hover:border-primary hoverEffect flex items-center gap-x-2 rounded-full border p-1.5 text-blue-500 md:p-2.5 dark:text-blue-400">
                     <Image
                       alt={SITE.author}
-                      className="size-6 rounded-full shadow shadow-blue-200"
+                      className="size-3.5 rounded-full shadow shadow-blue-200 md:size-6"
                       height={48}
                       src={post.author.image ?? "/images/logo.svg"}
                       width={48}
                     />
-                    <span className="text-sm font-semibold select-none">
+                    <span className="text-xs font-semibold select-none md:text-sm">
                       {post.author.name}
                     </span>
                   </div>
@@ -150,7 +150,7 @@ export default async function BlogPost({
                           <span className="text-base font-semibold text-gray-900 dark:text-gray-100">
                             {post.author.name ?? SITE.author}
                           </span>
-                          <span className="line-clamp-2 text-sm text-gray-600 dark:text-gray-400">
+                          <span className="text-sm text-gray-600 dark:text-gray-400">
                             {SITE.desc}
                           </span>
                         </figcaption>
@@ -158,6 +158,7 @@ export default async function BlogPost({
 
                       {/* Social Links Section */}
                       <div className="flex items-center gap-x-2 border-t border-gray-100 pt-3 dark:border-gray-800">
+                        <strong>Find me: </strong>
                         {SOCIALS.filter((social) => social.active).map(
                           (social, index) => (
                             <Link
