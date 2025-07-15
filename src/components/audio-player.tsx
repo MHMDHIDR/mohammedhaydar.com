@@ -294,7 +294,7 @@ export default function AudioPlayer({
               </div>
             </div>
             {/* Time Display */}
-            <span className="text-muted dark:text-muted-foreground min-w-[60px] flex-1 text-right text-xs tabular-nums drop-shadow">
+            <span className="text-muted-foreground min-w-[60px] flex-1 text-right text-xs tabular-nums drop-shadow">
               {formatTime(currentTime)} / {formatTime(duration)}
             </span>
           </div>

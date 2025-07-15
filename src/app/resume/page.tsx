@@ -295,10 +295,10 @@ export default function ResumePage() {
                 <AudioPlayer
                   audioUrl="/cv.mp3"
                   title="CV Audio Version"
-                  subtitle="Listen to my resume in audio format."
+                  subtitle=""
                 />
                 <Button
-                  className="text-lightSky/85 hover:text-lightSky text-xl font-bold"
+                  className="text-sm font-normal text-white"
                   variant={"active"}
                   onClick={saveFile}
                 >
