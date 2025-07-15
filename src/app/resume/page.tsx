@@ -15,6 +15,7 @@ import {
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
+import AudioPlayer from "@/components/audio-player";
 
 const tabMenu = [
   { title: "Education", value: "education", icon: GraduationCap },
@@ -287,32 +288,42 @@ export default function ResumePage() {
               </div>
             </TabsContent>
             <TabsContent value="cv">
-              <Button
-                className="text-lightSky/85 hover:text-lightSky mb-3 px-0 text-xl font-bold"
-                variant={"link"}
-                onClick={saveFile}
-              >
-                <Download className="mr-2 h-4 w-4" /> Download CV
-              </Button>
-              <div className="border-lightSky/20 w-full max-w-full overflow-clip rounded-lg border">
-                <object
-                  data="/cv.pdf#zoom=100&view=Fit"
-                  type="application/pdf"
-                  className="h-[80vh] max-h-[800px] min-h-[500px] w-full bg-white"
+              <div className="flex flex-col items-center gap-4">
+                <h2 className="text-lightSky mb-4 text-xl font-bold select-none md:mt-16">
+                  Fancy Listening to my CV 😎?
+                </h2>
+                <AudioPlayer
+                  audioUrl="/cv.mp3"
+                  title="CV Audio Version"
+                  subtitle="Listen to my resume in audio format."
+                />
+                <Button
+                  className="text-lightSky/85 hover:text-lightSky text-xl font-bold"
+                  variant={"active"}
+                  onClick={saveFile}
                 >
-                  <p>
-                    It appears you don not have a PDF plugin for this browser.
-                    You can
-                    <Button
-                      variant={"link"}
-                      onClick={saveFile}
-                      className="text-lightSky/85 hover:text-lightSky px-1"
-                    >
-                      download the PDF
-                    </Button>
-                    instead.
-                  </p>
-                </object>
+                  <Download className="mr-2 h-4 w-4" /> Download CV
+                </Button>
+                <div className="border-lightSky/20 w-full max-w-full overflow-clip rounded-lg border">
+                  <object
+                    data="/cv.pdf#zoom=100&view=Fit"
+                    type="application/pdf"
+                    className="h-[80vh] max-h-[800px] min-h-[500px] w-full bg-white"
+                  >
+                    <p>
+                      It appears you don not have a PDF plugin for this browser.
+                      You can
+                      <Button
+                        variant={"link"}
+                        onClick={saveFile}
+                        className="text-lightSky/85 hover:text-lightSky px-1"
+                      >
+                        download the PDF
+                      </Button>
+                      instead.
+                    </p>
+                  </object>
+                </div>
               </div>
             </TabsContent>
           </div>
