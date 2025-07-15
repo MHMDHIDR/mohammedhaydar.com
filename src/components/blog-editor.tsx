@@ -1,11 +1,10 @@
 import { Color } from "@tiptap/extension-color";
-import { FontSize } from "@tiptap/extension-font-size";
 import { Highlight } from "@tiptap/extension-highlight";
 import { Image as TipTapImage } from "@tiptap/extension-image";
 import { Link } from "@tiptap/extension-link";
 import { ListItem } from "@tiptap/extension-list-item";
 import { TextAlign } from "@tiptap/extension-text-align";
-import TextStyle from "@tiptap/extension-text-style";
+import { TextStyle } from "@tiptap/extension-text-style";
 import { Underline } from "@tiptap/extension-underline";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
@@ -54,7 +53,6 @@ export function BlogEditor({
           keepAttributes: false,
         },
       }),
-      // Text styling extensions
       TextStyle,
       Color.configure({ types: [TextStyle.name, ListItem.name] }),
       Highlight.configure({
@@ -64,7 +62,6 @@ export function BlogEditor({
         },
       }),
       Underline,
-      FontSize.configure({ types: [TextStyle.name, ListItem.name] }),
 
       // Text alignment
       TextAlign.configure({

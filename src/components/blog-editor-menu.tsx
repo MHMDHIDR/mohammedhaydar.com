@@ -382,7 +382,11 @@ export function BlogEditorMenu({ editor, postId }: BlogEditorMenuProps) {
                   onChange={(e) => {
                     const size = e.target.value;
                     if (size) {
-                      editor.chain().focus().setFontSize(`${size}px`).run();
+                      editor
+                        .chain()
+                        .focus()
+                        .setMark("textStyle", { fontSize: `${size}px` })
+                        .run();
                     }
                   }}
                   className="w-full"
@@ -400,7 +404,11 @@ export function BlogEditorMenu({ editor, postId }: BlogEditorMenuProps) {
                         }) && "bg-muted border-primary text-primary border",
                       )}
                       onClick={() =>
-                        editor.chain().focus().setFontSize(`${size}px`).run()
+                        editor
+                          .chain()
+                          .focus()
+                          .setMark("textStyle", { fontSize: `${size}px` })
+                          .run()
                       }
                       title={`${size}px`}
                       type="button"

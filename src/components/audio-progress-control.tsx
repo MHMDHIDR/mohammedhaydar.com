@@ -60,6 +60,8 @@ export function AudioProgressControl({
         onPointerUp={handlePointerUp}
         onFocus={handlePointerDown}
         onBlur={handleBlur}
+        showTooltip={true}
+        tooltipContent={(value) => formatTime(value)}
       />
       {showLabel && (
         <output
