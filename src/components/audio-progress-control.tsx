@@ -60,13 +60,11 @@ export function AudioProgressControl({
         onPointerUp={handlePointerUp}
         onFocus={handlePointerDown}
         onBlur={handleBlur}
-        showTooltip={true}
-        tooltipContent={value => formatTime(value)}
       />
       {showLabel && (
         <output
-          className={`text-sm font-medium text-muted-foreground tabular-nums transition-opacity duration-300 ${
-            isChanging ? "opacity-100" : "opacity-0 pointer-events-none"
+          className={`text-muted-foreground text-sm font-medium tabular-nums transition-opacity duration-300 ${
+            isChanging ? "opacity-100" : "pointer-events-none opacity-0"
           }`}
         >
           {formatTime(value)} / {formatTime(max)}
