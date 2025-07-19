@@ -15,6 +15,11 @@ const nextConfig: NextConfig = {
       },
       { hostname: "s3.eu-west-2.amazonaws.com", protocol: "https", port: "" },
       { hostname: "lh3.googleusercontent.com", protocol: "https", port: "" },
+      {
+        hostname: "hubspot-credentials-na1.s3.amazonaws.com",
+        protocol: "https",
+        port: "",
+      },
     ],
   },
 };

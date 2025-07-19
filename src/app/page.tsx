@@ -7,6 +7,7 @@ import SocialLinks from "@/components/SocialLinks";
 import { Button } from "@/components/ui/button";
 import { File, Package } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const dynamic = "force-static";
 export const revalidate = 86400;
@@ -34,6 +35,26 @@ export default async function Home() {
             <div className="relative h-[170px] w-full md:h-[140px]">
               <div className="absolute top-0 left-0 h-full w-full">
                 <HomeDescription />
+              </div>
+            </div>
+            <div className="flex gap-x-1">
+              <div className="academy-badge">
+                <Link
+                  href="https://app-eu1.hubspot.com/academy/achievements/w02xvmxp/en/1/mohammed-haydar/seo"
+                  title="Mohammed Haydar - SEO"
+                  target="_blank"
+                  aria-label="Mohammed Haydar - SEO"
+                  rel="noopener noreferrer"
+                  className="rounded-full"
+                >
+                  <Image
+                    src="https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/9b2dff0e21824340aafe7a389fb1852f.png"
+                    alt="SEO"
+                    width={176}
+                    height={176}
+                    className="rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  />
+                </Link>
               </div>
             </div>
             <div className="flex gap-x-1">
