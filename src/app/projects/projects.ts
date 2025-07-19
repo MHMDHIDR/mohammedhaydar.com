@@ -24,7 +24,7 @@ export const projects = [
       "Stripe",
       "PostgreSQL",
     ],
-    image: "/projects/john-al-shiekh.svg",
+    image: "/projects/john-al-shiekh.png",
     liveUrl: "https://www.john-al-shiekh.live",
     githubUrl: "https://github.com/MHMDHIDR/john-al-sheikh",
   },
