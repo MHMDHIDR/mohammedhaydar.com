@@ -10,9 +10,22 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Mohammed Haydar | A Full Stack Engineer",
+  title: "Mohammed Haydar | Full Stack Engineer",
   description:
-    "I'm a full stack engineer based in Coventry, UK. I build web applications with React, Next.js, and Node.js.",
+    "Full Stack Engineer with 6+ years building fast, reliable applications with clean code and strong teamwork.",
+  keywords: [
+    "Full Stack Engineer",
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "TypeScript",
+    "JavaScript",
+    "Zustand",
+    "Redux",
+    "CSS",
+    "Tailwind CSS",
+    "Shadcn UI",
+  ],
   icons: {
     icon: [{ url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" }],
     apple: [
