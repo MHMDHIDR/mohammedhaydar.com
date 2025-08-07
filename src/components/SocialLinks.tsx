@@ -20,7 +20,7 @@ const SocialLinks = () => {
                 </Link>
               </div>
             </TooltipTrigger>
-            <TooltipContent className="bg-primary font-semibold">
+            <TooltipContent className="bg-primary font-semibold text-current">
               {social?.linkTitle}
             </TooltipContent>
           </Tooltip>
