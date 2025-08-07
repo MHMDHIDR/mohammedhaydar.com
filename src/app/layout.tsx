@@ -1,4 +1,3 @@
-import "@/styles/globals.css";
 import { type Metadata } from "next";
 import { SessionProvider } from "next-auth/react";
 import { TRPCReactProvider } from "@/trpc/react";
@@ -8,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Suspense } from "react";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Mohammed Haydar | Full Stack Engineer",

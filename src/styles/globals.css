@@ -113,11 +113,6 @@ pre[class*="language-"] {
   --color-chart-5: oklch(68% 0.15 345);
 }
 
-/* Base Styles */
-* {
-  border-color: var(--color-border);
-}
-
 html {
   scroll-behavior: smooth;
 }
