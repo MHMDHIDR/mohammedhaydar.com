@@ -16,6 +16,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import AudioPlayer from "@/components/audio-player";
+import clsx from "clsx";
 
 const tabMenu = [
   { title: "Education", value: "education", icon: GraduationCap },
@@ -122,7 +123,12 @@ export default function ResumePage() {
           onValueChange={handleTabChange}
           className="flex w-full flex-col gap-6 md:flex-row md:gap-10"
         >
-          <TabsList className="h-full flex-col gap-4 bg-transparent md:w-64">
+          <TabsList
+            className={clsx(
+              "h-full flex-col gap-4 bg-transparent md:w-64",
+              currentTab === "cv" && "md:mt-40",
+            )}
+          >
             {tabMenu?.map((item) => (
               <TabsTrigger
                 key={item?.value}
