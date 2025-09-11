@@ -63,7 +63,7 @@ export const SOCIALS = [
     icon: IconBrandX,
   },
   {
-    href: "https://www.instagram.com/mohammed_haydar_ibrahim",
+    href: "https://www.instagram.com/mohammed___haydar",
     linkTitle: `${SITE.title} on Instagram`,
     active: true,
     icon: IconBrandInstagram,
